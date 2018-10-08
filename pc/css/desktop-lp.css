@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+}
+
+.button-common-style, .bottom-button, .section-top-button {
+  background: linear-gradient(142.8deg, #FBD249 0%, #F5A623 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.button-common-style:hover, .bottom-button:hover, .section-top-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.button-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.common-section-title {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 43px;
+  word-wrap: break-word;
+  color: #313131;
+  margin-bottom: 40px;
+}
+
+.common-section-span {
+  color: #4EB9FD;
+}
+
+.common-section-body {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 20px;
+  letter-spacing: 3px;
+  line-height: 30px;
+  word-wrap: break-word;
+  color: #313131;
+}
+
+.page-container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 60px;
+  width: 140px;
+  margin-top: 20px;
+  margin-left: 20px;
+  position: relative;
+}
+.logo:hover {
+  opacity: 0.6;
+}
+
+.section-top {
+  width: 100%;
+  padding: 15px 90px 50px 90px;
+  display: flex;
+  position: relative;
+}
+
+.section-top-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.section-top-desc {
+  width: 360px;
+}
+
+.section-top-title {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 43px;
+  word-wrap: break-word;
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.section-top-small {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 13px;
+  letter-spacing: -0.1px;
+  line-height: 25px;
+  word-wrap: break-word;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.section-top-button {
+  height: 70px;
+  width: 350px;
+  border-radius: 18px;
+}
+
+.section-top-button-text {
+  font-family: "Hiragino Kaku Gothic Pro";
+	font-size: 27px;	
+	letter-spacing: -0.15px;	
+	line-height: 41px;
+  word-wrap: break-word;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.section-top-app-image {
+  margin-left: 240px;
+	height: 360px;	
+	width: 180px;
+}
+
+.app-feat-text {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 43px;
+  word-wrap: break-word;
+  color: #313131;
+  border-bottom: #313131 6px solid;
+  width: 365px;
+  margin: 0 auto 20px auto;
+}
+
+.search-section {
+  width: 100%;
+  height: 300px;
+  padding: 60px 90px;
+  background: url("https://www.traicy.com/wp-content/uploads/2018/09/detect-background.png");
+  z-index: -1;
+}
+
+.detect-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 40px 90px;
+}
+
+.detect-section-desc {
+  width: 360px;
+  margin-left: 70px;
+}
+
+.buy-section {
+  width: 100%;
+  padding: 30px 90px;
+  background: rgba(228, 228, 228, 0.32);
+  display: flex;
+  align-items: center;
+}
+
+.buy-app-image {
+  margin-left: 130px;
+}
+
+.bottom-button {
+  height: 70px;
+  width: 360px;
+  border-radius: 18px;
+  box-shadow: 0 4px 4px 0 rgba(49, 49, 49, 0.5);
+  margin: 30px auto;
+}
+
+.bottom-button-text {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 24px;
+  letter-spacing: -0.13px;
+	font-weight: 600;
+  word-wrap: break-word;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.bottom-promote-text {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 18px;
+  letter-spacing: -0.1px;
+  line-height: 27px;
+  word-wrap: break-word;
+  color: #313131;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  margin: 70px auto;
+}
+
+.icon-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.icon :hover{
+	opacity: 0.6;
+}
+
+.share-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.app-feat-text-bottom {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 43px;
+  word-wrap: break-word;
+  color: #313131;
+  border-bottom: #313131 6px solid;
+  margin: 0 auto 20px auto;
+  width: 250px;
+}
+
+.share-text-row-dt {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 250px;
+}
+
+.party-image-dt {
+  width: 30px;
+  height: 30px;
+  margin-top: -26px;
+  margin-left: -42px;
+}

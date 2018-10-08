@@ -1,0 +1,585 @@
+@charset "UTF-8";
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* line 7, ../sass/front-page.scss */
+#campaignInfo {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: var(--main-background-color);
+}
+
+/* line 12, ../sass/front-page.scss */
+#campaignHead, #reqrouteHead {
+  background: var(--bar-color);
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  width: 20%;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 22, ../sass/front-page.scss */
+#aCampaign {
+  color: black;
+  display: block;
+  height: 60px;
+  width: 100%;
+}
+
+/* line 28, ../sass/front-page.scss */
+#aCampaign + #aCampaign {
+  border-top: 2px solid #bab7ad;
+}
+
+/* line 31, ../sass/front-page.scss */
+#aCampaign:hover {
+  background: rgba(49, 192, 220, 0.6);
+  text-decoration: underline;
+}
+
+/* line 36, ../sass/front-page.scss */
+#campaignContents {
+  height: 100%;
+  display: block;
+  position: relative;
+  background: white;
+}
+
+/* line 42, ../sass/front-page.scss */
+#campaignImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* line 52, ../sass/front-page.scss */
+#campaignImg > img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 60px;
+  position: absolute;
+  display: block;
+  height: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+/* line 66, ../sass/front-page.scss */
+#campaginContentsRight {
+  height: 100%;
+  width: calc(75% - 3px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0;
+  border-left: 3px solid var(--main-background-color);
+}
+
+/* line 75, ../sass/front-page.scss */
+#campaignTitle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 12px;
+  padding: 3px 5px 3px 3px;
+  color: var(--main-title-color);
+}
+
+/* line 89, ../sass/front-page.scss */
+#campaignDate {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0px;
+  font-size: 12px;
+  width: 100%;
+  height: 30%;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 101, ../sass/front-page.scss */
+#campaignDate span {
+  line-height: normal;
+}
+
+/* line 104, ../sass/front-page.scss */
+.addGcalender.frontPage {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 114, ../sass/front-page.scss */
+.addGcalender.frontPage a, .addGcalender.frontPage i {
+  display: inline !important;
+  width: auto !important;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+/*notice*/
+/* line 121, ../sass/front-page.scss */
+h2.main_category {
+  background: var(--bar-color);
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  /*margin-top: 20px;*/
+}
+
+/* line 140, ../sass/front-page.scss */
+object.addGcalender > a {
+  display: inline !important;
+}
+
+/* wifi価格比較 */
+/* line 144, ../sass/front-page.scss */
+h1.kakakuwifi {
+  background: var(--bar-color);
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 153, ../sass/front-page.scss */
+#wifiFrontContainer {
+  position : relative;
+  width: 100%;
+  height : auto;
+}
+
+/* line 159, ../sass/front-page.scss */
+#wifiFrontContainer div.right {
+  margin-left: 50%;
+  width: 50%;
+  height: auto;
+}
+
+/* line 163, ../sass/front-page.scss */
+#wifiFrontContainer div.left {
+  position: absolute;
+  width: 50%;
+  height: auto;
+}
+
+/* line 167, ../sass/front-page.scss */
+div#national {
+  height: 60px;
+  display: block;
+  position: relative;
+  background: white;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 174, ../sass/front-page.scss */
+#wifiFrontImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 183, ../sass/front-page.scss */
+#wifiFrontImg > img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 60px;
+  position: absolute;
+  display: block;
+  height: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+/* line 197, ../sass/front-page.scss */
+#wifiFrontInfo {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 50%;
+}
+
+/* line 203, ../sass/front-page.scss */
+#wifiFrontInfo h2 {
+  margin: 5px 0px;
+  font-size: 18px;
+  color: var(--main-title-color);
+}
+
+/* line 208, ../sass/front-page.scss */
+#wifiFrontInfo .cost {
+  font-size: 15px;
+}
+
+/* line 211, ../sass/front-page.scss */
+#national div.guide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  margin: auto 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 220, ../sass/front-page.scss */
+#national div.guide > i {
+  line-height: 60px;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  color: white;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 1px;
+}
+
+/* line 230, ../sass/front-page.scss */
+#national + #national {
+  border-top: 1px solid var(--border-color);
+}
+
+.sp_ad{
+  margin-top : 20px;
+}
+
+li.notice {
+    background: white;
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--border-color);
+    padding: 3px 2px;
+    color: var(--main-title-color);
+    font-size: 12px;
+    line-height: 16px;
+}
+
+/* line 174, ../sass/front-page.scss */
+#makeFriends {
+  position : relative;
+  width: 100%;
+  height: 200px;
+  background: white;
+}
+
+#traicyMailMagazine {
+  position: absolute;
+  top: 155px;
+  display: block;
+  text-align: center;
+  height: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  color: white;
+
+  & > a {
+    background: #3f51b5;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+}
+
+
+h1#friendsTitle{
+  background-color: var(--bar-color);
+  color : white;
+  height: 40px;
+  width: 100%;
+  font-size : 20px;
+  text-align : center;
+  line-height: 40px;
+}
+/* line 183, ../sass/front-page.scss */
+
+#followTwitter{
+  position: absolute;
+  /* bottom: 0; */
+  left: 0;
+  height: 50px;
+  width: 60%;
+  text-align: center;
+  top: 0;
+  box-sizing: border-box;
+  padding: 12px 0px;
+}
+#addLine{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 37.5%;
+  height: 50px;
+  box-sizing: border-box;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+}
+#addLine > a > img {
+ width: auto;
+ height: auto;
+ max-width: 100%;
+ max-height: 100%;
+ position: absolute;
+ display: block;
+ height: auto;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ margin: auto;
+}
+#followFeedly{
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 40%;
+  height: 46px;
+  margin: 2px 0;
+}
+#followFeedly > a > img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  display: block;
+  height: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+#likeFacebook{
+  position: absolute;
+  top: 100px;
+  width: 175px;
+  height: 28px;
+  margin-left: calc((60% - 175px)/2);
+  margin-right: calc((60% - 175px)/2);
+  margin-top: calc((50px - 28px)/2);
+  margin-bottom: calc((50px - 28px) / 2);
+}
+#addHatena{
+  position: absolute;
+    top: 100px;
+    right: -5px;
+    width: 40%;
+    margin: 10px 0px;
+    padding-left: 20px;
+}
+#followTwitterSale{
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: 50px;
+  width: 60%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 12px 0px;
+}
+
+
+#traicyTalk {
+  background: white;
+
+  & > h1 {
+    background-color: var(--bar-color);
+    color : white;
+    height: 40px;
+    width: 100%;
+    font-size : 20px;
+    text-align : center;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+
+  #thres {
+    li.thre {
+      background: white;
+      box-sizing: border-box;
+      padding: 3px 2px;
+      color: var(--main-title-color);
+      font-size: 14px;
+      line-height: 18px;
+      padding-left: 3px;
+
+      & > span {
+        padding: 1px 2px;
+        font-weight: bold;
+        border-radius: 3px;
+        color: white;
+        margin-left: auto;
+        font-size: 0.8em;
+      }
+      .update_icon {
+        background: #F9A825;
+      }
+      .new_icon {
+        background: #df002c;
+      }
+    }
+
+    .campaign {
+      font-size: 18px !important;
+      line-height: 24px !important;
+      text-align: center;
+      font-weight: 700;
+
+      span {
+        color: #f99000;
+      }
+    }
+
+    li.thre + li.thre {
+      border-top: 2px solid var(--border-color);
+    }
+
+    .btn {
+       margin: 10px 28%;
+       display: block;
+       text-align: center;
+       background: var(--bar-color);
+       color: white !important;
+       padding: 5px 5px;
+       width: 40%;
+       font-weight: 400;
+       border-radius: 4px;
+       text-indent: 0em;
+    }
+  }
+
+  .traicyTalkLink {
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+
+    & > a {
+      color: var(--main-title-color) !important;
+      font-size: 20px;
+    }
+
+  }
+
+
+  #traicyTalkDescription {
+    background: white;
+    padding: 10px;
+
+    &  > a {
+      color: var(--main-title-color) !important;
+    }
+  }
+}
+
+.wanted {
+  margin: 10px 35%;
+  display:block;
+  text-align: center;
+  background: var(--bar-color);
+  color: white;
+  padding: 5px 5px;
+  width: 30%;
+  font-weight: 400;
+  border-radius: 4px;
+  text-indent: 0em;
+}
+
+#campaign-tab-menu, #traicy-talk-tab-menu {
+  list-style: none;
+  background: white;
+  font-size: 0px;
+
+  li {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    width: calc(100%/3);
+    line-height: 40px;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+    background: var(--bar-color);
+  }
+
+  li.active {
+    background: white;
+    color: var(--bar-color);
+    background: #fff;
+    font-weight: 600;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+  }
+}
+
+#campaign-tab-box, #traicy-talk-tab-box {
+  & > div {
+    display: none;
+  }
+  & > div.active {
+    display: block;
+  }
+}
+
+// 航空会社一覧
+.air_tag:hover {
+	text-decoration : underline;
+}
+.air_tag{
+	line-height:1.8em;
+	font-size: 1.2em;
+}
+
+.air_tag_more{
+	text-align: right;
+}
+// 航空会社一覧
+div.airline_tags{
+	padding: 5px;
+  background: white;
+}

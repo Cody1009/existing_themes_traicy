@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+}
+
+.button-common-style, .sp-btn {
+  background: linear-gradient(142.8deg, #FBD249 0%, #F5A623 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.button-common-style:hover, .sp-btn:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.button-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sp-common-title {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 60px;
+  letter-spacing: 6px;
+  line-height: 77px;
+  color: #313131;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.sp-common-span {
+  color: #4EB9FD;
+}
+
+.sp-common-body {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 30px;
+  letter-spacing: -0.23px;
+  line-height: 47px;
+  color: #313131;
+}
+
+.container {
+  width: 750px;
+  margin: 0 auto;
+}
+
+.sp-logo {
+  height: 95px;
+  width: 240px;
+  margin-left: 20px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.sp-top {
+margin-top:30px;
+	width: 100%;
+  padding: 40px 110px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	background: url("https://www.traicy.com/wp-content/uploads/2018/09/mobile_background.svg");
+	background-repeat: no-repeat;
+}
+
+.sp-top-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.sp-head-text {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 78px;
+  letter-spacing: 7.8px;
+  line-height: 85px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.sp-title {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 30px;
+	font-weight: bold;
+  letter-spacing: -0.23px;
+  line-height: 47px;
+  color: #ffffff;
+  text-align: center;
+  margin: 20px;
+  width: 100%;
+}
+
+.sp-btn {
+  height: 100px;
+  width: 530px;
+  border-radius: 18px;
+}
+
+.sp-btn-text {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 35px;
+	font-weight: bold;
+  letter-spacing: -0.19px;
+  line-height: 53px;
+  color: #ffffff;
+}
+
+.sp-feat-text {
+  margin: 50px auto;
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 30px;
+  letter-spacing: -0.23px;
+  line-height: 47px;
+  font-weight: 600;
+  border-bottom: #313131 6px solid;
+  width: 330px;
+}
+
+.sp-find {
+  background: url("https://www.traicy.com/wp-content/uploads/2018/09/sp-find.png");
+  width: 100%;
+  height: 610px;
+  padding: 40px 60px;
+}
+
+.sp-detect {
+  width: 100%;
+  padding: 40px 60px;
+}
+
+.sp-detect-img {
+  margin-top: 40px;
+}
+
+.sp-buy {
+  width: 100%;
+  padding: 40px 60px 60px 60px;
+}
+
+.sp-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.sp-buy {
+  width: 100%;
+  padding: 40px 60px;
+  background-color: rgba(228, 228, 228, 0.32);
+  margin-bottom: 40px;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sp-bottom-text {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 18px;
+  letter-spacing: 2.7px;
+  line-height: 23px;
+  margin-top: 30px;
+  text-align: center;
+  width: 350px;
+}
+
+.icons-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+
+}
+
+.icons-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.icon:hover {
+  opacity: 0.6;
+}
+
+.share-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.share-text-row {
+  display: flex;
+  align-items: center;
+}
+
+.party-image {
+  width: 30px;
+  height: 30px;
+  margin-left: -30px;
+	margin-top:-3px;
+}
+
+.sp-feat-bottom-text{
+  margin: 70px 0;
+ font-family: "Hiragino Kaku Gothic Pro";
+  font-size: 30px;
+  letter-spacing: -0.23px;
+  line-height: 47px;
+  font-weight: 600;
+  border-bottom: #313131 6px solid;
+  width: 220px;
+}

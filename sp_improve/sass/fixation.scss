@@ -1,0 +1,46 @@
+#wanted, #about {
+  background: white;
+  padding: 10px;
+  color: var(--main-color);
+
+  .title {
+    margin: 0px;
+  }
+
+  p {
+    margin-bottom: 1em;
+    text-indent: 1em;
+  }
+}
+
+.uls {
+  list-style-type: decimal;
+  margin-left: 48px;
+  margin-bottom: 15px;
+
+  li {
+    margin-bottom: 3px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  ul {
+    margin-bottom: 10px;
+  }
+}
+
+.person {
+  font-size: 22px;
+  text-align: center;
+  color: white;
+  background: var(--bar-color);
+  padding: 10px 0px;
+  margin: 10px -10px;
+}
+
+#applicationPage {
+  width: 100%;
+  margin: 20px 0px;
+}

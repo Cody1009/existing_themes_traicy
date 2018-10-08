@@ -1,0 +1,67 @@
+#site-navigation {
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	height: 60px;
+	padding: 5px 5px;
+}
+#site-navigation .header_logo{
+	height: 100%;
+	margin: 0 auto;
+}
+#traicyLogo {
+	width: 100px;
+	height: 50px;
+	float: left;
+}
+#menuIcons {
+  /* box-sizing: border-box; */
+  /* width: 200px; */
+  float: left;
+  width: calc(100% - 110px);
+  display: flex;
+  height: 50px;
+  margin: 2px 5px 0px;
+  justify-content: space-around;
+}
+#menuIcons > li {
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin : 0;
+  text-align: center;
+}
+.menuIcon {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 35px;
+  width: 100%;
+}
+.menuIcon > i {
+  font-size: 28px;
+  color: #54A0E6;
+  line-height: 35px;
+}
+.menuText {
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 20px;
+  width: 100%;
+}
+.menuText > span {
+  font-size: 2vw;
+  line-height: 20px;
+  text-decoration: none;
+	color : #54A0E6;
+}
+
+.fa-large:before {
+	font-size : calc(10vw);
+	color : var(--bar-color);
+}

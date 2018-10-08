@@ -1,0 +1,696 @@
+	.flexBox{
+		width : 90%;
+		width : 90%;
+		display: -webkit-flex;
+     	display: flex;
+		margin : 30px auto;
+		font-size : 18px;
+		line-height : 24px;
+		color : var(--main-color);
+	}
+	#main > h1{
+		font-size : 18px;
+		text-align : center;
+		margin-top : 20px;
+	}
+	.flexBox .right{
+		-webkit-flex: 1;
+    	flex: 1;
+	}
+	.flexBox .right{
+
+	}
+	.flexBox .left{
+		-webkit-flex: 1;
+    	flex: 1;
+	}
+	.flexBox ul{
+		margin-left : 0px;
+	}
+	.flexBox ul > li{
+		font-size : 15px;
+		color : var(--main-color);
+	}
+	.flexBox ul > ul{
+		margin-left : 10px;
+	}
+	.flexBox a{
+		color : var(--main-color);
+		text-decoration : none;
+	}
+
+
+/* wifiResult */
+/* wifiResult */
+.rankingTop{
+	display : flex;
+	flex-wrap : wrap;
+	width : 100%;
+}
+.capasity{
+	width : calc(100% / 3);
+	box-sizing : border-box;
+}
+.rankingTop > div.capasity > a{
+	display : block;
+	height : auto;
+	width : auto;
+}
+.lineComment{
+	height : 50px;
+	width : 100%;
+	box-sizing : border-box;
+	text-align : center;
+	color : white;
+	font-size : 24px;
+	line-height : 50px;
+	display : block;
+}
+.wifiImg{
+	background-color : #fff;
+	display : block;
+}
+.rankingTop .capasity img{
+	width : 95%;
+	height : 100px;
+	display : block;
+	margin : 5px auto;
+	padding-bottom : 5px;
+	border-radius : 0px;
+	box-shadow : none;
+}
+.rankingTop .rentalFee{
+	box-sizing : border-box;
+	font-size : 24px;
+	height : 50px;
+	text-align : center;
+	line-height : 50px;
+	color : white;
+}
+#wifiCompe{
+	overflow: hidden;
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none;
+	position : relative;
+	width : 100%;
+}
+#wifiCompe > ul#wifiCompeTab{
+	background-color : #E0E6F7;
+   	font-size : 0px;
+	position : absolute;
+	top : 0;
+	left : 0;
+	list-style : none;
+	vertical-align : middle;
+	width : 100%;
+	height : 50px;
+}
+#wifiCompe > ul#wifiCompeTab > li{
+    cursor: pointer;
+	margin-top : 0px !important;
+    color: var(--main-sub-color) !important;
+	font-size:18px;
+	text-align : center;
+   	text-decoration: none !important;
+   	display : inline-block;
+	height : 50px;
+	box-sizing : border-box;
+	line-height : 50px;
+}
+#wifiCompe li.select{
+	background-color : #FFFFFF;
+}
+
+.wifiContentCompe{
+	position : absolute;
+	top : 50px;
+	left : 0;
+	width : 100%;
+}
+div.wifiContentCompe > div{
+	position : relative;
+}
+li.wifiContent{
+	position : relative;
+	display : block;
+	height : 100px;
+	width : 100%;
+	box-sizing : border-box;
+	background : #fff;
+	padding : 5px 0px;
+}
+li.wifiContent > a{
+	display : block;
+	height : 90px;
+	box-sizing: border-box;
+	width : auto;
+	font-size : 0;
+}
+li.wifiContent > a:hover{
+	background-color : rgba(255,255,204,0.7);
+}
+li.wifiContent .wifiImgLeft{
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : calc(30% - 1% * 2);
+	height : 100%;
+	margin : 0 1%;
+}
+.wifiContent .wifiImgLeft > img{
+	width:auto;
+	height:auto;
+	max-width:100%;
+	max-height:100%;
+	position: absolute;
+	display: block;
+	height: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.wifiContent .wifiTitleRight{
+	position : absolute;
+	top : 0;
+	right : 0;
+	width : 70%;
+}
+p .kakaku{
+	color : red;
+	font-size:calc(10px + 0.5vw);
+}
+
+.caution{
+	font-size : calc(1.0vw);
+	color : #909090;
+	text-align : center;
+	margin-bottom : 10px;
+}
+
+.compensation{
+	margin-top : calc(0px);
+	font-size:calc(5px + 0.75vw);
+	text-align : left;
+}
+
+p span .compensationComment{
+	font-size : calc(0.5vw);
+}
+
+.perCost{
+	font-size:calc(8px + 0.5vw);
+}
+
+.costHikaku > .atitle{
+	font-weight: 600;
+	font-size:calc(12px + 0.5vw);
+	margin-top:10px;
+	margin-bottom: 5px;
+	color : var(--main-title-background-color);
+}
+
+.perCostDay{
+	font-size:calc(1.5vw);
+}
+
+.hideSpan {
+	display: none;
+}
+
+.kaisen{
+	color : red;
+	font-size : calc(6px + 0.5vw);
+}
+table.indication > tbody{
+	width : 100%;
+	text-align : center;
+	display : block;
+}
+
+
+h1.wifiTitle{
+	/* font-size: calc(10px + 1.5vw) !important; */
+	text-align: center;
+	/* margin-bottom: 10px; */
+	font-weight: normal;
+	background: var(--bar-color);
+	color: white;
+	font-size: 24px;
+	line-height: 40px;
+}
+
+	div.capasity{
+		position : relative;
+	}
+	.wifiImg{
+		background-color : #fff;
+		display : block;
+		height : 80px;
+		position : relative;
+	}
+	.rankingTop .capasity div.wifiImg > img{
+		width:auto;
+		height:auto;
+		max-width:100%;
+		max-height:100%;
+		position: absolute;
+		display: block;
+		height: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+	div.lineComment{
+		font-size : 18px;
+		line-height : 50px;
+	}
+	.rankingTop .rentalFee{
+		font-size : 18px;
+		line-height : 50px;
+	}
+	#wifiCompe > ul#wifiCompeTab > li{
+		font-size : 10px;
+		line-height : 30px;
+		height : 30px;
+		color : white !important;
+	}
+	#wifiCompe > ul#wifiCompeTab > li.select{
+		font-size : 10px;
+		line-height : 30px;
+		height : 30px;
+		color : var(--main-color) !important;
+	}
+	#wifiCompe > ul#wifiCompeTab{
+		background-color : var(--bar-color);
+   		font-size : 0px;
+		position : absolute;
+		top : 0;
+		left : 0;
+		list-style : none;
+		vertical-align : middle;
+		width : 100%;
+		height : 30px;
+	}
+	div.wifiContentCompe{
+		margin-top : -20px;
+	}
+	li.wifiContent{
+		height : 70px;
+	}
+
+
+	/**
+	*
+	* 固定ページのコーナー
+	*
+	*/
+	/* Wifi価格比較 */
+	/* 検索フォーム*/
+	#searchform {
+		width: 294px;
+		background-color: #fff;
+		margin-bottom:10px;
+		padding:4px 2px;
+	}
+	#s {
+		width: 200px;
+		height: 30px;
+		line-height: 30px;
+		padding: 0 10px;
+		vertical-align: bottom;
+		border: 1px solid #ccc;
+		border-radius: 5px 0 0 5px;
+		outline: none;
+		box-sizing: content-box;
+		-webkit-appearance: textfield;
+		color: #999;
+		background: #eee;
+		box-shadow: 0 1px 0 #fff,
+		0 -1px 0 #fff,
+		-1px 0 0 #fff,
+		1px 0 0 #fff,
+		0 0 3px #ddd inset;
+	}
+	#s:focus {
+		color: #333;
+	}
+	#searchsubmit {
+		width: 60px;
+		height: 32px;
+		vertical-align: bottom;
+		border: 1px solid #ccc;
+		border-radius: 0 5px 5px 0;
+		color: #666;
+		background: -webkit-linear-gradient(to bottom, #fff, #eee);
+		background: -moz-linear-gradient(to bottom, #fff, #eee);
+		background: linear-gradient(to bottom, #fff, #eee);
+		cursor: pointer;
+		box-shadow: 0 1px 0 #fff,
+		0 -1px 0 #fff,
+		-1px 0 0 #fff,
+		1px 0 0 #fff;
+	}
+	#searchsubmit:hover {
+		background: -webkit-linear-gradient(to bottom, #eee, #fff);
+		background: -moz-linear-gradient(to bottom, #eee, #fff);
+		background: linear-gradient(to bottom, #eee, #fff);
+	}
+	#searchsubmit:active {
+		border: 1px solid #aaa;
+		border-right-color: #fff;
+		border-bottom-color: #fff;
+		box-shadow: 0 1px 0 #ddd,
+		0 -1px 0 #fff,
+		-1px 0 0 #fff,
+		1px 0 0 #ddd;
+	}
+	/*ここからwifiのformのstyle*/
+	#searchWifi{
+	  width: 100%;
+	  height: auto;
+	  box-sizing: border-box;
+	  font-size: 95%;
+	  padding: 10px 5%;
+	  margin-bottom: 20px;
+	}
+	#searchWifi.top{
+	  box-sizing: border-box;
+	  height: 100%;
+	  /* border: 3px solid #54A0E6; */
+	}
+	#searchWifi.page{
+	  margin-bottom: 30px;
+	}
+	#searchWifi #title {
+	  width: 100%;
+	  height: 30px;
+	  color: #006835;
+	  font-size: 14pt;
+	  font-weight: bold;
+	  padding-bottom: 5px;
+	  margin: 10px 0 0px;
+	  border-bottom: 1px solid rgba(0,0,0,0.3);
+	}
+	#searchWifi.top #title {
+	  font-size: 11pt;
+	  text-align: center;
+	  color: red;
+	}
+	#searchWifi .form_container {
+	  width: 100%;
+	  box-sizing: border-box;
+	  padding: 10px 0px 3px;
+	}
+	#wifi_form {
+	  width: 90%;
+	  margin: 0 auto;
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	  justify-content: space-around;
+	}
+	#searchWifi.page #wifi_form {
+	  width: 100%;
+	}
+	#searchWifi.top .item {
+	  width: 100%;
+	  margin-top: 10px;
+	}
+	#searchWifi.top .item:nth-child(n+3) {
+	  display: none;
+	}
+	#searchWifi.page .item {
+	  margin-top: 10px;
+	}
+	#searchWifi.page input[name="country_name"]{
+	  width: 200px;
+	}
+	#searchWifi.page select[name="use_days"]{
+	  width: 70px;
+	}
+	#searchWifi .itemName{
+	  height: 18px;
+	  line-height: 100%;
+	  margin-bottom: 2px;
+	  font-size: 11px;
+	}
+	#searchWifi .itemValue{
+	  box-sizing: border-box;
+	  width: 100%;
+	  height: 32px;
+	  line-height: 100%;
+	  background: white;
+	  font-size: 12px;
+	  border: 1px solid #e4e4e4;
+	}
+	#countryHide{
+	  display: none;
+	}
+	#searchButton {
+	  box-sizing: content-box;
+	  width: 140px;
+	  height: 30px;
+	  line-height: 30px;
+	  text-align: center;
+	  margin: 35px auto 0;
+	  padding: 5px;
+	  display: block;
+	  border: none;
+	  color: white;
+	  background: #00aaff;
+	  border-radius: 5px;
+	  box-shadow: 0 4px 0 #0088cc;
+	  cursor: pointer;
+	  font-size: 11pt;
+	}
+	#searchButton:hover {
+	  opacity: 0.8;
+	}
+	#searchButton.pushed {
+	  margin-top: 37px;
+	  box-shadow: 0 2px 0 #0088cc;
+	}
+	#errorMsg {
+	  position: absolute;
+	  height: 20px;
+	  line-height: 30px;
+	  font-size: 10pt;
+	  margin-left: 20px;
+	  color: #E43A3A;
+	  display: none;
+	  z-index: 1;
+	}
+	.fa-red {
+	  color: #E43A3A;
+	}
+	#suggest {
+	  display: block;
+	  position: absolute;
+	  background-color: #FFFFFF;
+	  border: 1px solid #e4e4e4;
+	  font-size: 90%;
+	  height: auto;
+	  max-height: 95px;
+	  overflow: scroll;
+	  z-index: 2;
+	}
+	#suggest div {
+	  display: block;
+	  width: 100%;
+	  box-sizing: border-box;
+	  height: 20px;
+	  line-height:100%;
+	  padding: 7px 5px 0;
+	  overflow: hidden;
+	  white-space: nowrap;
+	}
+	#suggest div.select{ /* キー上下で選択した場合のスタイル */
+	  color: #FFFFFF;
+	  background-color: #3366FF;
+	}
+	#suggest div.over{ /* マウスオーバ時のスタイル */
+	  background-color: #99CCFF;
+	}
+
+	@media screen and (max-width: 600px) {
+	  #searchWifi.page{
+	    margin-bottom: 20px;
+	  }
+
+	  #searchWifi .itemValue{
+	    height: 35px;
+	  }
+
+	  #searchWifi.page input[name="country_name"]{
+	    width: 210px;
+	  }
+
+	  #suggest {
+	    max-height: 140px;
+	  }
+	  #suggest div {
+	    height: 40px;
+	    font-size: 18px;
+	  }
+	}
+
+	/*wifi-価格比較 検索結果スタイル*/
+	.no_result{
+		background-color : #fff;
+		font-size : 20px;
+	}
+
+	.result{
+		margin : 20px;
+	}
+	/* ３段組み */
+	article div[itemprop="articleBody"]
+	{display: -webkit-box;
+		display: -moz-box;
+	display: -ms-box}
+
+	article section	{
+		width: 32%;
+		height: 33.3%;
+		background-color : #fff;
+		margin: 0.3%;
+		margin-top:10px;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		overflow: visible;
+		border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+	}
+	article section:nth-of-type(1n) {
+		float: none;
+		margin: 0;
+	}
+
+	article section:nth-of-type(1n) figcaption{
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+	article section .photo{
+		padding-top : calc(1vw);
+		padding-bottom : calc(1vw);
+		height : 8vw;
+		text-align:center;
+		position:relative;
+	}
+	article section .photo > img{
+		width : 90%;
+	}
+	article section .money{
+		height : 20vw;
+	}
+	article section .money p{
+		padding-top : 20px;
+		padding-bottom : 20px;
+		/*color:#FDF7FA;*/
+		color:#000000;
+		font-size:calc(2.5vw);
+		text-align: center;
+	}
+
+	article section .capasity1{
+		background-color:#E33848;
+		height : calc(8vw);
+		border-radius: 5px;        /* CSS3草案 */
+		-webkit-border-radius: 5px;    /* Safari,Google Chrome用 */
+		-moz-border-radius: 5px;   /* Firefox用 */
+	}
+	article section .capasity1 p{
+		padding-top : 2.75vw;
+		padding-bottom : 2.75vw;
+		font-size:calc(2.5vw);
+		text-align: center;
+		color:#FDF7FA;
+	}
+	article section .capasity2{
+		background-color:#F36343;
+		height : calc(8vw);
+		border-radius: 5px;        /* CSS3草案 */
+		-webkit-border-radius: 5px;    /* Safari,Google Chrome用 */
+		-moz-border-radius: 5px;   /* Firefox用 */
+	}
+	article section .capasity2 p{
+		padding-top : 2.75vw;
+		padding-bottom : 2.75vw;
+		font-size:calc(2.5vw);
+		color:#FDF7FA;
+		text-align : center;
+	}
+	article section .capasity3{
+		background-color:#FCB538;
+		height : calc(8vw);
+		border-radius: 5px;        /* CSS3草案 */
+		-webkit-border-radius: 5px;    /* Safari,Google Chrome用 */
+		-moz-border-radius: 5px;   /* Firefox用 */
+	}
+	article section .capasity3 p{
+		padding-top : 2.75vw;
+		padding-bottom : 2.75vw;
+		font-size:calc(2.5vw);
+		color:#FDF7FA;
+		text-align: center;
+	}
+
+	.fee{
+		font-size:calc(8px + 1.0vw);
+	}
+	/*
+	.lineComment{
+		float :left;
+		width : 32%;
+		margin-right : 0.5%;
+		margin-left : 0.5%;
+	}
+	.lineComment > p{
+		font-size:calc(1.5vw);
+		line-height:2.5vw;
+		text-align: center;
+	}*/
+	.lineType{
+		float :left;
+		width : 32%;
+		margin-right : 0.5%;
+		margin-left : 0.5%;
+	}
+	.lineType > p{
+		font-size:calc(1.25vw);
+		line-height:2.0vw;
+		text-align: center;
+	}
+	/* ３段組み IE8～9 & Opera */
+	article section	{
+		clear: none;
+		float: left;
+		position: relative
+	}
+
+	article section + section + section	{margin-right: 0}
+
+	.titleCompasion{
+		font-size : calc(10px + 1vw);
+		text-align : center;
+		color:#5c5c5c;
+		margin-top : 10px;
+		margin-bottom: 10px;
+	}
+
+	.titleTabCompasion{
+		font-size : calc(10px + 1.5vw);
+		text-align : center;
+		color:#5c5c5c;
+		margin-top : 10px;
+		margin-bottom: 10px;
+	}

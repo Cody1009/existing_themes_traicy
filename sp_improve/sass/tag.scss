@@ -1,0 +1,94 @@
+.archive-header {
+  background : var(--main-background-color);
+  font-size : 16px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-bottom: 0px;
+
+  div.tag-description {
+    background-color: #fff;
+    font-size:0.9em;
+
+    h3 {
+      font-size: 1.1em;
+      padding: 7px 0;
+		}
+    h2 {
+      font-size: 1.2em;
+      background: var(--bar-color);
+      padding: 0.4em 0px 0.4em 1em;
+      color: white;
+      font-weight: 900;
+    }
+
+    h1.archive-title{
+      font-size : 16px;
+      margin-left : 3px;
+    }
+
+    .flex-container{
+			.left{
+				text-align: center;
+				margin: 0 auto;
+			}
+			table{
+				border-collapse: separate;
+				border-spacing: 10px;
+			}
+		}
+  }
+}
+
+// airline-tag-page.php
+ul.airline_tag li{
+	margin: 10px 0;
+	margin-left: 20px;
+	list-style-type: disc
+}
+
+
+/**
+	タブ
+**/
+#famoustag {
+	margin-bottom: 30px;
+	#famoustag-tab-menu {
+	  list-style: none;
+	  background: white;
+	  font-size: 0px;
+	  li {
+	    display: inline-block;
+	    font-size: 16px;
+	    font-weight: 400;
+	    width: calc(100%/3);
+	    line-height: 40px;
+	    letter-spacing: normal;
+	    text-align: center;
+	    color: white;
+	    background: var(--bar-color);
+	  }
+
+	  li.active {
+	    background: white;
+	    color: var(--bar-color);
+	    background: #fff;
+	    font-weight: 600;
+	    -webkit-box-sizing: border-box;
+	    box-sizing: border-box;
+	    height: 100%;
+			font-size: 16px;
+		}
+	}
+	div.passive{
+	    display: none;
+	}
+}
+
+#traicytag_include_talk {
+  .catCards {
+    width: auto;
+  }
+  .catCards + .catCards {
+    margin-top: 10px;
+  }
+}
