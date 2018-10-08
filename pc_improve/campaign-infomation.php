@@ -118,7 +118,7 @@ $posts = get_posts($args);
 		          <div class="article-image">
   <?php
     if(has_post_thumbnail($id)){
-      echo '<img  class = "article-image"  src="' , get_the_post_thumbnail_url( $id , array(100,100) ) ,'">';
+      echo '<img  class = "article-image"  src="' , get_the_post_thumbnail_url( $id , array(268,180) ) ,'">';
     }else{
       echo '<img  class = "article-image" src="'.get_stylesheet_directory_uri().'/images/dummy_600_400.jpg">';
     }
