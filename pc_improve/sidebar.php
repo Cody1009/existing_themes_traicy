@@ -16,7 +16,10 @@
     <?php get_template_part('ranking'); ?><!-- ランキング -->
 
 <!--　タグ一覧 	 --> 
-	 <?php get_template_part('sidebar-tags'); ?> 
+
+	<?php get_template_part('sidebar-tags'); ?> 	
+
+	 
     <!--  採用情報カード	 -->
     <div class="sidebar-recruit-card">
         <a href="https://www.traicy.com/wanted" class="recruit-anchor"></a>
@@ -33,10 +36,10 @@
         </div>
     </div>
 
-<!--     <?php if (!is_home()) : ?>
-        <?php get_template_part('campaign-information-side'); ?><!-- キャンペーン情報 -->
+<!--    <?php if (!is_home()) : ?>
+        <?php get_template_part('campaign-information-side'); ?>
     <?php endif; ?> 
-
+ -->
     <?php
     get_template_part('sidebar-mail_magazine');
     ?>
