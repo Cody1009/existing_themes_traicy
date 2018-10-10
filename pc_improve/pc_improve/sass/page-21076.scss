@@ -1,0 +1,60 @@
+@import './spectre/_variables.scss';
+@import './spectre/_mixins.scss';
+
+#about-traicy{
+   padding: 40px ;
+   background: $white;
+	margin-bottom:30px;
+ }
+.wanted-head{
+   @include title;
+  color: $primary;
+ }
+
+.wanted-body{
+  @include smallTitle;
+  color: $primary;
+}
+
+.wanted-highlight-body {
+  @include smallTitle;
+  color: $primary;
+  font-weight: $bold;
+}
+.wanted-angle{
+  color: $secondary;
+  margin: 5px 0;
+}
+.horizontal-devider{
+  height: 4px;
+  width: 50px;
+  background: $primary;
+  margin-bottom:20px;
+}
+
+.wanted-travel-anchor{
+  @include smallTitle;
+  text-decoration: underline;
+  color: $lightBlue;
+}
+
+.bread-crumb-row{
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bread-crumb-anchor{
+  color: $primary;
+  @include body;
+  margin-right: 10px;
+	&:hover{
+		opacity: 0.6;
+	}
+}
+
+.bread-crumb-angle{
+  color: $primary;
+  @include body;
+  margin-right: 10px;
+}
