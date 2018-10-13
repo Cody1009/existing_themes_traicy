@@ -222,6 +222,7 @@
   position: relative;
   border-radius: 6px;
   margin-bottom: 10px;
+	border: $paleBlue 0.5px solid;
 	&:hover{
 		opacity: 0.6;
 	}
@@ -395,6 +396,5 @@
 }
 .mail-register-yahoo {
   color: $yahoo;
-
 }
 

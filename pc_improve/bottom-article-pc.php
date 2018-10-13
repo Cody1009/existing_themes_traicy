@@ -13,9 +13,4 @@
       <?php get_template_part('article-skyscanner'); ?>
     </div>
   </div>
-  <div class="pc_right">
-    <div id="traicytalk">
-      <?php get_template_part('article-traicy-talk-pc'); ?>
-    </div>
-  </div>
 </div>

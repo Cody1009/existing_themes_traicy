@@ -43,7 +43,7 @@ if(!is_single( $post )){
 	wpp_get_mostpopular($args);
 }else{
 	$categories=get_the_category();
-	echo '<span class="rankingTitle">'.$categories[0]->cat_name.'の人気記事</span>';
+	echo '<span class="headline-ja">'.$categories[0]->cat_name.'の人気記事</span>';
 	$args['cat']=$categories[0]->term_id;
 	wpp_get_mostpopular($args);
 }
@@ -54,7 +54,7 @@ if(!is_single( $post )){
 <?php
 if(is_single( $post )){
 	unset($args['cat']);
-	echo '<span class="rankingTitle">人気記事</span>';
+	echo '<span class="headline-ja">人気記事</span>';
 	wpp_get_mostpopular($args);
 }
 ?>

@@ -36,10 +36,7 @@
         </div>
     </div>
 
-<!--    <?php if (!is_home()) : ?>
-        <?php get_template_part('campaign-information-side'); ?>
-    <?php endif; ?> 
- -->
+
     <?php
     get_template_part('sidebar-mail_magazine');
     ?>
