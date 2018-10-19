@@ -44,31 +44,7 @@ if( is_sticky() && is_home() && !is_paged() ){
 
     <?php if( is_single() ) : ?>
         <div class="entry-content">
-            <?php
-            // セール情報の場合はGoogleカレンダーに追加するボタンを表示
-            $startTime = strtotime(get_post_meta($id, 'CampaignStart' ,true));
-            $endTime   = strtotime(get_post_meta($id, 'CampaignEnd' ,true));
-
-            if ($startTime && $endTime):
-                // google カレンダーのリンク用
-                $baseUrl = "https://www.google.com/calendar/event?action=TEMPLATE&";
-                $params = array(
-                    "text" => $post->post_title,
-                    "dates" => date('Ymd',  $startTime) . "/" . date('Ymd',  $endTime),
-                    "details" => $post->guid
-                );
-                $gcalenderUrl = $baseUrl . http_build_query($params);
-                ?>
-
-                <div class="addGcalender singlePage">
-                    <a href="<?php echo $gcalenderUrl; ?>">
-                        <button><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>&nbsp;Googleカレンダーに追加</button>
-                    </a>
-                </div>
-            <?php else: ?>
-                <div style="height: 10px;"></div>
-            <?php endif; ?>
-
+          
             <?php /**
              * 記事の表示　*/ ?>
             <?php the_content( __( '<span class="meta-nav"></span>', 'twentytwelve' ) ); ?>
@@ -137,7 +113,10 @@ if( is_sticky() && is_home() && !is_paged() ){
                 <?php the_tags('<p class="article-bottom-tag-head">タグ</p>'); ?>
                 <?php $tmp = get_the_category( '' ); ?>
                 <?php foreach($tmp as $item) : ?>
-                    <div class="category blue-category-container  hide_u600"><a class="blue-category-text" href="<?php echo get_category_link( $item -> cat_ID ); ?>"><i class="fa fa-tag fa-white-tag" aria-hidden="true"></i><?php echo $item -> name; ?></a></div>
+                    <div class="category blue-category-container  hide_u600"><a  href="<?php echo get_category_link( $item -> cat_ID ); ?>"><i class="fa fa-tag fa-white-tag" aria-hidden="true"></i>
+						<p class="blue-category-text"><?php echo $item -> name; ?></p>
+						</a>
+				</div>
                 <?php endforeach; ?>
             </footer>
         </div>

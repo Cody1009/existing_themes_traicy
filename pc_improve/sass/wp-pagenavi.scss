@@ -1,0 +1,48 @@
+@import './spectre/_variables.scss';
+@import './spectre/_mixins.scss';
+
+.wp-pagenavi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wp-pagenavi a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  color: $primary;
+  background: $white;
+  text-align: center;
+  text-decoration: none;
+  border: 0.5px solid $borderGray;
+}
+.wp-pagenavi a:hover{
+  opacity: 0.6;
+}
+.wp-pagenavi span.current{
+	 width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  color: $white !important;
+  background-color: $blue !important;
+  border-color: $blue;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.previouspostslink{
+  width: 50px !important;
+  border: none !important;
+  background: none !important;
+}
+
+.nextpostslink{
+  width: 50px !important;
+  border: none !important;
+  background: none !important;
+}

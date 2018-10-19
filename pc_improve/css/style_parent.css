@@ -507,6 +507,7 @@ body.custom-font-enabled {
 	font-family: Hiragino Kaku Gothic Pro;
 }
 a {
+	text-decoration:none;
 	outline: none;
 }
 a :hover{
@@ -1227,7 +1228,7 @@ article.format-quote .entry-content blockquote {
 	color: #444;
 }
 .comments-area article header cite a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 .comments-area article header h4 {
 	position: absolute;

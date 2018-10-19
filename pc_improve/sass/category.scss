@@ -1,0 +1,40 @@
+@import './spectre/_variables.scss';
+@import './spectre/_mixins.scss';
+
+.category-articles-result{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.category-articles-header{
+  background: $white;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+.category-articles-header-title{
+  @include title;
+  color: $primary;
+}
+
+.category-articles-title-emphasis{
+  @include headline;
+  color: $primary;
+  font-weight: $bold;
+}
+
+.category-articles-header-tag{
+  margin-right: 5px;
+  color: $blue;
+}
+
+.wp-pagenavi-container{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  margin: 20px 0;
+}
+

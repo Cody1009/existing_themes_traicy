@@ -13,4 +13,5 @@
       <?php get_template_part('article-skyscanner'); ?>
     </div>
   </div>
+
 </div>

@@ -37,6 +37,8 @@ body.full-width .site-content {
   }
 }
 
+
+
 .article-detail-page-container {
   background: $white;
   padding: 40px;
@@ -47,6 +49,7 @@ body.full-width .site-content {
   margin-bottom: 30px;
 }
 
+
 //breadcrumbのテキスト
 #breadcrumb a {
   @include body;
@@ -54,6 +57,10 @@ body.full-width .site-content {
   &:hover {
     opacity: 0.6;
   }
+}
+.bread-crumb-angle-style{
+  font-weight: $bold;
+  margin-right: 5px;
 }
 
 /*記事のタイトル */
@@ -161,11 +168,8 @@ header.entry-header div.date p a.author {
 
 /* Googleカレンダー追加ボタン */
 .addGcalender.singlePage {
-  width: calc(100% - 20px);
-  height: 30px;
-  margin-bottom: 10px;
-  padding: 0 10px;
-  overflow: hidden;
+  margin-top: 4px;
+  
 }
 
 .addGcalender.singlePage button {
@@ -271,6 +275,7 @@ header.entry-header div.date p a.author {
 .article-bottom-tag-head{
   @include body;
   color: $primary;
+	margin-right: 20px;
 }
 
 /* タグ カテゴリ st */
@@ -287,31 +292,34 @@ header.entry-header div.date p a.author {
 }
 
 .tag_box a {
-  display: inline-block;
-  min-width: 142px;
-  margin: 0 10px;
+  display: inline-flex;
+	align-items:center;
   padding: 10px;
   color: $white;
   background: $blue;
   border-radius: 5px;
   @include caption;
+	min-width: 170px;
+	justify-content:center;
+	
 }
 
 .blue-category-container{
   display: inline-flex;
   align-items: center;
-  padding: 10px;
+	background: $blue;
+	border-radius: 5px;
+	margin: 0 10px;
 }
 
-.blue-category-text{
+.blue-category-text {
   color: $white;
   @include caption;
-  padding: 0;
+  min-width: 27px;
 }
 .fa-white-tag{
   margin-right: 5px;
   color: $white;
-  background: $blue;
 }
 
 

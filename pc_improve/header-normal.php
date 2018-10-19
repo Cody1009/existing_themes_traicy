@@ -213,8 +213,8 @@
         </div>
         <ul class="menu-items-wrapper">
             <nav id="site-navigation" class="main-navigation PC_nav" role="navigation">
-				<a class="assistive-text" href="#content"
-                   title="<?php esc_attr_e('Skip to content', 'twentytwelve'); ?>"><?php _e('Skip to content', 'twentytwelve'); ?></a>
+<!--				<a class="assistive-text" href="#content"-->
+<!--                   title="--><?php //esc_attr_e('Skip to content', 'twentytwelve'); ?><!--">--><?php //_e('Skip to content', 'twentytwelve'); ?><!--</a>-->
                 <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'nav-menu', 'container_class' => 'dynamic-container')); ?>
             </nav>
         </ul>

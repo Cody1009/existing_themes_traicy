@@ -140,12 +140,12 @@
                         </div>
 
                         <div class="articleRight">
-                            <a href=" <?php echo $json[0]['permalink']; ?> ">
+                            <a  href=" <?php echo $json[0]['permalink']; ?> ">
                                 <div class="articleRightImage">
                                     <?php echo '<img src="' . $json[0]['img_medium'] . '">'; ?>
                                 </div>
-                                <div class="articleRightText">
-                                    <?php echo shortingTitle($json[0]['title'], 40); ?>
+                                <div class="articleRightText" style="text-decoration: none;" >
+                                            <?php echo shortingTitle($json[0]['title'], 40); ?>
                                 </div>
                             </a>
                             <div class="top-article-arrow-attempt">
