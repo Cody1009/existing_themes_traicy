@@ -1,7 +1,5 @@
 <?php global $myAmp; ?>
-<div class="breadAndCat">
-    <?php breadcrumb(); ?>
-</div>
+
 
 <?php
 echo '<article class="article-detail-page-container" id="post-',the_ID(),'"',post_class(),'>';
@@ -44,7 +42,7 @@ if( is_sticky() && is_home() && !is_paged() ){
 
     <?php if( is_single() ) : ?>
         <div class="entry-content">
-          
+
             <?php /**
              * 記事の表示　*/ ?>
             <?php the_content( __( '<span class="meta-nav"></span>', 'twentytwelve' ) ); ?>
@@ -110,18 +108,10 @@ if( is_sticky() && is_home() && !is_paged() ){
         <?php get_template_part('share-buttons'); ?>
         <div class="article-bottom-tag-box-container">
             <footer class="entry-meta tag_box">
-                <?php the_tags('<p class="article-bottom-tag-head">タグ</p>'); ?>
-                <?php $tmp = get_the_category( '' ); ?>
-                <?php foreach($tmp as $item) : ?>
-                    <div class="category blue-category-container  hide_u600"><a  href="<?php echo get_category_link( $item -> cat_ID ); ?>"><i class="fa fa-tag fa-white-tag" aria-hidden="true"></i>
-						<p class="blue-category-text"><?php echo $item -> name; ?></p>
-						</a>
-				</div>
-                <?php endforeach; ?>
+                <?php the_tags('<p class="article-bottom-tag-head">タグ</p>', ''); ?>
             </footer>
         </div>
-
-       
+    
         <?php //ほとんど起きない条件 ?>
     <?php else : ?>
         <div class="entry-summary" itemprop="headline">

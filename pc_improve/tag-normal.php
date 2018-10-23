@@ -10,69 +10,18 @@
                         <div class="tag-articles-header">
                             <!-- タグページの装飾はここだよ! -->
                             <div class="tag-article-header-description">
+                                <p class="tag-article-header-title"><i
+                                            class="fa fa-tags category-articles-header-tag fa-large"
+                                            aria-hidden="true"></i><?php printf(single_tag_title('', false) . 'の記事一覧'); ?>
+                                </p>
                                 <?php $tag_description = tag_description(); ?>
                                 <?php if (!empty($tag_description)): ?>
-                                    <div class="tag-blue-horizontal-devider"></div>
-                                    <p class="reserve-hotel-title">ホテル予約サイトで予約</p>
 
-                                    <div class="hotel-reservation-row">
-                                        <div><?php echo $tag_description; ?></div>
-                                    </div>
+                                    <?php echo $tag_description; ?>
+
                                 <?php endif; ?>
                             </div>
                             <!-- タグページの装飾はここまでだよ! -->
-                            <p class="tag-article-header-title"><i
-                                        class="fa fa-tags category-articles-header-tag fa-large"
-                                        aria-hidden="true"></i><?php printf(single_tag_title('', false) . 'の記事一覧'); ?>
-                            </p>
-                        <!--                   TODO 仮置きのこのタグを消す                           -->
-                            <div class="tag-blue-horizontal-devider"></div>
-                            <p class="reserve-hotel-title">ホテル予約サイトで予約</p>
-                            <div class="hotel-reservation-row">
-                                <div class="reservation-cards-container">
-                                    <div class="reservation-card-image">
-                                        画像
-                                    </div>
-                                    <a href="#" class="reservation-hotel-anchor-text">楽天トラベルで予約</a>
-                                    <i class="fa fa-angle-right reservation-hotel-angle-right"  aria-hidden="true"></i>
-                                </div>
-                                <div class="reservation-cards-container">
-                                    <div class="reservation-card-image">
-                                        画像
-                                    </div>
-                                    <a href="#" class="reservation-hotel-anchor-text">じゃらんで予約</a>
-                                    <i class="fa fa-angle-right reservation-hotel-angle-right"  aria-hidden="true"></i>
-                                </div>
-                                <div class="reservation-cards-container">
-                                    <div class="reservation-card-image">
-                                        画像
-                                    </div>
-                                    <a href="#" class="reservation-hotel-anchor-text">JTBで予約</a>
-                                    <i class="fa fa-angle-right reservation-hotel-angle-right"  aria-hidden="true"></i>
-                                </div>
-                                <div class="reservation-cards-container">
-                                    <div class="reservation-card-image">
-                                        画像
-                                    </div>
-                                    <a href="#" class="reservation-hotel-anchor-text">るるぶで予約</a>
-                                    <i class="fa fa-angle-right reservation-hotel-angle-right"  aria-hidden="true"></i>
-                                </div>
-                                <div class="reservation-cards-container">
-                                    <div class="reservation-card-image">
-                                        画像
-                                    </div>
-                                    <a href="#" class="reservation-hotel-anchor-text">エクスペディアで予約</a>
-                                    <i class="fa fa-angle-right reservation-hotel-angle-right"  aria-hidden="true"></i>
-                                </div>
-                                <div class="reservation-cards-container">
-                                    <div class="reservation-card-image">
-                                        画像
-                                    </div>
-                                    <a href="#" class="reservation-hotel-anchor-text">Booking.comで予約</a>
-                                    <i class="fa fa-angle-right reservation-hotel-angle-right"  aria-hidden="true"></i>
-                                </div>
-                            </div>
-
                         </div>
 
 
@@ -93,9 +42,9 @@
                             }
                             ?>
                             <div class="wp-pagenavi-container">
-                            <?php if (function_exists('wp_pagenavi')) {
-                                wp_pagenavi();
-                            } ?>
+                                <?php if (function_exists('wp_pagenavi')) {
+                                    wp_pagenavi();
+                                } ?>
                             </div>
 
                         </div>

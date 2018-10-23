@@ -65,6 +65,10 @@ input[type="text"]:focus {
   outline: 0;
   border-color: none;
 }
+textarea{
+	outline: 0;
+  border-color: none;
+}
 
 button[type="submit"]:focus{
 	outline:0;

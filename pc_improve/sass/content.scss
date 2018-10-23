@@ -44,13 +44,12 @@ body.full-width .site-content {
   padding: 40px;
 }
 
-.breadAndCat {
-  width: 100%;
-  margin-bottom: 30px;
-}
-
 
 //breadcrumbのテキスト
+.breadAndCat {
+	margin-top: 40px;
+  width: 100%;
+}
 #breadcrumb a {
   @include body;
   color: $primary;
@@ -169,7 +168,7 @@ header.entry-header div.date p a.author {
 /* Googleカレンダー追加ボタン */
 .addGcalender.singlePage {
   margin-top: 4px;
-  
+
 }
 
 .addGcalender.singlePage button {
@@ -207,15 +206,15 @@ header.entry-header div.date p a.author {
   background: $skyBlue;
 }
 
-.entry-content strong{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 80px;
-  border-radius: 8px;
-  background: $skyBlue;
-}
+// .entry-content strong{
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   height: 80px;
+//   border-radius: 8px;
+//   background: $skyBlue;
+// }
 
 .link-to-detail-row{
   display: inline-flex;
@@ -275,8 +274,8 @@ header.entry-header div.date p a.author {
 .article-bottom-tag-head{
   @include body;
   color: $primary;
-	margin-right: 20px;
 }
+
 
 /* タグ カテゴリ st */
 .article-bottom-tag-box-container{
@@ -288,38 +287,54 @@ header.entry-header div.date p a.author {
 .tag_box{
   display: inline-flex;
   align-items: center;
-
 }
 
 .tag_box a {
-  display: inline-flex;
-	align-items:center;
+  display: inline-block;
+  min-width: 142px;
+  margin: 0 10px;
   padding: 10px;
   color: $white;
   background: $blue;
   border-radius: 5px;
   @include caption;
-	min-width: 170px;
-	justify-content:center;
-	
+}
+
+.article-bottom-category-head{
+  @include body;
+  color: $primary;
+  margin-right: 10px;
+}
+.category-box-article-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .blue-category-container{
-  display: inline-flex;
-  align-items: center;
-	background: $blue;
-	border-radius: 5px;
-	margin: 0 10px;
+  padding: 10px;
+  background: $blue;
+  border-radius: 8px;
+  margin-right: 10px;
 }
 
-.blue-category-text {
+.blue-category-text-row{
+  display: inline-flex;
+  align-items: center;
+}
+
+
+.blue-category-text{
   color: $white;
   @include caption;
-  min-width: 27px;
+  padding: 0;
 }
 .fa-white-tag{
   margin-right: 5px;
   color: $white;
+  background: $blue;
 }
 
 

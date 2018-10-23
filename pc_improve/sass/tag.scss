@@ -1,20 +1,26 @@
 @import './spectre/_variables.scss';
 @import './spectre/_mixins.scss';
 
-.tag-articles-header{
+.tag-articles-header {
   width: 100%;
   background: $white;
   padding: 20px;
   margin-bottom: 30px;
 }
+.tag-famous-description-header{
+  width: 100%;
+  background: $white;
+  padding: 30px;
+  margin-bottom: 30px;
+}
 
-.tag-article-header-description{
+.tag-article-header-description {
   @include body;
   color: $secondary;
 
 }
 
-.tag-article-header-title{
+.tag-article-header-title {
   @include articleTitle;
   color: $primary;
   font-weight: $bold;
@@ -28,68 +34,70 @@
   margin-bottom: 20px;
 }
 
-.reserve-hotel-title{
+.reserve-hotel-title {
   @include body;
   color: $primary;
   font-weight: $bold;
   margin-bottom: 25px;
 }
-.hotel-reservation-row{
+
+.hotel-reservation-row {
   width: 100%;
   display: flex;
 }
 
-.reservation-cards-container{
+.reservation-cards-container {
   margin-right: 15px;
 }
 
-.reservation-card-image{
-  border:  $secondary 0.5px solid;
+.reservation-card-image {
+  padding: 2px;
   height: 50px;
   width: 120px;
   border-radius: 8px;
   margin-bottom: 10px;
 }
 
-.reservation-hotel-anchor-text{
+.reservation-hotel-anchor-text {
   @include small;
+  margin-left: 2px;
   color: $secondary;
-  &:hover{
+  &:hover {
     opacity: 0.6;
   }
 }
 
-.reservation-hotel-angle-right{
+.reservation-hotel-angle-right {
   color: $secondary;
+}
+
+// nestはしたくないが、既存のタグ詳細を全てリファクタリングするのは面倒なのでこう書く
+.tag-famous-comp-description{
+  @include body;
+  color: $primary;
 }
 
 
 .flex-container {
-  display: -webkit-flex; /* Safari */
+  margin-top: 20px;
   display: flex;
-  -webkit-flex-direction: row; /* Safari */
-  flex-direction:         row;
-  margin: 5px 0px;
-  padding: 5px 0px;
 
-  & > div {
-    margin: 1% 0;
-  }
+
   .left {
-    width: 30%;
-    margin: auto;
+    width: 40%;
     img {
       object-fit: contain;
       width: 98%;
     }
   }
   .right {
-    width: 68%;
+    width: 60%;
     font-size: small;
 
     h3 {
-      font-size: 15px;
-      margin: 8px 0;
+      margin-left: 12px;
+      @include body;
+      color: $primary;
     }
 
     ul {
@@ -99,61 +107,97 @@
       }
     }
 
-    table{
-      width: 100%!important;
+    table {
+      width: 100% !important;
       border-spacing: 12px 5px;
       border-collapse: separate;
-      td:first-child{
-        font-weight: bold;
+      td:first-child {
+        font-weight: $bold;
+        @include body;
+        color: $primary;
       }
     }
   }
 }
 
+.review-star{
+  color: $yellow;
+}
+.renewal-date-text{
+  @include caption;
+  color: $primary;
+}
+
+.famous-tag-anchor-container{
+  height: 40px;
+  min-width: 200px;
+  display: inline-flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 8px;
+  background: $lightBlue;
+  position: relative;
+  &:hover{
+    opacity: 0.6;
+  }
+}
+
+//.famous-tag-anchor{
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//}
+
+.famous-tag-anchor-text{
+  color: $white;
+  @include body;
+  font-weight: normal;
+}
 
 // airline-tag-page.php
-ul.airline_tag li{
+ul.airline_tag li {
   margin: 10px 0;
   margin-left: 20px;
   list-style-type: disc
 }
 
-
 /**
 	タブ
 **/
 #famoustag {
-  margin-bottom: 30px;
-  #famoustag-tab-menu {
-    list-style: none;
-    background: white;
-    font-size: 0px;
-    li {
-      display: inline-block;
-      font-size: 16px;
-      font-weight: 400;
-      width: calc(100%/3);
-      line-height: 40px;
-      letter-spacing: normal;
-      text-align: center;
-      color: white;
-      background: var(--bar-color);
-    }
+  margin: 30px 0;
+}
 
-    li.active {
-      background: white;
-      color: var(--bar-color);
-      background: #fff;
-      font-weight: 600;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      height: 100%;
-      font-size: 16px;
+#famoustag-tab-menu {
+  list-style: none;
+  li {
+    display: inline-block;
+    @include body;
+    color: $primary;
+    margin-left: 26px;
+    height: 26px;
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
     }
   }
-  div.passive{
-    display: none;
+  li.active {
+    border-bottom: $primary solid 3px;
   }
+}
+
+div.passive {
+  display: none;
+}
+
+.famous-tag-articles-row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #traicytag_include_talk {

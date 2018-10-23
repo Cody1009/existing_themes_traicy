@@ -6,16 +6,15 @@
             <div id="primary" class="site-content">
                 <div id="content" role="main">
 
-                    <div id="topic">
-                        <h2 class="main_category">航空会社一覧</h2>
+                    <h2 class="main_category">航空会社一覧</h2>
                         <ul class="airline_tag">
                             <?php
                             if(have_posts())
                                 echo get_post(get_the_id())->post_content;
                             ?>
                         </ul>
-                    </div> <!-- topic -->
 
+                    <!-- banner ad -->
                     <div class="ad-banner-center">
                         <?php get_template_part('ad-banner-730-90'); ?>
                     </div>
@@ -33,3 +32,6 @@
     </div>
 </div>
 <?php get_footer(); ?>
+
+
+

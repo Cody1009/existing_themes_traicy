@@ -205,7 +205,7 @@
                         <a class="social-icon" href="http://line.me/ti/p/%40traicy" target="_blank"><span
                                     class="icon-line"></span></a>
                     </div>
-                <a href="#" class="loginButton">
+                <a href="https://talk.traicy.com/signup" target="_blank" class="loginButton">
                     ログイン/新規会員登録
                 </a>
             </div>

@@ -6,6 +6,15 @@
   padding: 40px;
   background: $white;
 }
+.wanted-top-img{
+  margin-left: -40px;
+  margin-top: -40px;
+	margin-bottom: 20px;
+}
+
+.recruit-top-img{
+  @extend .wanted-top-img;
+}
 #static-page-container-common{
   margin: 40px 0;
   padding: 40px;

@@ -3,6 +3,9 @@
 <div class="under-header-wrapper">
     <div class="content-box-row">
         <div class="center-contents">
+			<div class="breadAndCat">
+    		<?php breadcrumb(); ?>
+			</div>
             <div id="primary" class="site-content">
                 <div id="content" role="main">
                     <?php //著者情報と画像の処理 ?>

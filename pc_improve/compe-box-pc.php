@@ -93,7 +93,7 @@
                                     </div>
                                 </a>
 
-                                
+
                                 <?php if ($j == 0) { ?>
                                     <div class="top-article-arrow-attempt">
                                         <i class="fa fa-angle-right yellow-angle"></i>
@@ -120,39 +120,42 @@
 
 
                     <div class="show articleHide">
-                        <?php
-                        //$url = "http://release.traicy.com/wp-content/json/release.json";
-                        $url = "/var/www/release/wp-content/json/release.json";
-                        $json = file_get_contents($url);
-                        $json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
-                        $json = json_decode($json, true);
-                        ?>
-                        <div class="articleLeft">
-                            <ul>
-                                <?php
-                                for ($i = 1; $i < $getNum; $i++) {
-                                    ?>
-                                    <a href=" <?php echo $json[$i]['permalink']; ?> ">
-                                        <li><?php shortingTitle($json[$i]['title'], 45); ?> </li>
-                                    </a>
-                                <?php } ?>
-                            </ul>
+                        <div class="article-featured-article-row">
+                            <?php
+                            //$url = "http://release.traicy.com/wp-content/json/release.json";
+                            $url = "/var/www/release/wp-content/json/release.json";
+                            $json = file_get_contents($url);
+                            $json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+                            $json = json_decode($json, true);
+                            ?>
+                            <div class="articleLeft">
+                                <ul>
+                                    <?php
+                                    for ($i = 1; $i < $getNum; $i++) {
+                                        ?>
+                                        <a href=" <?php echo $json[$i]['permalink']; ?> ">
+                                            <li class="top-article-title-text"><?php shortingTitle($json[$i]['title'], 60); ?> </li>
+                                        </a>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+
+                            <div class="articleRight">
+                                <a href=" <?php echo $json[0]['permalink']; ?> ">
+                                    <div class="articleRightImage">
+                                        <?php echo '<img src="' . $json[0]['img_medium'] . '"/>'; ?>
+                                    </div>
+                                    <div class="articleRightText">
+                                        <?php echo shortingTitle($json[0]['title'], 60); ?>
+                                    </div>
+                                </a>
+                                <div class="top-article-arrow-attempt">
+                                    <i class="fa fa-angle-right yellow-angle"></i>
+                                    <a href="http://release.traicy.com/" class="attempt-text">乗り物・コラムをもっと見る</a>
+                                </div>
+                            </div> <!-- articleRight-->
                         </div>
 
-                        <div class="articleRight">
-                            <a  href=" <?php echo $json[0]['permalink']; ?> ">
-                                <div class="articleRightImage">
-                                    <?php echo '<img src="' . $json[0]['img_medium'] . '">'; ?>
-                                </div>
-                                <div class="articleRightText" style="text-decoration: none;" >
-                                            <?php echo shortingTitle($json[0]['title'], 40); ?>
-                                </div>
-                            </a>
-                            <div class="top-article-arrow-attempt">
-                                <i class="fa fa-angle-right yellow-angle"></i>
-                                <a href="http://release.traicy.com/" class="attempt-text">乗り物・コラムをもっと見る</a>
-                            </div>
-                        </div> <!-- articleRight-->
                     </div> <!-- show articleHide -->
 
 

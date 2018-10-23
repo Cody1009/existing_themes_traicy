@@ -4,6 +4,7 @@
     <div class="content-box-row">
         <div class="center-contents">
             <div id="about-traicy">
+						<img class="wanted-top-img" src="https://www.traicy.com/wp-content/uploads/2018/10/about-company.png" alt="">
                 <p class="static-page-body-text">
                     トラベルメディア「Traicy（とらいしー）」は、2011年7月1日に創刊した、航空、鉄道、バス、旅行・観光情報をお送りするメディアです。
 

@@ -16,6 +16,7 @@ $programmer = "プログラマー";
         <div class="content-box-row">
             <div class="center-contents">
                 <div id="wanted-container">
+					 <img class="recruit-top-img" src="https://www.traicy.com/wp-content/uploads/2018/10/wanted-top.png" alt="">
                     <p class="static-page-body-text">
                         　トラベルメディア「Traicy（トライシー）」を運営する(株)トライシージャパンでは、トラベル関連事業の拡大に伴い、アルバイト及びインターンを募集します。
                     </p>

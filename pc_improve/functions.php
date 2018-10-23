@@ -40,7 +40,8 @@ if (is_feed()) {
 	remove_filter( 'the_content', 'wpautop' );
 	remove_filter( 'the_excerpt', 'wpautop' );
 }
-
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_content', 'wptexturize' );
 /**
  * 続きを読むの文字数
  */

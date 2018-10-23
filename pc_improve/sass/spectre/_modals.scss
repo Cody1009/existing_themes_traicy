@@ -1,3 +1,6 @@
+@import './_mixins.scss';
+@import './_variables.scss';
+
 // Modals
 .modal {
   align-items: center;
@@ -19,7 +22,7 @@
     z-index: $zindex-4;
 
     .modal-overlay {
-      background: rgba($bg-color, .75);
+      background: rgba(0,0,0,0.4);;
       bottom: 0;
       cursor: default;
       display: block;
@@ -29,54 +32,117 @@
       top: 0;
     }
 
-    .modal-container {
-      animation: slide-down .2s ease 1;
-      max-width: 640px;
-      width: 100%;
-      z-index: $zindex-0;
-    }
-  }
-
-  &.modal-sm {
-    .modal-container {
-      max-width: 320px;
-      padding: 0 $unit-2;
-    }
-  }
-
-  &.modal-lg {
-    .modal-overlay {
-      background: $bg-color-light;
-    }
-
-    .modal-container {
-      box-shadow: none;
-      max-width: 960px;
-    }
   }
 }
 
 .modal-container {
-  @include shadow-variant(.2rem);
-  background: $bg-color-light;
-  border-radius: $border-radius;
+  background: $white;
   display: block;
-  padding: 0 $unit-4;
-  text-align: left;
+  padding: 30px;
+  max-width: 865px;
+  position: relative;
+  z-index: 10000;
+  animation: slide-down .2s ease 1;
+  width: 865px;
+}
 
-  .modal-header {
-    padding: $unit-4;
-  }
-
-  .modal-body {
-    max-height: 50vh;
-    overflow-y: auto;
-    padding: $unit-4;
-    position: relative;
-  }
-
-  .modal-footer {
-    padding: $unit-4;
-    text-align: right;
+.modal-title {
+  a {
+    //動的に生成するaタグの色はこれでしか変えられない
+    @include title;
+    color: $primary;
   }
 }
+
+.modal-body {
+  max-height: none;
+  position: relative;
+}
+
+.close-modal{
+  position: absolute;
+  top: -9px;
+  right: -7px;
+  cursor: pointer;
+}
+.modal-thre {
+  .content {
+    // modal内のcontent クラス名を変えるとjsが動かないのでネスト記法
+    padding: 0;
+    margin-top: 20px;
+    @include body;
+    color: $primary;
+    font-weight: normal;
+    height: auto;
+  }
+}
+
+.modal-question-title-row {
+  display: inline-flex;
+  align-items: center;
+}
+
+.modal-question-icon {
+  color: $blue;
+  margin-right: 5px;
+}
+
+
+
+.modal-form-input {
+  height: 150px;
+  width: 100%;
+  @include body;
+  color: $primary;
+  border: 2px solid $borderGray;
+  &::placeholder {
+    @include body;
+    color: $secondary;
+    font-weight: normal;
+  }
+}
+
+.form-group {
+  margin-top: 30px;
+  position: relative;
+}
+.modal-form-bottom {
+  display: flex;
+  margin-top: 30px;
+  align-items: flex-start;
+}
+
+.submit-answer-btn{
+  height: 52px;
+  width: 275px;
+  margin: 0 165px 0 260px;
+  background: $lightBlue;
+  color: $white;
+  border: none ;
+
+  @include title;
+  &:hover{
+    cursor: pointer;
+    opacity: 0.6;
+  }
+}
+
+.see-answer-anchor{
+  @include body;
+  color: $lighterBlue;
+  font-weight: normal;
+
+  &:hover{
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+
+
+
+
+
+
+
+

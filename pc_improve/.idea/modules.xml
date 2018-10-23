@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/traicy_pc_improve_dev.iml" filepath="$PROJECT_DIR$/.idea/traicy_pc_improve_dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pc_improve.iml" filepath="$PROJECT_DIR$/.idea/pc_improve.iml" />
     </modules>
   </component>
 </project>
