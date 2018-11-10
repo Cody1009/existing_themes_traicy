@@ -1,0 +1,230 @@
+@import './spectre/_variables.scss';
+@import './spectre/_mixins.scss';
+
+.wifi-comparison-content-wrapper {
+  width: 100%;
+  background: $white;
+  padding: 40px;
+}
+
+.wifi-search-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.wifi-comparison-title {
+  @include articleTitle;
+  color: $primary;
+}
+
+.wifi-database {
+  color: $blue;
+  margin-right: 10px;
+}
+
+.rankingTop {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.wifi-card {
+  width: 240px;
+  margin-bottom: 30px;
+}
+
+.lineComment {
+  height: 50px;
+  width: 100%;
+  @include subHeader;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: $blue;
+}
+
+.wifiImg {
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+}
+
+.rankingTop .capasity img {
+  width: 95%;
+  height: 100px;
+  display: block;
+  margin: 5px auto;
+  padding-bottom: 5px;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+.rentalFee {
+  height: 50px;
+  width: 100%;
+  @include subHeader;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  background: $redOrange;
+}
+
+#wifiCompe {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#wifiCompeTab {
+  background-color: $blue;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  height: 50px;
+}
+
+.wifi-tab-text {
+  cursor: pointer;
+  color: $white;
+  @include body;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3px;
+  height: 50px;
+  font-weight: normal;
+}
+
+.select {
+  background-color: $white;
+  color: $primary !important;
+
+}
+
+.wifiContentCompe {
+  width: 100%;
+  background: $paleBlue;
+}
+.wifi-contents-lists{
+  padding: 10px;
+  background: $paleBlue;
+}
+div.wifiContentCompe > div {
+  position: relative;
+}
+
+li.wifiContent {
+  position: relative;
+  display: block;
+  height: 100px;
+  width: 100%;
+  box-sizing: border-box;
+  background: $white;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+
+li.wifiContent > a {
+  display: block;
+  height: 90px;
+  box-sizing: border-box;
+  width: auto;
+  font-size: 0;
+}
+
+li.wifiContent > a:hover {
+  opacity: 0.6;
+}
+
+li.wifiContent .wifiImgLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(30% - 1% * 2);
+  height: 100%;
+  margin: 0 1%;
+}
+
+.wifiContent .wifiImgLeft > img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  display: block;
+  height: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.wifiContent .wifiTitleRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+}
+
+p .kakaku {
+  color: red;
+  font-size: calc(10px + 0.5vw);
+}
+
+.caution {
+  font-size: calc(1.0vw);
+  color: #909090;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.compensation {
+  margin-top: calc(0px);
+  font-size: calc(5px + 0.75vw);
+  text-align: left;
+}
+
+p span .compensationComment {
+  font-size: calc(0.5vw);
+}
+
+.perCost {
+  font-size: calc(8px + 0.5vw);
+}
+
+.plan-title {
+  color: $primary;
+  @include smallTitle;
+  font-weight: $bold;
+}
+
+.perCostDay {
+  font-size: calc(1.5vw);
+}
+
+.hideSpan {
+  display: none;
+}
+
+.kaisen {
+  color: red;
+  font-size: calc(6px + 0.5vw);
+}
+
+table.indication > tbody {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+

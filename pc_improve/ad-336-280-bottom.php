@@ -1,3 +1,5 @@
+
+<!-- ad-336-280-bottom.php -->
 <div id="ad_top" style="text-align: center;">
 <span style="display: inline-block;">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

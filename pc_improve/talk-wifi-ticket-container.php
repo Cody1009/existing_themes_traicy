@@ -27,9 +27,19 @@
             $isCompeBox = true;
             ?>
             <div class="show articleHide wifi" style="display: none;"><?php get_template_part('form'); ?></div>
-            <?php $isCompeBox = false; ?>
-            <div class="show articleHide ticket" style="display: none;"><a href="http://airticket.traicy.com/"
-                                                                           target="_blank">Traicy × Skyscanner</a></div>
+
+            <div class="show articleHide ticket" style="display: none;">
+                <div class="skyscanner-top-container">
+                    <a href="http://airticket.traicy.com/" class="skyscanner-top-anchor" target="_blank">
+                        <i class="fa fa-angle-right fa-skyscanner-angle fa-large" aria-hidden="true"></i>
+                        Traicy × Skyscannerで航空券を検索する
+                    </a>
+                </div>
+
+            </div>
+
         </div>
     </div>
-    <!--どこかにdivのとじタグあるので閉じなくていい-->
+
+
+    <!-- apparently there is no closing tag but this is fine. -->

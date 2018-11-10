@@ -209,6 +209,7 @@
                     ログイン/新規会員登録
                 </a>
             </div>
+<!-- 	ad-header.php		 -->
             <div class="banner-advertizement-top"><?php get_template_part('ad-header'); ?></div>
         </div>
         <ul class="menu-items-wrapper">

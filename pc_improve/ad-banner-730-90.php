@@ -1,3 +1,4 @@
+<!--  ad-banner-730-90.php -->
 <?php if (!is_NoAdsense()) : ?>
     <div class="bottom-banner-add-container">
         <script async defer src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

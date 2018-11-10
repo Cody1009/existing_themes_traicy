@@ -1,4 +1,4 @@
-<?php 
+<?php
 # APIを叩いてマスタデータを取得
 #{{{
 $xmlstr = <<<XML
@@ -260,158 +260,158 @@ XML;
 $target_url = "http://api.kakaku.com/mobile_data/world-wifi/api/searchXml/ver2/master/?key=NRWMVEUQG9NN335KVMGGACZE8BCT9C4V";
 $xml = simplexml_load_file($target_url);
 // エラーが隠蔽されるので注意（改良）が必要
-if(!$xml){
-  $xml = simplexml_load_string($xmlstr);
+if (!$xml) {
+    $xml = simplexml_load_string($xmlstr);
 }
 global $isCompeBox;
 ?>
 
-<?php if ( is_page("43574")): ?>
-  <?php if ( $isCompeBox): ?>
-    <div id="searchWifi" class="top">
-    <h2 id="title">海外Wifiのレンタル価格を一斉比較！</h2>
-  <?php else: ?>
+<?php if (is_page("43574")): ?>
+<?php if ($isCompeBox): ?>
+<div id="searchWifi" class="top">
+    <div class="wifi-title-container-compebox">
+        <h2 class="wifi-search-title">海外Wifiのレンタル価格を一斉比較！</h2>
+    </div>
+
+    <?php else: ?>
     <div id="searchWifi" class="page">
-    <h2 id="title">海外WI-FI比較 検索</h2>
-  <?php endif; ?>
-<?php else: ?>
-    <div id="searchWifi" class="top">
-    <h2 id="title">海外Wifiのレンタル価格を一斉比較！</h2>
-<?php endif; ?>
+        <div class="wifi-search-title-compensation-container">
+            <h2 class="wifi-search-title-compensation">海外WI-FI比較 検索</h2>
+        </div>
+        <?php endif; ?>
+        <?php else: ?>
+            <div class="wifi-title-container-compebox">
+                <h2 class="wifi-search-title">海外Wifiのレンタル価格を一斉比較！</h2>
+            </div>
+        <?php endif; ?>
 
-  <div class="form_container">
-    <form id="wifi_form" action="https://www.traicy.com/wifi" method="post">
-    <div class="item">
-      <div class="itemName">国名</div>
-      <input id="countryNameText" class="itemValue" type="text" name="country_name" value="<?php echo isset($_POST['country_name']) ? $_POST['country_name'] : ""; ?>" autocomplete="off" placeholder="入力">
-      <div id="suggest" style="display: none"></div> <!-- 補完候補を表示するエリア -->
-      <input id="countryHide" type="text" name="country" value="">
-    </div>
-    <div class="item">
-      <div class="itemName">利用日数</div>
-      <select class="itemValue" name="use_days" size=1>
-      <?php
-      for($i=1; $i<=27; $i++){
-        if($i != $_POST[use_days]){
-          echo "<option value='{$i}'>{$i}日</option>";
-        }else{
-          echo "<option value='{$i}' selected>{$i}日</option>";
-        }
-      }
-      ?>
-      </select>
-    </div>
-    <div class="item">
-      <div class="itemName">受取場所</div>
-      <select class="itemValue" name="receipt" size=1>
-      <?php
-      foreach($xml -> receiptStep -> item as $item){
-        if($item['id'] != $_POST[receipt]){
-          echo "<option value='{$item['id']}'>{$item[0]}</option>";
-        }else{
-          echo "<option value='{$item['id']}' selected>{$item[0]}</option>";
-        }
-      }
-      ?>
-      </select>
-    </div>
+        <div class="form_container">
+            <form id="wifi_form" action="https://www.traicy.com/wifi" method="post">
+                <div class="item">
+                    <div class="item-title">国名</div>
+                    <input id="countryNameText" class="item-input-text" type="text" name="country_name"
+                           value="<?php echo isset($_POST['country_name']) ? $_POST['country_name'] : ""; ?>"
+                           autocomplete="off" placeholder="入力してください">
+                    <div id="suggest" style="display: none"></div> <!-- 補完候補を表示するエリア -->
+                    <input id="countryHide" type="text" name="country" value="">
+                    <p id="errorMsg"><i class="fa fa-exclamation-circle fa-red" aria-hidden="true"></i> 国名が無効です</p>
+                </div>
+                <div class="item">
+                    <div class="item-title">利用日数</div>
+                    <select class="item-input-drop" name="use_days" size=1>
+                        <?php
+                        for ($i = 1; $i <= 27; $i++) {
+                            if ($i != $_POST[use_days]) {
+                                echo "<option value='{$i}'>{$i}日</option>";
+                            } else {
+                                echo "<option value='{$i}' selected>{$i}日</option>";
+                            }
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="item">
+                    <div class="item-title">受取場所</div>
+                    <select class="item-input-drop" name="receipt" size=1>
+                        <?php
+                        foreach ($xml->receiptStep->item as $item) {
+                            if ($item['id'] != $_POST[receipt]) {
+                                echo "<option value='{$item['id']}'>{$item[0]}</option>";
+                            } else {
+                                echo "<option value='{$item['id']}' selected>{$item[0]}</option>";
+                            }
+                        }
+                        ?>
+                    </select>
+                </div>
 
-    <div class="item">
-      <div class="itemName">返却場所</div>
-      <select class="itemValue" name="returnPlace" size=1>
-      <?php
-        foreach($xml -> receiptStep -> item as $item){
-          if($item['id'] != $_POST[returnPlace]){
-            echo "<option value='{$item['id']}'>{$item[0]}</option>";
-          }else{
-            echo "<option value='{$item['id']}' selected>{$item[0]}</option>";
-          }
-        }
-      ?>
-      </select>
-    </div>
+                <div class="item">
+                    <div class="item-title">返却場所</div>
+                    <select class="item-input-drop" name="returnPlace" size=1>
+                        <?php
+                        foreach ($xml->receiptStep->item as $item) {
+                            if ($item['id'] != $_POST[returnPlace]) {
+                                echo "<option value='{$item['id']}'>{$item[0]}</option>";
+                            } else {
+                                echo "<option value='{$item['id']}' selected>{$item[0]}</option>";
+                            }
+                        }
+                        ?>
+                    </select>
+                </div>
 
-    <div class="item">
-      <div class="itemName">補償制度</div>
-      <select class="itemValue" name="compensationType" size=1>
+                <div class="item">
+                    <div class="item-title">補償制度</div>
+                    <select class="item-input-drop" name="compensationType" size=1>
+                        <?php
+                        foreach ($xml->compensationType->item as $item) {
+                            if ($item['id'] != $_POST[compensationType]) {
+                                echo "<option value='{$item['id']}'>{$item[0]}</option>";
+                            } else {
+                                echo "<option value='{$item['id']}' selected>{$item[0]}</option>";
+                            }
+                        }
+                        ?>
+                    </select>
+                </div>
+            </form>
+            <div class="wifi-search-btn-container">
+                <div id="searchButton"> 検索する</div>
+            </div>
+
+        </div>
+<!--   div id="search  wifiの  closingタグを入れると壊れる。 talk-wifi-ticket-contaiinerのwrapping divで対応 -->
+    <script>
         <?php
-          foreach($xml -> compensationType -> item as $item){
-            if($item['id'] != $_POST[compensationType]){
-              echo "<option value='{$item['id']}'>{$item[0]}</option>";
-            }else{
-              echo "<option value='{$item['id']}' selected>{$item[0]}</option>";
-            }
-          }
+        $country_names_str = "";
+        foreach ($xml->country->item as $item) {
+            $country_names_str .= "'{$item[0]}': {$item['id']},";
+        }
         ?>
-      </select>
-    </div>
-    </form>
-  </div>
-    <p id="errorMsg"><i class="fa fa-exclamation-circle fa-red" aria-hidden="true"></i> 国名が無効です</p>
-  <div id="searchButton"><i class="fa fa-search" aria-hidden="true"></i>  検索</div>
-</div>
-<script>
-<?php
-  $country_names_str = "";
-  foreach($xml -> country -> item as $item){
-    $country_names_str .= "'{$item[0]}': {$item['id']},";
-  }
-?>
 
-var countries = {<?php echo $country_names_str ?>};
-function startSuggest() {
-  // オプション
-  new Suggest.Local(
-    "countryNameText",    // 入力のエレメントID
-    "suggest", // 補完候補を表示するエリアのID
-    Object.keys(countries),      // 補完候補の検索対象となる配列
-    {dispMax: 20, interval: 1000, prefix: false, highlight: true, dispAllKey: true}
-  ); 
-};
+        var countries = {<?php echo $country_names_str ?>};
 
-startSuggest();
-// window.addEventListener ? window.addEventListener('load', startSuggest, false) : window.attachEvent('onload', startSuggest);
+        function startSuggest() {
+            // オプション
+            new Suggest.Local(
+                "countryNameText",    // 入力のエレメントID
+                "suggest", // 補完候補を表示するエリアのID
+                Object.keys(countries),      // 補完候補の検索対象となる配列
+                {dispMax: 20, interval: 1000, prefix: false, highlight: true, dispAllKey: true}
+            );
+        };
 
-$("#countryNameText").focus(function(){
-  $("#suggest").css("width", $(this).outerWidth()-2);
-});
+        startSuggest();
+        // window.addEventListener ? window.addEventListener('load', startSuggest, false) : window.attachEvent('onload', startSuggest);
 
-// submit時の処理
-$("#searchButton").on("click", function(e){
-  var country_name = $("#countryNameText").val();
-  
-  // もし国名が無効の場合はエラーを表示
-  var country_id = countries[country_name];
-  if(country_id === undefined){
-    // エラーを表示
-    $("#countryNameText").css("border", "2px solid #E43A3A");
-    $("#errorMsg").css("display", "block");
-  } else {
-    // countryNameに入力された国のidをセットして送信
-    $("#countryHide").val(country_id);
-    $('#wifi_form').submit();
-  }
-});
+        $("#countryNameText").focus(function () {
+            $("#suggest").css("width", $(this).outerWidth() - 2);
+        });
 
-// submitボタン押すと凹む処理
-$("#searchButton").on("mousedown", function(e){
-  $(this).addClass("pushed");
-});
-$("#searchButton").on("mouseup", function(e){
-  $(this).removeClass("pushed");
-});
+        // submit時の処理
+        $("#searchButton").on("click", function (e) {
+            var country_name = $("#countryNameText").val();
 
-</script>
-<!-- </div> -->
+            // もし国名が無効の場合はエラーを表示
+            var country_id = countries[country_name];
+            if (country_id === undefined) {
+                // エラーを表示
+                $("#countryNameText").css("border", "2px solid #E43A3A");
+                $("#errorMsg").css("display", "block");
+            } else {
+                // countryNameに入力された国のidをセットして送信
+                $("#countryHide").val(country_id);
+                $('#wifi_form').submit();
+            }
+        });
 
-<?php
-/*
-foreach($xml -> country -> item as $item){
-    if($item['id'] != $_POST[country]){
-        echo "<option value='{$item['id']}'>{$item[0]}</option>";
-    }else{
-        echo "<option value='{$item['id']}' selected>{$item[0]}</option>";
-    }
-}
- */
-?>
+        // submitボタン押すと凹む処理
+        // $("#searchButton").on("mousedown", function (e) {
+        //     $(this).addClass("pushed");
+        // });
+        // $("#searchButton").on("mouseup", function (e) {
+        //     $(this).removeClass("pushed");
+        // });
+
+    </script>
+

@@ -11,6 +11,7 @@
 ?>
 
 <div class="right-contents">
+<!-- 	ad-card-sidebar  -->
 	 <?php get_template_part('ad-card-sidebar'); ?>
 	
     <?php get_template_part('ranking'); ?><!-- ランキング -->

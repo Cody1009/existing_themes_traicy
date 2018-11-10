@@ -87,7 +87,9 @@
 .articleRight {
   width: 200px;
   height: 300px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
@@ -108,7 +110,6 @@
 .top-article-arrow-attempt {
   display: inline-flex;
   align-items: center;
-  margin-top: 60px;
 }
 
 .yellow-angle {

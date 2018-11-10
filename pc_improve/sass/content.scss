@@ -1,14 +1,6 @@
 @import './spectre/_variables.scss';
 @import './spectre/_mixins.scss';
 
-.site-content {
-  margin: 0;
-  padding: 0;
-  float: left;
-  width: calc(100% - 300px) !important;
-  max-width: calc(var(--main-width) - 300px);
-}
-
 .site-content .post {
   background-color: #fff;
 }
@@ -200,38 +192,42 @@ header.entry-header div.date p a.author {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+	margin-top:25px;
   width: 100%;
   height: 80px;
   border-radius: 8px;
   background: $skyBlue;
+	&:hover{
+		opacity: 0.6;
+	}
 }
 
-// .entry-content strong{
+.entry-content strong{
+	 @include contentsDefault;
+}
+
+// strongで色指定がきかないのでこの書き方
+.entry-content strong >a{
+	color: $primary ;
+}
+
+// SPのリニューアル終わった時点でこのスタイルにする。
+// .link-to-detail-row{
 //   display: inline-flex;
-//   justify-content: center;
 //   align-items: center;
-//   width: 100%;
-//   height: 80px;
-//   border-radius: 8px;
-//   background: $skyBlue;
 // }
 
-.link-to-detail-row{
-  display: inline-flex;
-  align-items: center;
-}
+// .link-to-detail-text{
+//   @include subHeader;
+//   color: $white;
+//   font-weight: $bold;
+// }
 
-.link-to-detail-text{
-  @include subHeader;
-  color: $white;
-  font-weight: $bold;
-}
-
-.link-to-detail-angle{
-  font-size: 24px;
-  color: $white;
-  font-weight: $bold;
-}
+// .link-to-detail-angle{
+//   font-size: 24px;
+//   color: $white;
+//   font-weight: $bold;
+// }
 
 #primary #content .post > div.entry-content > p {
   box-sizing: border-box;

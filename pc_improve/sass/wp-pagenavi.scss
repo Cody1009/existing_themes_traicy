@@ -1,5 +1,12 @@
 @import './spectre/_variables.scss';
 @import './spectre/_mixins.scss';
+// pagination 
+ .wp-pagenavi-container{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  margin: 20px 0;
+}
 
 .wp-pagenavi {
   display: flex;

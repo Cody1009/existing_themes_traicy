@@ -1,5 +1,7 @@
 @import './spectre/_variables.scss'	;
 @import './spectre/_mixins.scss';
+
+
 .under-header-wrapper{
 	width: 100%;
    background: $paleBlue;
@@ -223,7 +225,6 @@ h2.main_category{
 }
 
 #event_campaign {
-	background: $paleBlue;
 	margin-bottom: 30px;
 	width: 860px;
 }

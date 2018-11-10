@@ -1,4 +1,5 @@
 <!-- 広告開始　-->
+<!-- ad-sidebar -->
 <?php if(!is_NoAdsense()) : ?>
 <script type='text/javascript'>
 	document.MAX_ct0 ='';

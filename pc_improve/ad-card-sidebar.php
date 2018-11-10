@@ -1,5 +1,6 @@
 <!-- 1020px以上の場合表示 -->
 <!--  This is test if these sidebar ads are displayed -->
+<!-- 	ad-card-sidebar  -->
 <div class="ad-cards-container" >
 <span style="display: block;" >
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

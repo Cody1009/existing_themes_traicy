@@ -46,12 +46,14 @@ if( is_sticky() && is_home() && !is_paged() ){
             <?php /**
              * 記事の表示　*/ ?>
             <?php the_content( __( '<span class="meta-nav"></span>', 'twentytwelve' ) ); ?>
-            <div class="link-to-detail-wrapper">
+
+<!-- 		SPのリニューアル終わった時点でこれをテンプレのタグにする	 -->
+			<!--             <div class="link-to-detail-wrapper">
                 <div class="link-to-detail-row">
                     <a href="#" class="link-to-detail-text">詳細はこちら</a>
                     <i class="fa fa-angle-right link-to-detail-angle fa-2x" aria-hidden="true"></i>
                 </div>
-            </div>
+            </div> -->
 
             <?php /**
             ページを区切る方法
