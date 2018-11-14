@@ -1,0 +1,16 @@
+@import './spectre/_variables.scss'	;
+@import './spectre/_mixins.scss';
+
+#article-card-content-archive{
+  width: 275px;
+	margin-bottom:20px;
+	min-height:285px;
+}
+
+.article-card-title-content-archive{
+  padding: 20px;
+	min-height: 90px;
+  @include body;
+  color: $primary;
+  background: $white;
+}

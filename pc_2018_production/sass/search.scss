@@ -1,0 +1,63 @@
+@import './spectre/_variables.scss';
+@import './spectre/_mixins.scss';
+
+.search-result-header-container{
+  width: 100%;
+  padding: 15px;
+  background: $white;
+  margin-bottom: 30px;
+}
+
+.static-breadcrumb-row{
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.static-breadcrumb-text{
+  @include body;
+  font-weight: $bold;
+  color: $primary;
+}
+
+.static-breadcrumb-anchor{
+  @extend .static-breadcrumb-text;
+  &:hover{
+    opacity: 0.6;
+  }
+}
+
+.static-breadcrumb-angle{
+  color: $primary;
+  margin: 0 5px;
+	font-weight:800;
+}
+
+
+.search-result-header-title{
+  @include title;
+  color: $primary;
+  display: inline-flex;
+  align-items: center;
+}
+
+.search-result-emphasis{
+  @include headline;
+  color: $primary;
+  font-weight: $bold;
+}
+
+.search-result-icon{
+  margin-right: 5px;
+  color: $blue;
+
+}
+
+.search-result-articles-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+

@@ -1,0 +1,531 @@
+/*
+Theme Name:naka_sada_kama
+Description:Twenty Twelve を利用した子テーマです。
+Template:twentytwelve
+Version:1.0
+Author:camax (fixed by kamakan & sada)
+Author URI:http://camax.org/
+ */
+
+/* 変数宣言 */
+:root{
+	/*PC版　画面のマックスサイズ*/
+	--main-width : 1520px;
+	/*背景色*/
+	--main-background-color : #E6E4DD;
+	--main-color : #666666;
+	--main-title-color : #052669;
+	--main-sub-color : #3582A1;
+	--main-title-background-color : #3261AB;
+	--bar-color : #54A0E6;
+	--border-color : #bab7ad;
+	--navigation-bar-color : #54A0E6;
+}
+/* ここまで */
+
+/* =Media queries
+-------------------------------------------------------------- */
+
+/* Does the same thing as <meta name="viewport" content="width=device-width">,
+ * but in the future W3C standard way. -ms- prefix is required for IE10+ to
+ * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
+ * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
+ */
+@-ms-viewport {width: device-width;}
+@viewport     {width: device-width;}
+
+/* aタグのときは，何もスタイルを当てない */
+a:focus{
+	outline:none;
+}
+.left {float: left;}
+.right{float:right;}
+.both {clear:both;}
+
+/* レスポンシブ表示・非表示 */
+@media screen and (max-width: 1120px) {.hide_u1120 { display:none; }}
+@media screen and (max-width: 1020px) {.hide_u1020 { display:none; }}/* 1020px以下非表示 */
+@media screen and (min-width: 1020px) {.hide_o1020 { display:none; }}/* 1020px以上非表示 */
+@media screen and (max-width: 850px ) {.hide_u850  { display:none; }}
+@media screen and (min-width: 850px ) {.hide_o850  { display:none; }}
+@media screen and (max-width: 770px ) {.hide_u770  { display:none; }}
+@media screen and (min-width: 600px ) {.hide_o600  { display:none; }}
+
+.site{padding:0;}
+.fb_iframe_widget span{padding-bottom: 2px;}
+.entry-content .entry-meta p{margin:0;}
+
+
+
+/*サイトの全体を制御 */
+/* PCバージョン */
+
+#page{
+	max-width : var(--main-width);
+	margin : 0px auto;
+	padding : 0px !important;
+}
+/* サイト全体の色を統一 参考はナタリー  リニューアルで変更*/
+// body {
+// 	background-color : var(--main-background-color);
+// 	width : 100%;
+// 	text-align : left;
+// 	box-shadow : none;
+// }
+#main {
+	position: relative;
+	z-index: 1;
+	background-color : var(--main-background-color);
+	box-shadow : none;
+      padding-top: -10px;
+}
+.site {
+	margin: 0;
+	padding:0;
+	overflow: hidden;
+	box-shadow : none;
+}
+/* 親クラスのデータを消すように */
+@media screen and (min-width: 960px){
+	body .site{
+		box-shadow : none !important;
+	}
+}
+
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+/* 詳細のページ */
+/* 共通 */
+
+/* ライターの名前をクリックしたときのページ */
+/* カテゴリーの名前をクリックしたときのページ */
+/* タグの名前をクリックしたときのページ */
+/* tagページ */
+.tagpage{
+	padding: 3px 5px 3px 5px;
+	font-size: 13px;
+	color: #FFFFFF;
+	/*font-weight: bold;*/
+	background-color: green;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	margin: 0 5px 2px 0;
+	text-decoration: none;
+	display: inline-block;
+	line-height: 20px;
+}
+/* tagページ */
+/* タグページスタイル */
+/* ここまで */
+
+/* 広告レスポンシブ ads */
+.my_adslot{
+	margin-bottom: 5px;
+	background:#fff;
+}
+@media screen and (min-width: 310px) {
+	.my_adslot { width: 300px; height: 250px; }
+}
+@media screen and (min-width: 340px) {
+	.my_adslot { width: 320px; height: 50px; }
+}
+@media screen and (min-width: 400px) {
+	.my_adslot { width: 338px; height: 280px; }
+}
+@media screen and (min-width: 730px) {
+	.my_adslot { width: 728px; height: 90px; }
+}
+/* アドセンス背景色消す */
+ins {
+	background: none;
+}
+/* アドセンス背景色消す */
+
+
+/* プラグイン WP page navi レスポンシブ対応 */
+.wp-pagenavi a ,.wp-pagenavi span.pages, .wp-pagenavi span.extend {
+	display: inline-block;
+}
+.wp-pagenavi a:hover {
+	display: inline-block;
+}
+.wp-pagenavi span.current{
+	display: inline-block;
+}
+.wp-pagenavi a, .wp-pagenavi span {
+	color:#006835;
+}
+/* プラグイン page navi レスポンシブ対応 */
+/* プラグイン page navi ...のあしらい修正 */
+.wp-pagenavi span.extend{
+	border: none !important;
+	box-shadow: none !important;
+	color: #444 !important;
+}
+/* プラグイン page navi ...のあしらい修正 */
+/* プラグイン page navi カレントページのあしらい修正 */
+.wp-pagenavi .current {
+	/*font-weight: bold;*/
+	border: #d8d8d8 !important;
+	color: #4e7fb7 !important;
+	background-color:#5395c5 !important;
+}
+/* プラグイン page navi カレントページのあしらい修正 */
+.wp-pagenavi{text-align: center;}
+/* どこで使用しているのかわからない　*/
+div#content .wp-pagenavi{padding: 5px 0;}
+
+/* 404ページ */
+#post-0{
+	height : 1000px;
+	width : 100%;
+	box-sizing : border-box;
+	padding : 20px;
+}
+#post-0 header.entry-header{
+	border-bottom : none;
+	font-size : 20px;
+	line-height : 26px;
+}
+#post-0 img{
+ 	width : 70%;
+ 	display : block;
+ 	margin : 0 auto;
+ 	margin-top : 20px;
+	float : none;
+}
+/* 404ページ */
+
+/*広告 20160621 鎌田寛*/
+.thumbnail_triming{
+	float:left;
+	position:absolute;
+}
+
+.idea_image{
+	float:bottom;
+	width:150px;
+}
+
+/**
+*
+* 固定ページのコーナー
+*
+*/
+/* Wifi価格比較 */
+/* 検索フォーム*/
+#searchform {
+	width: 294px;
+	background-color: #fff;
+	margin-bottom:10px;
+	padding:4px 2px;
+}
+#s {
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+	vertical-align: bottom;
+	border: 1px solid #ccc;
+	border-radius: 5px 0 0 5px;
+	outline: none;
+	box-sizing: content-box;
+	-webkit-appearance: textfield;
+	color: #999;
+	background: #eee;
+	box-shadow: 0 1px 0 #fff,
+	0 -1px 0 #fff,
+	-1px 0 0 #fff,
+	1px 0 0 #fff,
+	0 0 3px #ddd inset;
+}
+#s:focus {
+	color: #333;
+}
+#searchsubmit {
+	width: 60px;
+	height: 32px;
+	vertical-align: bottom;
+	border: 1px solid #ccc;
+	border-radius: 0 5px 5px 0;
+	color: #666;
+	background: -webkit-linear-gradient(to bottom, #fff, #eee);
+	background: -moz-linear-gradient(to bottom, #fff, #eee);
+	background: linear-gradient(to bottom, #fff, #eee);
+	cursor: pointer;
+	box-shadow: 0 1px 0 #fff,
+	0 -1px 0 #fff,
+	-1px 0 0 #fff,
+	1px 0 0 #fff;
+}
+#searchsubmit:hover {
+	background: -webkit-linear-gradient(to bottom, #eee, #fff);
+	background: -moz-linear-gradient(to bottom, #eee, #fff);
+	background: linear-gradient(to bottom, #eee, #fff);
+}
+#searchsubmit:active {
+	border: 1px solid #aaa;
+	border-right-color: #fff;
+	border-bottom-color: #fff;
+	box-shadow: 0 1px 0 #ddd,
+	0 -1px 0 #fff,
+	-1px 0 0 #fff,
+	1px 0 0 #ddd;
+}
+
+/* ３段組み */
+article div[itemprop="articleBody"]
+{display: -webkit-box;
+	display: -moz-box;
+display: -ms-box}
+
+article section	{
+	width: 32%;
+	height: 33.3%;
+	background-color : #fff;
+	margin: 0.3%;
+	margin-top:10px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow: visible;
+	border-radius: 10px;        /* CSS3草案 */
+	-webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
+	-moz-border-radius: 10px;   /* Firefox用 */
+}
+
+article section:nth-of-type(1n) {
+	float: none;
+	margin: 0;
+}
+
+article section:nth-of-type(1n) figcaption{
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+article section .photo{
+	padding-top : calc(1vw);
+	padding-bottom : calc(1vw);
+	height : 8vw;
+	text-align:center;
+	position:relative;
+}
+article section .photo > img{
+	width : 90%;
+}
+article section .money{
+	height : 20vw;
+}
+article section .money p{
+	padding-top : 20px;
+	padding-bottom : 20px;
+	/*color:#FDF7FA;*/
+	color:#000000;
+	font-size:calc(2.5vw);
+	text-align: center;
+}
+
+article section .capasity1{
+	background-color:#E33848;
+	height : calc(8vw);
+	border-radius: 5px;        /* CSS3草案 */
+	-webkit-border-radius: 5px;    /* Safari,Google Chrome用 */
+	-moz-border-radius: 5px;   /* Firefox用 */
+}
+article section .capasity1 p{
+	padding-top : 2.75vw;
+	padding-bottom : 2.75vw;
+	font-size:calc(2.5vw);
+	text-align: center;
+	color:#FDF7FA;
+}
+article section .capasity2{
+	background-color:#F36343;
+	height : calc(8vw);
+	border-radius: 5px;        /* CSS3草案 */
+	-webkit-border-radius: 5px;    /* Safari,Google Chrome用 */
+	-moz-border-radius: 5px;   /* Firefox用 */
+}
+article section .capasity2 p{
+	padding-top : 2.75vw;
+	padding-bottom : 2.75vw;
+	font-size:calc(2.5vw);
+	color:#FDF7FA;
+	text-align : center;
+}
+article section .capasity3{
+	background-color:#FCB538;
+	height : calc(8vw);
+	border-radius: 5px;        /* CSS3草案 */
+	-webkit-border-radius: 5px;    /* Safari,Google Chrome用 */
+	-moz-border-radius: 5px;   /* Firefox用 */
+}
+article section .capasity3 p{
+	padding-top : 2.75vw;
+	padding-bottom : 2.75vw;
+	font-size:calc(2.5vw);
+	color:#FDF7FA;
+	text-align: center;
+}
+
+.fee{
+	font-size:calc(8px + 1.0vw);
+}
+/*
+.lineComment{
+	float :left;
+	width : 32%;
+	margin-right : 0.5%;
+	margin-left : 0.5%;
+}
+.lineComment > p{
+	font-size:calc(1.5vw);
+	line-height:2.5vw;
+	text-align: center;
+}*/
+.lineType{
+	float :left;
+	width : 32%;
+	margin-right : 0.5%;
+	margin-left : 0.5%;
+}
+.lineType > p{
+	font-size:calc(1.25vw);
+	line-height:2.0vw;
+	text-align: center;
+}
+/* ３段組み IE8～9 & Opera */
+article section	{
+	clear: none;
+	float: left;
+	position: relative
+}
+
+article section + section + section	{margin-right: 0}
+
+.titleCompasion{
+	font-size : calc(10px + 1vw);
+	text-align : center;
+	color:#5c5c5c;
+	margin-top : 10px;
+	margin-bottom: 10px;
+}
+
+.titleTabCompasion{
+	font-size : calc(10px + 1.5vw);
+	text-align : center;
+	color:#5c5c5c;
+	margin-top : 10px;
+	margin-bottom: 10px;
+}
+
+
+
+/* content-archive */
+.allCategory{
+	display : flex;
+	flex-wrap : wrap;
+	width : 100%;
+}
+.catCards{
+	width : calc(100% / 3 - 10px - 20px);
+	margin : 3px 5px;
+	background : #fff;
+	padding : 10px 10px;
+}
+.catCards a >  h1{
+	font-size : 16px;
+	color : var(--main-title-color);
+	margin-bottom : 5px;
+	padding-bottom : 5px;
+	border-bottom : 2px solid var(--border-color);
+	text-align : center;
+}
+.catCards img{
+	width : 95%;
+	height : auto;
+	display : block;
+	margin : 5px auto;
+	padding-bottom : 5px;
+	border-bottom : 2px solid var(--border-color);
+	border-radius : 0px;
+	box-shadow : none;
+}
+.catCards p{
+	padding-top : 5px;
+	font-size : 14px;
+	color : var(--main-color);
+	word-wrap : break-word;
+  overflow-wrap : break-word;
+}
+.catCards:hover{
+	background-color : rgba(255,255,204,0.7);
+}
+@media screen and (max-width : 600px){
+	.catCards{
+		width : calc(100% / 2 - 10px - 20px);
+	}
+}
+
+.catpage{
+	padding: 2px 10px;
+	margin-right : 2px;
+	background: var(--main-title-background-color);
+	color: #fff;
+}
+.catpage:hover{
+	color : var(--main-title-background-color);
+	background : #fff;
+}
+
+#content{
+	background-color : #fff;
+}
+.status-publish{
+	background-color : #fff;
+}
+
+/*全体制御*/
+@media screen and (max-width : 600px){
+	#content{
+		width : 100% !important;
+		margin : 0 !important;
+		padding : 0;
+	}
+}
+
+/* image.phpのスタイル */
+article.image-attachment{
+	background : white;
+}
+article.image-attachment h1.entry-title{
+	margin : 0 !important;
+	padding : 20px 0 20px 0;
+}
+article.image-attachment header.entry-header{
+	margin-bottom : 20px;
+}
+article.image-attachment footer.entry-meta{
+	font-size : 14px;
+	padding : 10px 10px;
+}
+@media screen and (max-width : 600px){
+	article.image-attachment{
+		margin : 0;
+		padding-bottom : 20px;
+		margin-bottom : 10px;
+	}
+	#content{
+		padding-bottom : 10px;
+	}
+}

@@ -1,0 +1,104 @@
+@import './spectre/_variables.scss';
+@import './spectre/_mixins.scss';
+
+#bottomArticle {
+  width: 100%;
+  margin: 35px 0px;
+  display: flex;
+}
+
+.pc_left {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#wifi {
+  height: 90px;
+  width: 380px;
+  border: 0.5px solid $borderGray;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.wifi-comparison-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-title {
+  @include title;
+  color: $primary;
+}
+
+.lowest-wifi-headline-text {
+  @include caption;
+  color: $primary;
+  margin-bottom: 10px;
+  width: 80px;
+}
+
+.rental-fee-image-row {
+  display: flex;
+  align-items: center;
+}
+
+.rental-fee-bottom {
+  @include subHeader;
+  color: $red;
+}
+
+.imageWifi {
+  height: 40px;
+  width: 80px;
+  margin-left: 5px;
+}
+
+img.object-fit-img {
+  object-fit: scale-down;
+  font-family: 'object-fit: scale-down;';
+  box-shadow: none;
+  display: inherit;
+  height: 100%;
+}
+
+#skyscanner {
+  height: 90px;
+  width: 380px;
+  border: 0.5px solid $borderGray;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+
+.skyscanner-fee-image-row {
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+
+.ticketFee {
+  @include subHeader;
+  color: $red;
+}
+
+.skyscanner-image {
+  object-fit: scale-down;
+  font-family: 'object-fit: scale-down;';
+  box-shadow: none;
+  display: inherit;
+  height: 100%;
+  max-width: 50%;
+}

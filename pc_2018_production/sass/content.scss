@@ -1,0 +1,548 @@
+@import './spectre/_variables.scss';
+@import './spectre/_mixins.scss';
+
+.site-content .post {
+  background-color: #fff;
+}
+
+.site-content .post img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.site-content table {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body.template-front-page .site-content,
+body.attachment .site-content,
+body.full-width .site-content {
+  width: 100%;
+}
+
+@media screen and (max-width: 770px) {
+  .site-content {
+    width: 100% !important;
+    max-width: var(--main-width);
+  }
+}
+
+
+
+.article-detail-page-container {
+  background: $white;
+  padding: 40px;
+}
+
+
+//breadcrumbのテキスト
+.breadAndCat {
+	margin-top: 40px;
+  width: 100%;
+}
+#breadcrumb a {
+  @include body;
+  color: $primary;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+.bread-crumb-angle-style{
+  font-weight: $bold;
+  margin-right: 5px;
+}
+
+/*記事のタイトル */
+.entry-title {
+  color: $primary;
+  @include articleTitle;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+
+
+/*記事のタイトル下にある 著者情報*/
+header.entry-header div.date p a.author {
+  margin-left: 10px;
+}
+.updated{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.article-detail-date-text{
+  @include body;
+  color: $secondary;
+  font-weight: normal;
+}
+
+.author{
+  @include body;
+  color: $lightBlue;
+  font-weight: normal;
+}
+
+
+/* メタデータ */
+
+/* SNSシェアボタン */
+.share_buttons {
+  box-sizing: border-box;
+  width: calc(100% - 20px);
+  height: 41px;
+  min-height: 30px;
+  display: flex;
+}
+
+.sns_icon {
+  margin: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sns_icon:first-child {
+  width: 95px;
+}
+
+.sns_icon:not(:first-child) {
+  width: 90px;
+  height: 35px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sns_icon img {
+  box-sizing: border-box;
+  height: 33px !important;
+  width: 33px !important;
+  display: inline-block;
+  border-bottom-color: rgba(1, 1, 1, 0);
+  border-bottom: none !important;
+  box-shadow: none !important;
+  border-radius: 3px;
+  margin: 1px 1px;
+}
+
+.sns_icon.google {
+  background-color: #E02F2F;
+}
+
+.sns_icon.line {
+  background-color: #00B900;
+}
+
+.sns_icon.hatena {
+  background-color: #00A4DE;
+}
+
+.sns_icon.twitter {
+  background-color: #1DA1F2;
+}
+
+.sns_icon.facebook {
+  background-color: #3B5998;
+}
+
+.sns_icon.facebook_like {
+  height: 25px;
+  line-height: 30px;
+  span{
+    height: 25px;
+  }
+}
+
+/* SNSシェアボタン 終わり*/
+
+/* Googleカレンダー追加ボタン */
+.addGcalender.singlePage {
+  margin-top: 4px;
+
+}
+
+.addGcalender.singlePage button {
+  box-sizing: border-box;
+  float: right;
+  padding: 0;
+  width: 200px;
+  height: 26px;
+  font-size: 14px;
+  line-height: 26px;
+  background: rgb(235, 235, 235);
+  margin: 0 10px !important;
+}
+
+.addGcalender.singlePage i {
+  font-size: 16px;
+}
+
+/* Googleカレンダー追加ボタン 終わり*/
+
+/* 記事の中身 */
+.entry-content {
+ @include contentsDefault;
+  color: $secondary;
+  font-weight: normal;
+
+}
+
+.link-to-detail-wrapper{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+	margin-top:25px;
+  width: 100%;
+  height: 80px;
+  border-radius: 8px;
+  background: $skyBlue;
+	&:hover{
+		opacity: 0.6;
+	}
+}
+
+.entry-content strong{
+	 @include contentsDefault;
+}
+// 記事詳細ページの画像スタイル
+.entry-content {
+    img {
+      object-fit: contain;
+      font-family: 'object-fit: contain;';
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      box-shadow: none;
+    }
+  
+}
+// strongで色指定がきかないのでこの書き方
+.entry-content strong >a{
+	color: $primary ;
+}
+
+// SPのリニューアル終わった時点でこのスタイルにする。
+// .link-to-detail-row{
+//   display: inline-flex;
+//   align-items: center;
+// }
+
+// .link-to-detail-text{
+//   @include subHeader;
+//   color: $white;
+//   font-weight: $bold;
+// }
+
+// .link-to-detail-angle{
+//   font-size: 24px;
+//   color: $white;
+//   font-weight: $bold;
+// }
+
+#primary #content .post > div.entry-content > p {
+  box-sizing: border-box;
+  padding: 0px 5px;
+}
+
+/* シングル境界線削除 st */
+.entry-content td, .comment-content td {
+  border-top: none;
+  padding: 0;
+}
+
+.entry-content table, .comment-content table {
+  border-bottom: none;
+  color: #757575;
+  font-size: 12px;
+  font-size: 0.857142857rem;
+  line-height: 0;
+  margin: 0;
+  width: 0;
+}
+
+/* 記事最後のダブルレクタングル */
+.sponsor {
+  font-size: 10px;
+  display: block;
+  margin: 10px 0px 15px;
+}
+
+#content .tag_box > p {
+  padding: 0;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  display: block;
+  width: 100%;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+.article-bottom-tag-head{
+  @include body;
+  color: $primary;
+}
+
+
+/* タグ カテゴリ st */
+.article-bottom-tag-box-container{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tag_box{
+  display: inline-flex;
+  align-items: center;
+}
+
+.tag_box a {
+  display: inline-block;
+  min-width: 142px;
+  margin: 0 10px;
+  padding: 10px;
+  color: $white;
+  background: $blue;
+  border-radius: 5px;
+  @include caption;
+}
+
+.article-bottom-category-head{
+  @include body;
+  color: $primary;
+  margin-right: 10px;
+}
+.category-box-article-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.blue-category-container{
+  padding: 10px;
+  background: $blue;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.blue-category-text-row{
+  display: inline-flex;
+  align-items: center;
+}
+
+
+.blue-category-text{
+  color: $white;
+  @include caption;
+  padding: 0;
+}
+.fa-white-tag{
+  margin-right: 5px;
+  color: $white;
+  background: $blue;
+}
+
+
+._popIn_recommend_header {
+  border-left: 5px solid var(--navigation-bar-color) !important;
+  border-bottom: 1px solid var(--navigation-bar-color) !important;
+}
+
+#_popIn_recommend {
+  padding-bottom: 20px !important;
+}
+
+/* シングルページのページ内ページャー あしらい修正 */
+.page-numbers {
+  text-align: center;
+  font-size: 12px !important;
+  padding: 10px 20px 10px !important;
+  display: block !important;
+  clear: both !important;
+  margin-left: auto !important;
+  margin-right: auto;
+}
+
+.page-numbers a span {
+  color: #707070 !important;
+  background: #FFFFFF !important;
+  border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  -webkit-border-radius: 3px !important;
+  border: solid 1px #DCDCDC !important;
+  padding: 6px 9px 6px 9px !important;
+  text-decoration: none !important;
+  font-size: 12px !important;
+}
+
+.page-numbers a span:hover {
+  color: #fff !important;
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #9F9F9F), color-stop(0.02, #6C6C6C), color-stop(1, #525252)) !important;
+}
+
+.page-numbers span {
+  color: #fff !important;
+  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #9F9F9F), color-stop(0.02, #6C6C6C), color-stop(1, #525252)) !important;
+  border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  -webkit-border-radius: 3px !important;
+  border: solid 1px #DCDCDC !important;
+  border-color: #202020 !important;
+  padding: 6px 9px 6px 9px !important;
+  text-decoration: none !important;
+  font-size: 12px !important;
+}
+
+/* シングルページのページ内ページャー あしらい修正 */
+
+/*記事用Wifi価格比較のスタイル*/
+/* 横スクロールリストのコンテナ */
+.wificompeL .container {
+  width: 100% !important;
+  overflow-y: hidden;
+  background: #CCC;
+  white-space: nowrap;
+  overflow-x: scroll;
+  height: 170px;
+  line-height: 0em !important;
+  font-size: 1px !important;
+  padding-bottom: 20px;
+}
+
+/* 横スクロールリストの要素 */
+.wificompeL .item {
+  /* 程よい余白のため */
+  margin: 0px 0px 0px 0px !important;
+  /* 程よいサイズ */
+  width: 180px;
+  height: 180px;
+  /* インラインブロックにして改行しないブロックに */
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid var(--main-background-color);
+  line-height: 0em !important;
+}
+
+.wificompeL .item img {
+  margin-bottom: 0px !important;
+  width: 100% !important;
+}
+
+.wificompeL .logo {
+  height: 90px !important;
+  text-align: center;
+  margin-bottom: 0px !important;
+  margin-top: 3px;
+  line-height: 0em !important;
+}
+
+.wificompeL .imageLogo {
+  height: 100% !important;
+}
+
+.wificompeL .comTitle {
+  font-size: 12px !important;
+  color: var(--main-title-background-color) !important;
+  text-align: center !important;
+  line-height: 0em;
+  margin: 0 auto !important;
+  margin-top: 13px !important;
+  margin-bottom: 13px !important;
+}
+
+.wificompeL .kakakuTitle {
+  font-size: 12px !important;
+  color: #FD9B27;
+  line-height: 0em !important;
+  margin-bottom: 0em !important;
+  text-align: center !important;
+  margin-bottom: 13px !important;
+}
+
+.wificompeL .lineSpeed {
+  font-size: 12px !important;
+  line-height: 0em !important;
+  margin-bottom: 13px !important;
+  margin-left: 1em;
+}
+
+.wificompeL .lineCapasity {
+  font-size: 12px !important;
+  line-height: 0em !important;
+  margin-bottom: 13px !important;
+  margin-left: 1em;
+}
+
+.wificompeL .lineCost {
+  font-size: 16px !important;
+  color: #B02B16;
+  line-height: 0em !important;
+  margin-bottom: 13px !important;
+  margin-left: 1em;
+}
+
+.wificompeL {
+  border-top: 2px solid var(--main-background-color);
+  border-bottom: 2px solid var(--main-background-color);
+  border-left: 2px solid var(--main-background-color);
+  border-right: 2px solid var(--main-background-color);
+  padding: 3px 3px 0px 3px;
+}
+
+/*ここまで*/
+
+/* 著者紹介 */
+div.description {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+div.description > div.authordesc {
+  width: 80%;
+  margin-left: 20%;
+}
+
+div.description > div.image {
+  width: 20%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+}
+
+div.image > img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  position: absolute !important;
+  display: block !important;
+  height: auto !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  margin: auto !important;
+}
+
+.next-title {
+  width: calc(100% - 15px * 2);
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 15px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+
+p.wp-caption-text {
+  font-style: italic;
+  font-size: 12px;
+  font-size: 0.857142857rem;
+  line-height: 2;
+  color: #757575;
+  text-align: center;
+}

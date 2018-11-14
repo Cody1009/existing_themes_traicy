@@ -1,0 +1,92 @@
+@import './spectre/_variables.scss';
+@import './spectre/_mixins.scss';
+
+#about-traicy{
+  margin: 40px 0;
+  padding: 40px;
+  background: $white;
+}
+.wanted-top-img{
+  margin-left: -40px;
+  margin-top: -40px;
+	margin-bottom: 20px;
+}
+
+.recruit-top-img{
+  @extend .wanted-top-img;
+}
+#static-page-container-common{
+  margin: 40px 0;
+  padding: 40px;
+  background: $white;
+}
+
+#wanted-container{
+  margin: 40px 0;
+  padding: 40px;
+  background: $white;
+}
+
+#application-page{
+  margin: 40px 0;
+  padding: 40px;
+  background: $white;
+}
+
+.flow-for-application{
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.flow-angle-down{
+  color: $primary;
+  margin: 10px 0;
+}
+.uls{
+  padding-left: 16px;
+}
+
+.static-page-title-text {
+  @include title;
+  color: $primary;
+  font-weight: $bold;
+  margin-top: 10px;
+}
+
+.static-page-body-text {
+  @include smallTitle;
+  color: $secondary;
+  font-weight: normal !important;
+}
+
+.static-page-anchor-style{
+  @include smallTitle;
+  color: $lighterBlue;
+  cursor: pointer;
+  text-decoration: underline;
+  &:hover{
+    opacity: 0.6;
+  }
+}
+
+.static-page-anchor-no-under{
+  @extend .static-page-anchor-style;
+  text-decoration: none;
+  &:hover{
+    opacity: 0.6;
+  }
+}
+
+.static-page-body-bold{
+  @include smallTitle;
+  color: $primary;
+  font-weight: $bold;
+  margin: 10px 0;
+}
+
+.black-horizontal-devider {
+  height: 4px;
+  width: 50px;
+  background-color: $primary;
+  margin: 25px 0;
+}

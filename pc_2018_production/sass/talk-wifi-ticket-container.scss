@@ -1,0 +1,64 @@
+// 右にあったトーク
+@import './spectre/_mixins.scss';
+@import './spectre/_variables.scss';
+
+.talk-wifi-ticket-container {
+  width: 100%;
+  background: $white;
+  margin: 30px 0;
+}
+
+#category-tab-items {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: $white solid 2px;
+}
+
+.category-tab-item-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $lightBlue;
+  height: 40px;
+  min-width: 202px;
+  @include body;
+  padding: 0 62px;
+  color: $white;
+  border-right: $white solid 3px;
+  &:last-child {
+		border: none;
+  }
+}
+
+.select {
+  background: $white;
+  color: $primary;
+}
+
+.tab-content {
+  width: 100%;
+}
+
+.skyscanner-top-container {
+  height: 100px;
+  width: 100%;
+  padding: 40px 0;
+  background: $white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skyscanner-top-anchor {
+  @include title;
+  color: $lightBlue;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.fa-skyscanner-angle {
+  color: $yellow;
+}
