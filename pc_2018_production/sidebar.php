@@ -12,33 +12,27 @@
 
 <div class="right-contents">
 <!-- 	ad-card-sidebar  -->
-	 <?php get_template_part('ad-card-sidebar'); ?>
+	 <?php get_template_part('ad_traicy_newpc_top_300_250_1'); ?>
+		<div style="margin: 20px 0px">
+			 <?php get_template_part('ad_traicy_newpc_top_300_250_2'); ?>
+		</div>
 	
-    <?php get_template_part('ranking'); ?><!-- ランキング -->
-
-<!--　タグ一覧 	 --> 
-
+	
+    <?php get_template_part('ranking'); ?>
+	
+	<div style="margin: 20px 0px">
+    <?php get_template_part('ad_traicy_newpc_top_300_650_3'); ?>
+</div>
+	
 	<?php get_template_part('sidebar-tags'); ?> 	
-
-	 
-    <!--  採用情報カード	 -->
-    <div class="sidebar-recruit-card">
-        <a href="https://www.traicy.com/wanted" class="recruit-anchor"></a>
-        <div class="recruit-section-top">
-            <p class="recruit-top-text">デザイナ・エンジニア募集中</p>
-        </div>
-        <div class="recruit-section-center">
-            <p class="recruit-center-text">言語: PHP/Ruby</p>
-            <p class="recruit-center-text">雇用: アルバイト・インターン</p>
-            <p class="recruit-center-text">時給: 1000円~</p>
-        </div>
-        <div class="recruit-section-bottom">
-            <img class="sidebar-comp-logo" src="<?php get_stylesheet_directory_uri(); ?>/images/logo.gif">
-        </div>
-    </div>
-
-
+	<div style="margin: 20px 0px">
+    <?php get_template_part('ad_traicy_newpc_top_300_250_4'); ?>
+</div>
+	
     <?php
     get_template_part('sidebar-mail_magazine');
     ?>
+	<div style="margin: 20px 0px">
+    <?php get_template_part('ad_traicy_newpc_top_300_250_5'); ?>
+</div>
 </div><!-- #sidebar -->

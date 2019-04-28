@@ -34,9 +34,6 @@
                         ・Amebaニュース
                     </p>
                     <p class="static-page-body-text">
-                        ・OKwave NIGIYAカフェ
-                    </p>
-                    <p class="static-page-body-text">
                         ・読めるモニュース（Yomerumo News）
                     </p>
 
@@ -61,8 +58,6 @@
                     <p>
                         ・<a class="static-page-anchor-style" href="https://plat.navitime.co.jp/provider/TCY/" target="_blank">Plat（ナビタイムジャパン）</a>
                     </p>
-
-
                     <p class="static-page-body-text">
                         ・PORTABLE SMILING ROAD -ポータブルスマイリングロード-（損保ジャパン日本興亜） via Plat by NAVITIME
                     </p>
@@ -79,6 +74,9 @@
                     <p class="static-page-body-text">
                         ・News Jet
                     </p>
+					      <p class="static-page-body-text">
+                        ・トラベルニュース
+                    </p>
 
 
                     <p class="static-page-body-bold">
@@ -87,7 +85,9 @@
                     <p class="static-page-body-text">
                         ・ジョルダンニュース
                     </p>
-
+                    <p class="static-page-body-text">
+                        ・OKwave NIGIYAカフェ
+                    </p>
                     <p class="static-page-body-bold">
                         外部提携先
                     </p>

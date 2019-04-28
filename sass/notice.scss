@@ -1,0 +1,41 @@
+@import './spectre/_variables.scss';
+@import './spectre/_mixins.scss';
+
+/* お知らせ st */
+.information-container {
+  width: 100%;
+  background: white;
+  padding: 30px;
+	margin-bottom: 40px;
+}
+
+.info-title-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.info-title-en {
+  @include title;
+  color: $blue;
+  margin-right: 24px;
+}
+
+.info-title-ja {
+  @include body;
+  color: $blue;
+}
+
+.info-content {
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  @include body;
+  color: $black;
+  width: 100%;
+  @include title-border-bottom;
+  &:hover{
+    color: $skyBlue;
+    border-bottom: $skyBlue solid 3px;
+  }
+}

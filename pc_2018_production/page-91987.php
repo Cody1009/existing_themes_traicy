@@ -1,6 +1,6 @@
 <?php global $myAmp ?>
 <?php global $is_valid_post_date ?>
-
+<!-- アプリPR用のページ -->
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
 <![endif]-->
@@ -138,7 +138,7 @@
       </div>
     </div>
     <div class="section-top-app-image">
-		<img  src="https://www.traicy.com/wp-content/uploads/2018/09/top-app.png">
+		<img  src="https://www.traicy.com/wp-content/uploads/2018/09/top_app_dt.png">
     </div>
   </div>
   <p class="app-feat-text">トライシーアプリの特徴</p>
@@ -157,7 +157,7 @@
 
   <div class="detect-section">
     <div class="detect-app-image">
-			<img  src="https://www.traicy.com/wp-content/uploads/2018/09/detect-sale.png">
+			<img  src="https://www.traicy.com/wp-content/uploads/2018/12/app-top-focused.svg">
     </div>
     <div class="detect-section-desc">
       <p class="common-section-title">

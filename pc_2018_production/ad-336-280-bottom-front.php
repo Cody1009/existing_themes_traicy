@@ -1,4 +1,4 @@
-<div id="ad_top" style="text-align: center;">
+<div id="ad_top" style="display:flex; justify-content:center;">
 
 <span class="hide_u1120">
 

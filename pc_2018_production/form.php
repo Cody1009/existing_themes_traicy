@@ -270,7 +270,7 @@ global $isCompeBox;
 <?php if ($isCompeBox): ?>
 <div id="searchWifi" class="top">
     <div class="wifi-title-container-compebox">
-        <h2 class="wifi-search-title">海外Wifiのレンタル価格を一斉比較！</h2>
+        <h2 class="wifi-search-title">海外Wi-Fiのレンタル価格を一斉比較！</h2>
     </div>
 
     <?php else: ?>

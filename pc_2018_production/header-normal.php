@@ -13,8 +13,8 @@
 
 <html lang="ja">
 <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
-    <title><?php wp_title('|', true, 'right'); ?></title>
-
+<title><?php wp_title('|', true, 'right'); ?></title>
+	
     <!-- ファビコン用 -->
     <?php //require('favicon.php'); ?>
     <!-- ファビコン用 -->
@@ -46,9 +46,8 @@
     <?php endif; ?>
 
 
-    <link rel="alternate" type="application/rss+xml" title="トラベルメディア
-	「Traicy（トライシー）」 &raquo; フィード"
-          href="http://newsformat.jp/hd/traicy/http://www.traicy.com/feed"/>
+    <link rel="alternate" type="application/rss+xml" title="Traicy（トライシー） &raquo; フィード"
+          href="http://www.traicy.com/feed"/>
     <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
     <!--[if lt IE 9]>
     <script async defer src="<?php echo get_stylesheet_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -94,23 +93,6 @@
           href="<?php echo get_stylesheet_directory_uri() . "/font-awesome/css/font-awesome.min.css" ?>">
     <!-- font-awesome -->
 
-    <!-- User Heat Tag -->
-    <script type="text/javascript">
-        (function (add, cla) {
-            window['UserHeatTag'] = cla;
-            window[cla] = window[cla] || function () {
-                (window[cla].q = window[cla].q || []).push(arguments)
-            }, window[cla].l = 1 * new Date();
-            var ul = document.createElement('script');
-            var tag = document.getElementsByTagName('script')[0];
-            ul.async = 1;
-            ul.src = add;
-            tag.parentNode.insertBefore(ul, tag);
-        })('//uh.nakanohito.jp/uhj2/uh.js', '_uhtracker');
-        _uhtracker({id: 'uhcrs8OtO4'});
-    </script>
-    <!-- End User Heat Tag -->
-
     <!-- DFP start -->
     <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
     <script>
@@ -129,8 +111,6 @@
     <!-- DFP end -->
 
     <script src="<?= get_stylesheet_directory_uri() . "/js/ofi.min.js" ?>"></script>
-
-
     <script src="<?= get_stylesheet_directory_uri() . "/js/traicy-talk-modal.js" ?>"></script>
 
     <!--  slider menu -->
@@ -147,6 +127,36 @@
             });
         });
     </script>
+	
+	<!--  traicy_newpc_top_728_2 -->
+	<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+	<script>
+	  var googletag = googletag || {};
+	  googletag.cmd = googletag.cmd || [];
+	</script>
+
+	<script>
+	  googletag.cmd.push(function() {
+		googletag.defineSlot('/2691324/traicy_newpc_top_728_2', [728, 90], 'div-gpt-ad-1553153292457-0').addService(googletag.pubads());
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+	  });
+	</script>
+	
+	<!--  traicy_newpc_top_300_5 -->
+	<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+	<script>
+	  var googletag = googletag || {};
+	  googletag.cmd = googletag.cmd || [];
+	</script>
+
+	<script>
+	  googletag.cmd.push(function() {
+		googletag.defineSlot('/2691324/traicy_newpc_top_300_5', [300, 250], 'div-gpt-ad-1553153625436-0').addService(googletag.pubads());
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+	  });
+	</script>
 
 </head>
 
@@ -195,7 +205,7 @@
                                     class="icon-twitter"></span></a>
                         <a class="social-icon" href="https://www.facebook.com/traicycom" target="_blank"><span
                                     class="icon-facebook"></span></a>
-                        <a class="social-icon" href="http://www.traicy.com/feed" target="_blank"><span
+                        <a class="social-icon" href="https://www.traicy.com/feed" target="_blank"><span
                                     class="icon-rss"></span></a>
                         <a class="social-icon"
                            href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Fwww.traicy.com%2Ffeed"
@@ -210,7 +220,7 @@
                 </a>
             </div>
 <!-- 	ad-header.php		 -->
-            <div class="banner-advertizement-top"><?php get_template_part('ad-header'); ?></div>
+            <div class="banner-advertizement-top"><?php get_template_part('ad_traicy_newpc_top_728_1'); ?></div>
         </div>
         <ul class="menu-items-wrapper">
             <nav id="site-navigation" class="main-navigation PC_nav" role="navigation">

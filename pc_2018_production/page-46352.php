@@ -5,10 +5,7 @@
             <div class="center-contents">
                 <div id="static-page-container-common">
                     <center>
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf-eZ1qkr4seTZqLi21iuBhBy5IY_jDpNT7rMih0Hzxa6c0IQ/viewform?embedded=true"
-                                width="95%" height="1400px;" frameborder="0" marginheight="0" marginwidth="0">
-                            読み込んでいます...
-                        </iframe>
+                       <div style="width:100%;height:1200px;overflow:auto;-webkit-overflow-scrolling:touch;"><iframe src="https://tayori.com/form/88d01a60c8fdbd52ddf41feeed079a2d1c4b20e6" width="100%" height="100%"></iframe></div>
                     </center>
                 </div>
                 <!-- お知らせ -->

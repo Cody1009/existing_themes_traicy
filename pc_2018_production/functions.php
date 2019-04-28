@@ -672,3 +672,520 @@ class traicytagAPI{
     update_option( "traicy_talk", $traicy_talk );
   }
 }
+
+function crunchify_feed($content) {  
+    if(is_feed()) {
+        $post_id = get_the_ID(); // sample reference. remove this if you don't want to use this
+        $output = '<sale_start>' . get_post_meta($post_id, "CampaignStart", true) . '</sale_start>';
+        $content = $content.$output;  
+    }  
+	
+    return $content;  
+}  
+add_filter('the_content_feed','crunchify_feed');
+
+
+add_action('rest_api_init', 'register_rest_additional_data' );
+function register_rest_additional_data(){
+    register_rest_field( array('post'),
+        'fimg_url',
+        array(
+            'get_callback'    => 'get_rest_featured_image',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+	register_rest_field( array('post'),
+        'slugs',
+        array(
+            'get_callback'    => 'get_slugs',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+function get_rest_featured_image( $object, $field_name, $request ) {
+    if( $object['featured_media'] ){
+        $img = wp_get_attachment_image_src( $object['featured_media'], 'app-thumb' );
+        return $img[0];
+    }
+    return false;
+}
+
+function get_slugs( $object, $field_name, $request ) {
+    if( $object['id'] ){
+			
+		   $category_info = get_the_category( $object['ID'] );
+			$category_slugs = Array();
+			foreach($category_info as $cat) {
+				$category_slugs[] = $cat->slug;
+			}
+        return $category_slugs;
+    }
+    return false;
+}
+
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'traicy-ranking-info-api/v1', '/route', array(
+      'methods' => 'GET',
+      'callback' => 'custom_meta_ranking_query',
+    ));
+} );
+  
+function custom_meta_ranking_query(){
+
+    $response = Array();
+    
+    if (class_exists('WPP_Query')) {
+        global $post;
+        $args = array(
+            'post_type' => 'post',
+            'range' => 'last7days',
+            'order_by' => 'views',
+            'limit' => 20
+        );
+        $wpp_query = new WPP_Query($args);
+        $wpp_posts = $wpp_query->get_posts();
+
+        if($wpp_posts) {
+            foreach($wpp_posts as $wpp_post) {
+                $post = get_post($wpp_post->id);
+					  $category_info = get_the_category( $post->ID );
+					  $category_ids = Array();
+					  $slugs = Array();
+                foreach($category_info as $cat) {
+                    $category_ids[] = $cat->term_id;
+							$slugs[] = $cat->slug;
+                }
+                $img_medium = get_the_post_thumbnail_url( $post->ID, 'medium' );
+                $title["rendered"] = $post->post_title;
+                $post->id = $post->ID;
+                $post->fimg_url = $img_medium;
+                $post->categories = $category_ids;
+					  $post->slugs = $slugs;
+                $post->title = $title;
+                $post->link = get_permalink( $post->ID, false);
+				
+					  if($must_buy == "1") {
+						  $acf["must_buy"] = true; 
+					  } elseif ($must_buy == "0") {
+						  $acf["must_buy"] = false; 
+					  } else {
+						  $acf["must_buy"] = false;
+					  }
+
+				$acf["sale_start"] = $sale_start;
+				$acf["sale_end"] = $sale_end;
+
+					  $post->acf = $acf;
+				
+                array_push($response, $post);
+            }
+            return $response;
+            wp_reset_postdata();   
+        } else {
+            return "no posts to show.";
+        }
+    
+    }
+}
+
+function add_sale_fields() {
+	add_meta_box( 'traicy_sale_info', 'セール情報', 'insert_sale_fields', 'post', 'normal');
+}
+add_action('admin_menu', 'add_sale_fields');
+ 
+ 
+// カスタムフィールドの入力エリア
+function insert_sale_fields() {
+	global $post;
+    
+    if( get_post_meta($post->ID,'must_buy',true) == "is-on" ) {
+		$is_must_buy = "checked";
+	}
+	echo 'お得か？： <input type="checkbox" name="must_buy" value="is-on" '.$is_must_buy.' ><br>';
+	echo '開始日時： <input type="datetime-local" name="traicy_sale_start" value="'.get_post_meta($post->ID, 'traicy_sale_start', true).'" size="50"><br>';
+	echo '終了日時： <input type="datetime-local" name="traicy_sale_end" value="'.get_post_meta($post->ID, 'traicy_sale_end', true).'" size="50"><br>';
+	
+}
+ 
+function save_traicy_sale_fields( $post_id ) {
+	if(!empty($_POST['traicy_sale_start'])){
+		
+		update_post_meta($post_id, 'traicy_sale_start', $_POST['traicy_sale_start'] );
+	}else{
+		delete_post_meta($post_id, 'traicy_sale_start');
+	}
+	
+	if(!empty($_POST['traicy_sale_end'])){
+		update_post_meta($post_id, 'traicy_sale_end', $_POST['traicy_sale_end'] );
+	}else{
+		delete_post_meta($post_id, 'traicy_sale_end');
+	}
+	
+	if(!empty($_POST['must_buy'])){
+		update_post_meta($post_id, 'must_buy', $_POST['must_buy'] );
+	}else{
+		delete_post_meta($post_id, 'must_buy');
+	}
+}
+add_action('save_post', 'save_traicy_sale_fields');
+
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'traicy-sale-info-api/v1', '/coming', array(
+      'methods' => 'GET',
+      'callback' => 'custom_meta_coming_sale_query',
+    ));
+} );
+  
+// Do the actual query and return the data
+function custom_meta_coming_sale_query(){
+    
+    date_default_timezone_set('Asia/Tokyo');
+    $date_now = date("Y-m-d H:i");
+
+    $args = array(
+        'posts_per_page'	=> -1,
+        'post_type'			=> 'post',
+        'meta_query' 		=> array(
+            'relation' 			=> 'AND',
+            array(
+                'key'			=> 'traicy_sale_start',
+                'compare'		=> '>=',
+                'value'			=> $date_now,
+                'type'			=> 'DATETIME'
+            )
+        ),
+        'order'				=> 'DESC',
+        'orderby'			=> 'meta_value',
+        'meta_key'			=> 'traicy_sale_start',
+        'meta_type'			=> 'DATE'
+    );
+
+    $posts = get_posts($args);
+
+    $response = Array();
+    
+    if($posts) {
+        foreach($posts as $post) {
+            setup_postdata($post);
+            //Get informations that is not avaible in get_post() function and store it in variables.
+            $category_info = get_the_category( $post->ID );
+            $img_medium = get_the_post_thumbnail_url( $post->ID, 'medium' );
+				 $must_buy = get_post_meta($post->ID , 'must_buy' ,true);
+				 $sale_start = get_post_meta($post->ID , 'traicy_sale_start' ,true);
+				 $sale_end = get_post_meta($post->ID , 'traicy_sale_end' ,true);
+				
+            //Adds the informations to the post object.
+            $category_ids = Array();
+				 $slugs = Array();
+				foreach($category_info as $cat) {
+					$category_ids[] = $cat->term_id;
+					$slugs[] = $cat->slug;
+				}
+
+				$title["rendered"] = $post->post_title;
+			
+				$post->id = $post->ID;
+				$post->fimg_url = $img_medium;
+				$post->categories = $category_ids;
+				$post->slugs = $slugs;
+				$post->title = $title;
+				$post->link = get_permalink( $post->ID, false);
+				$post->linkToDetail = $post->linkToDetail;
+
+				if($must_buy == "1") {
+					$acf["must_buy"] = true; 
+				} elseif ($must_buy == "0") {
+					$acf["must_buy"] = false; 
+				} else {
+					$acf["must_buy"] = false;
+				}
+
+				$acf["sale_start"] = $sale_start;
+				$acf["sale_end"] = $sale_end;
+            
+				$post->acf = $acf;
+            
+            array_push($response, $post);
+        
+        }
+        return $response;
+        wp_reset_postdata();   
+    } else {
+        return "no posts to show.";
+    }
+}
+
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'traicy-sale-info-api/v1', '/open', array(
+      'methods' => 'GET',
+      'callback' => 'custom_meta_open_sale_query',
+    ));
+} );
+  
+// Do the actual query and return the data
+function custom_meta_open_sale_query(){
+    
+    date_default_timezone_set('Asia/Tokyo');
+    $date_now = date("Y-m-d H:i");
+	
+    $args = array(
+        'posts_per_page'	=> -1,
+        'post_type'			=> 'post',
+        'meta_query' 		=> array(
+            'relation' 			=> 'AND',
+            array(
+                'key'			=> 'traicy_sale_start',
+                'compare'		=> '<=',
+                'value'			=> $date_now,
+                'type'			=> 'DATETIME'
+            ),
+            array(
+                'key'			=> 'traicy_sale_end',
+                'compare'		=> '>=',
+                'value'			=> $date_now,
+                'type'			=> 'DATETIME'
+            )
+        ),
+        'order'				=> 'ASC',
+        'orderby'			=> 'meta_value',
+        'meta_key'			=> 'traicy_sale_start',
+        'meta_type'			=> 'DATE'
+    );
+
+    $posts = get_posts($args);
+
+    $response = Array();
+    
+    if($posts) {
+        foreach($posts as $post) {
+            setup_postdata($post);
+            //Get informations that is not avaible in get_post() function and store it in variables.
+            $category_info = get_the_category( $post->ID );
+            $img_medium = get_the_post_thumbnail_url( $post->ID, 'medium' );
+				 $must_buy = get_post_meta($post->ID , 'must_buy' ,true);
+				 $sale_start = get_post_meta($post->ID , 'traicy_sale_start' ,true);
+				 $sale_end = get_post_meta($post->ID , 'traicy_sale_end' ,true);
+				
+            //Adds the informations to the post object.
+            $category_ids = Array();
+				 $slugs = Array();
+				foreach($category_info as $cat) {
+					$category_ids[] = $cat->term_id;
+					$slugs[] = $cat->slug;
+				}
+
+				$title["rendered"] = $post->post_title;
+			
+				$post->id = $post->ID;
+				$post->fimg_url = $img_medium;
+				$post->categories = $category_ids;
+				$post->slugs = $slugs;
+				$post->title = $title;
+				$post->link = get_permalink( $post->ID, false);
+				$post->linkToDetail = $post->linkToDetail;
+
+				if($must_buy == "1") {
+					$acf["must_buy"] = true; 
+				} elseif ($must_buy == "0") {
+					$acf["must_buy"] = false; 
+				} else {
+					$acf["must_buy"] = false;
+				}
+
+				$acf["sale_start"] = $sale_start;
+				$acf["sale_end"] = $sale_end;
+            
+				$post->acf = $acf;
+			
+            array_push($response, $post);
+        
+        }
+        return $response;
+        wp_reset_postdata();   
+    } else {
+        return "no posts to show.";
+    }
+}
+
+
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'traicy-sale-info-api/v1', '/closing', array(
+      'methods' => 'GET',
+      'callback' => 'custom_meta_closing_sale_query',
+    ));
+});
+  
+// Do the actual query and return the data
+function custom_meta_closing_sale_query(){
+    date_default_timezone_set('Asia/Tokyo');
+    $date_now = date("Y-m-d H:i");
+	
+    $args = array(
+        'posts_per_page'	=> -1,
+        'post_type'			=> 'post',
+        'meta_query' 		=> array(
+            'relation' 			=> 'AND',
+            array(
+                'key'			=> 'traicy_sale_start',
+                'compare'		=> '<=',
+                'value'			=> $date_now,
+                'type'			=> 'DATETIME'
+            ),
+            array(
+                'key'			=> 'traicy_sale_end',
+                'compare'		=> '>=',
+                'value'			=> $date_now,
+                'type'			=> 'DATETIME'
+            )
+        ),
+        'order'				=> 'ASC',
+        'orderby'			=> 'meta_value',
+        'meta_key'			=> 'traicy_sale_end',
+        'meta_type'			=> 'DATE'
+    );
+
+    $posts = get_posts($args);
+
+    $response = Array();
+	
+	 
+    
+    if($posts) {
+        foreach($posts as $post) {
+            setup_postdata($post);
+            //Get informations that is not avaible in get_post() function and store it in variables.
+            $category_info = get_the_category( $post->ID );
+            $img_medium = get_the_post_thumbnail_url( $post->ID, 'medium' );
+				 $must_buy = get_post_meta($post->ID , 'must_buy' ,true);
+				 $sale_start = get_post_meta($post->ID , 'traicy_sale_start' ,true);
+				 $sale_end = get_post_meta($post->ID , 'traicy_sale_end' ,true);
+				
+            //Adds the informations to the post object.
+            $category_ids = Array();
+				 $slugs = Array();
+				foreach($category_info as $cat) {
+					$category_ids[] = $cat->term_id;
+					$slugs[] = $cat->slug;
+				}
+
+				$title["rendered"] = $post->post_title;
+			
+				$post->id = $post->ID;
+				$post->fimg_url = $img_medium;
+				$post->categories = $category_ids;
+				$post->slugs = $slugs;
+				$post->title = $title;
+				$post->link = get_permalink( $post->ID, false);
+				$post->linkToDetail = $post->linkToDetail;
+
+				if($must_buy == "1") {
+					$acf["must_buy"] = true; 
+				} elseif ($must_buy == "0") {
+					$acf["must_buy"] = false; 
+				} else {
+					$acf["must_buy"] = false;
+				}
+
+				$acf["sale_start"] = $sale_start;
+				$acf["sale_end"] = $sale_end;
+
+
+				$post->acf = $acf;
+            
+            array_push($response, $post);
+        
+        }
+        return $response;
+        wp_reset_postdata();   
+    } else {
+        return "no posts to show.";
+    }
+}
+
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'traicy-sale-info-api/v1', '/all', array(
+      'methods' => 'GET',
+      'callback' => 'custom_meta_all_sale_query',
+    ));
+});
+  
+// Do the actual query and return the data
+function custom_meta_all_sale_query(){
+    date_default_timezone_set('Asia/Tokyo');
+    $date_now = date("Y-m-d H:i");
+
+    $args = array(
+        'posts_per_page'   => 50,
+        'offset'           => 0,
+        'cat'         => '82',
+        'category_name'    => '',
+        'orderby'          => 'date',
+        'order'            => 'DESC',
+        'include'          => '',
+        'exclude'          => '',
+        'meta_key'         => '',
+        'meta_value'       => '',
+        'post_type'        => 'post',
+        'post_mime_type'   => '',
+        'post_parent'      => '',
+        'author'	   => '',
+        'author_name'	   => '',
+        'post_status'      => 'publish',
+        'suppress_filters' => true,
+        'fields'           => '',
+    );
+
+    $posts = get_posts($args);
+	
+    $response = Array();
+	
+    if($posts) {
+        foreach($posts as $post) {
+            setup_postdata($post);
+            //Get informations that is not avaible in get_post() function and store it in variables.
+            $category_info = get_the_category( $post->ID );
+            $img_medium = get_the_post_thumbnail_url( $post->ID, 'medium' );
+				 $must_buy = get_post_meta($post->ID , 'must_buy' ,true);
+				 $sale_start = get_post_meta($post->ID , 'traicy_sale_start' ,true);
+				 $sale_end = get_post_meta($post->ID , 'traicy_sale_end' ,true);
+				
+            //Adds the informations to the post object.
+            $category_ids = Array();
+				 $slugs = Array();
+				foreach($category_info as $cat) {
+					$category_ids[] = $cat->term_id;
+					$slugs[] = $cat->slug;
+				}
+
+				$title["rendered"] = $post->post_title;
+			
+				$post->id = $post->ID;
+				$post->fimg_url = $img_medium;
+				$post->categories = $category_ids;
+				$post->slugs = $slugs;
+				$post->title = $title;
+				$post->link = get_permalink( $post->ID, false);
+				$post->linkToDetail = $post->linkToDetail;
+			
+				if($must_buy == "is-on") {
+					$acf["must_buy"] = true; 
+				} else {
+					$acf["must_buy"] = false; 
+				}
+
+				$acf["sale_start"] = $sale_start;
+				$acf["sale_end"] = $sale_end;
+            
+				$post->acf = $acf;
+            
+            array_push($response, $post);
+            wp_reset_postdata();
+        }
+        return $response;
+        
+    } else {
+        return "no posts to show.";
+    }
+}

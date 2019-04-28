@@ -61,25 +61,18 @@ $lowest = $wifi_data['serviceList']['service'][0];
 ?>
 
 <?php //実際の比較 ?>
-<div class="wifi-comparison-container">
-    <div>
-        <p class="lowest-wifi-headline-text">Wifi 最安価格</p>
-        <h3 class="topTitle"><?= mb_strimwidth($countryName, 0, 16); ?> </h3>
-    </div>
-
-    <div id="lowest">
-        <a class="rental-fee-image-row" href="<?= $lowest['detailUrl']; ?>">
-
-            <div class="rental-fee-bottom">
-                <?= $lowest['rentalFee']; ?><span>円/日</span>
-            </div>
-
-            <div class="imageWifi">
+    <div class="bottom-comparison-price">
+		<a href="<?= $lowest['detailUrl']; ?>">
+         <p class="bottom-country"><?= mb_strimwidth($countryName, 0, 16); ?><br> Wi-fi最安価格</p>
+            	<div class="bottom-price">
+						<p class="bottom-lawest-price"><span><?= $lowest['rentalFee']; ?></span> 円/日</p>
+            <div class="bottom-image imageWifi">
                 <img src="<?= str_replace("http:", "https:", $lowest['serviceLogo']); ?>" class="object-fit-img"/>
             </div>
-        </a>
-    </div>
-</div>
+					</div>
+		 </a>
+      </div>
+
 
 
 

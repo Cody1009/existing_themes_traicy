@@ -97,14 +97,14 @@
                                 <?php if ($j == 0) { ?>
                                     <div class="top-article-arrow-attempt">
                                         <i class="fa fa-angle-right yellow-angle"></i>
-                                        <a href="http://release.traicy.com/" class="attempt-text">乗り物・コラムをもっと見る</a>
+                                        <a href="https://www.traicy.com/newarticle" class="attempt-text">もっと見る</a>
                                     </div>
 
                                 <?php } else { ?>
                                     <div class="top-article-arrow-attempt">
                                         <i class="fa fa-angle-right yellow-angle"></i>
-                                        <a href="<?php echo(esc_url(get_category_link($tmp[0]))); ?>" title="カテゴリー名"
-                                           class="attempt-text">乗り物・コラムをもっと見る</a>
+                                        <a href="https://www.traicy.com/newarticle" title="カテゴリー名"
+                                           class="attempt-text">もっと見る</a>
                                     </div>
                                 <?php } ?>
 
@@ -151,7 +151,7 @@
                                 </a>
                                 <div class="top-article-arrow-attempt">
                                     <i class="fa fa-angle-right yellow-angle"></i>
-                                    <a href="http://release.traicy.com/" class="attempt-text">乗り物・コラムをもっと見る</a>
+                                    <a href="https://www.traicy.com/newarticle" class="attempt-text">もっと見る</a>
                                 </div>
                             </div> <!-- articleRight-->
                         </div>

@@ -26,20 +26,16 @@
         <p class="divider">|</p>
         <li><a class="footer-menu" href="https://www.traicy.com/ad">広告掲載</a></li>
         <p class="divider">|</p>
-        <li><a class="footer-menu" href="https://www.traicy.com/traicybloggernetwork">ブロガーネットワーク登録</a></li>
-        <p class="divider">|</p>
         <li><a class="footer-menu" href="https://talk.traicy.com/users/new">メルマガ登録</a></li>
-        <p class="divider">|</p>
-        <li><a class="footer-menu" href="http://line.me/ti/p/%40traicy">LINE登録</a></li>
         <p class="divider">|</p>
         <li><a class="footer-menu" href="https://www.traicy.com/wanted">採用情報</a></li>
         <p class="divider">|</p>
         <li><a class="footer-menu" href="https://www.traicy.com/about#company">運営会社情報</a></li>
         <p class="divider">|</p>
-        <li><a class="footer-menu" href="https://www.traicy.com/contact">お問い合わせ</a></li>
+        <li><a class="footer-menu" href="https://tayori.com/faq/af99b92c21220d7b3e393320db790350e0865ae0">ヘルプ・FAQ・お問い合わせ</a></li>
     </ul>
     <p class="copyright">
-        Copyright(c) traicy, Inc. All rights reserved.
+        Copyright(c) Traicy Japan, Inc. All rights reserved.
     </p>
 </footer><!-- #colophon -->
 </div>

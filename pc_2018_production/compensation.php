@@ -103,7 +103,7 @@
                 ?>
             > <?php //左にある">"は必要なやつです． ?>
 
-                <a class="special" href="<?php echo $items[$lowest[$i]]->applyUrl; ?>" target="_blank">
+                <a class="special" href="<?php echo $items[$lowest[$i]]->detailUrl; ?>" target="_blank">
                     <div class="lineComment">
                         <?php echo $items[$lowest[$i]]->lineComment; ?>
                     </div>
@@ -167,7 +167,7 @@
                             <?php foreach ($items as $item) : ?>
                                 <?php if ((string)$item->lineComment === (string)$uniqueLineComment[$i]) : ?>
                                     <li class="wifiContent">
-                                        <a href="<?php echo $item->applyUrl; ?>" class="special" target="_blank">
+                                        <a href="<?php echo $item->detailUrl; ?>" class="special" target="_blank">
                                             <div class="wifiImgLeft">
                                                 <img src="<?php echo $item->serviceLogo; ?>">
                                             </div>

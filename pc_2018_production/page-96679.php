@@ -27,9 +27,7 @@
 
                 <p class="static-page-title-text">プレスリリース送付先</p>
                 <div class="black-horizontal-devider"></div>
-                 <p class="static-page-body-text">プレスリリースはメールおよびFAXにて受け付けております。メールにてお送りいただければ幸いです。お手数ですが、メールとFAX両方での送付はご遠慮ください。</p>
-                <p class="static-page-body-text">メール：<span class="static-page-anchor-style" >press@traicy.com</span></p>
-                <p class="static-page-body-text">FAX：020-4664-4371</p>
+				<p class="static-page-body-text">プレスリリースの送付先は、<a href="https://tayori.com/faq/af99b92c21220d7b3e393320db790350e0865ae0">ヘルプ・FAQ・お問い合わせのページ</a>でご確認ください。</p>
                 <p class="static-page-body-text">
                     なお、航空・鉄道・船舶・ホテル・旅行等に関係のないリリースはお送りにならないよう、お願い致します。また、お送りいただいたリリースは記事化されないこともありますので、予めご了承のうえ、掲載に関するお問い合わせはお控えくださいますようお願いいたします。</p>
                 <p class="static-page-body-text">掲載が保証される広告プランもご用意しておりますので、詳しくは<a  class="static-page-anchor-style" href="https://www.traicy.com/contact">お問い合わせ</a>ください。</p>
@@ -38,11 +36,9 @@
                 <div class="black-horizontal-devider"></div>
                 <p class="static-page-body-text">株式会社トライシージャパン</p>
                 <p class="static-page-body-text">東京都千代田区神田鍛冶町3-7-21天翔神田駅前ビル804</p>
-                <p class="static-page-body-text">TEL：050-5532-5275　航空機の運航状況、セール航空券の予約の問い合わせは⇒<a class="static-page-anchor-style" href="https://www.traicy.com/contact">こちら</a></p>
-                <p class="static-page-body-text">FAX：020-4664-4371</p>
-                <p class="static-page-body-text">プレスリリース以外のメール： <span class="static-page-anchor-style" >info@traicy.com</span></p>
-                 <p class="static-page-body-text">プレスリリースの送信先：<span class="static-page-anchor-style" >press@traicy.com</span></p>
-                <p class="static-page-body-text">※ご連絡はメールか<a class="static-page-anchor-style" href="https://www.traicy.com/contact">お問い合わせフォーム</a>よりお願い致します。記事化についてのお問い合わせにはお答えできかねます。
+                <p class="static-page-body-text">TEL：050-5532-5275（営業時間：平日午前11時〜午後5時）、遠隔地のコールセンターにで受電しており、ご質問やご要望にはその場でお答えできませんことをご了承ください。</p>
+				<p class="static-page-body-text">航空機の運航状況、セール航空券の予約の問い合わせは⇒<a class="static-page-anchor-style" href="https://www.traicy.com/contact">こちら</a></p>
+                <p class="static-page-body-text">※ご連絡は<a href="https://tayori.com/faq/af99b92c21220d7b3e393320db790350e0865ae0">ヘルプ・FAQ・お問い合わせのページ</a>よりお願い致します。記事化についてのお問い合わせにはお答えできかねます。
                 </p>
 
                 <p class="static-page-title-text">沿革</p>
@@ -175,21 +171,27 @@
                     <li class="static-page-body-bold">2018年</li>
                     <ul>
                         <li class="static-page-body-text">1月1日　事務所を神田鍛冶町に再移転</li>
-                        <li class="static-page-body-text">1月22日　Bytedanceが提供するアプリ「TopBuzz」に配信開始</li>
+                        <li class="static-page-body-text">1月29日　三才ブックス発行「お金の裏ワザ＆儲けワザ」に掲載</li>
+                        <li class="static-page-body-text">1月22日　Bytedanceが提供するアプリ「TopBuzz」に配信開始</li>
+                        <li class="static-page-body-text">3月15日 JTBパブリッシング発行「週末海外ひとり旅」に掲載</li>
+                        <li class="static-page-body-text">3月16日　晋遊舎発行「100％ムックシリーズ　MONOQLOお得技大全」に掲載</li>
                         <li class="static-page-body-text">4月21日　第13回「Traicy懇親会 in 東京」開催</li>
                         <li class="static-page-body-text">5月6日　M&E Online Technologyが提供するアプリ「News Jet」に配信開始</li>
                         <li class="static-page-body-text">5月19日　晋遊舎発行「MONOQLO 2018年7月号」に掲載</li>
-                             
                         <li class="static-page-body-text">7月11日　日本テレビ系列「スッキリ」、「旅の新常識！旅行比較サイト使いこなし術」特集で放映</li>
                         <li class="static-page-body-text">9月19日　晋遊舎発行「MONOQLO 2018年11月号」に掲載</li>
-                    </ul>
+                        <li class="static-page-body-text">10月25日　晋遊舎発行「【お得技シリーズ124】台湾お得技ベストセレクション」に掲載</li>
+                        <li class="static-page-body-text">11月19日　オープンスマイルと「トラベルニュース」をオープンし、記事配信開始</li>
+						<li class="static-page-body-text">11月21日　bizSPA!フレッシュ「<a href="https://bizspa.jp/post-91357/">香港行きが片道10円!? 旅の達人が教える「激安航空チケット」の探し方」に掲載</a></li>
+						<li class="static-page-body-text">12月7日　技術評論社発行「ANA 上級会員 攻略ガイド」「JAL 上級会員 攻略ガイド」に掲載</li>
+                    </ul>
                 </ul>
                 <br><br>
                 <p class="static-page-title-text">お問い合わせ先</p>
                 <div class="black-horizontal-devider"></div>
                 <p class="static-page-body-text">
                     ご不明な点などは
-                    <a class="static-page-anchor-style" href="https://www.traicy.com/contact" target="_blank">お問い合わせフォーム</a>
+                    <a href="https://tayori.com/faq/af99b92c21220d7b3e393320db790350e0865ae0">ヘルプ・FAQ・お問い合わせのページ</a>
                     お問い合わせください
                 </p>
 

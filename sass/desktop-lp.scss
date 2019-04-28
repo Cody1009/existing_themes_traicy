@@ -1,0 +1,224 @@
+$blackLP: #313131;
+$whiteLP: #ffffff;
+$backgroundGray:rgba(228,228,228,0.32);
+$skyBlue:#4EB9FD;
+$gradationYellow:linear-gradient(142.8deg, #FBD249 0%, #F5A623 100%);
+
+// vars
+$mainWidth: 1024px;
+$bold: 600;
+
+// z-index
+$negativeZIndex: -1;
+$nullZIndex: 0;
+$lowestZIndex: 50;
+
+$mainFont: "Hiragino Kaku Gothic Pro";
+$subFont: "OCRB";
+
+@mixin title {
+  font-family: $mainFont;
+  font-size: 30px;
+  font-weight: $bold;
+  letter-spacing: 3px;
+  line-height: 43px;
+  word-wrap: break-word;
+}
+
+@mixin subTitle {
+  font-family: $mainFont;
+  font-size: 24px;
+  letter-spacing: -0.13px;
+  word-wrap: break-word;
+  line-height: 36px;
+}
+
+@mixin body {
+  font-family: $mainFont;
+  font-size: 20px;
+  letter-spacing: 3px;
+  line-height: 30px;
+  word-wrap: break-word;
+}
+
+@mixin middle {
+  font-family: $mainFont;
+  font-size: 18px;
+  letter-spacing: -0.1px;
+  line-height: 27px;
+  word-wrap: break-word;
+}
+
+@mixin small {
+  font-family: $mainFont;
+  font-size: 13px;
+  letter-spacing: -0.1px;
+  line-height: 25px;
+  word-wrap: break-word;
+}
+
+
+// common
+* {
+  box-sizing: border-box;
+}
+.button-common-style {
+  background: $gradationYellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.button-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.common-section-title {
+  @include title;
+  color: $blackLP;
+  margin-bottom: 40px;
+}
+
+.common-section-span {
+  color: $skyBlue;
+}
+
+.common-section-body{
+  @include body;
+  color: $blackLP;
+}
+
+.page-container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 60px;
+  width: 140px;
+  margin-top: 20px;
+  margin-left: 20px;
+  position: relative;
+  &:hover{
+    opacity: 0.6;
+  }
+}
+
+.section-top {
+  width: 100%;
+  padding: 15px 90px 50px 90px;
+  display: flex;
+  position: relative;
+}
+
+.section-top-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: $negativeZIndex;
+}
+
+.section-top-desc {
+  width: 360px;
+}
+
+.section-top-title {
+  @include title;
+  color: $whiteLP;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.section-top-small {
+  @include small;
+  color: $whiteLP;
+  margin-bottom: 40px;
+}
+
+.section-top-button {
+  height: 45px;
+  width: 230px;
+  border-radius: 18px;
+  @extend .button-common-style;
+}
+
+.section-top-button-text {
+  @include middle;
+  color: $whiteLP;
+  font-weight: $bold;
+}
+
+.section-top-app-image {
+  margin-left: 240px;
+}
+
+.app-feat-text {
+  @include title;
+  color: $blackLP;
+  border-bottom: $blackLP 6px solid;
+  width: 365px;
+  margin: 0 auto 20px auto;
+}
+
+.search-section {
+  width: 100%;
+  height: 300px;
+  padding: 60px 90px;
+  background: image-url("detect-background.png");
+  z-index: $negativeZIndex;
+}
+
+.detect-section{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 40px 90px;
+}
+
+.detect-section-desc{
+  width: 360px;
+  margin-left: 70px;
+}
+
+.buy-section{
+  width: 100%;
+  padding: 30px 90px;
+  background: $backgroundGray;
+  display: flex;
+  align-items: center;
+}
+
+.buy-app-image{
+  margin-left: 130px;
+}
+
+.bottom-button{
+  height: 70px;
+  width: 360px;
+  border-radius: 18px;
+  box-shadow: 0 4px 4px 0 rgba($blackLP,0.5);
+  margin: 30px auto;
+  @extend .button-common-style;
+}
+
+.bottom-button-text{
+  @include subTitle;
+  color: $whiteLP;
+}
+.bottom-promote-text{
+  @include middle;
+  color: $blackLP;
+  text-align: center;
+  margin-bottom:40px;
+}

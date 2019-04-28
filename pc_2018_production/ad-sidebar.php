@@ -1,25 +1,34 @@
 <!-- 広告開始　-->
 <!-- ad-sidebar -->
-<?php if(!is_NoAdsense()) : ?>
-<script type='text/javascript'>
-	document.MAX_ct0 ='';
-	var m3_u = (location.protocol=='https:'?'https://cas.criteo.com/delivery/ajs.php?':'http://cas.criteo.com/delivery/ajs.php?');
-	var m3_r = Math.floor(Math.random()*99999999999);
-	document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
-	document.write ("zoneid=421708");document.write("&amp;nodis=1");
-	document.write ('&amp;cb=' + m3_r);
-	if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
-	document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
-	document.write ("&amp;loc=" + escape(window.location).substring(0,1600));
-	if (document.context) document.write ("&context=" + escape(document.context));
-	if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
-		document.write ("&amp;ct0=" + escape(document.MAX_ct0));
-	}
-	if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
-	var publisherurl = "%%SITE%%";
-	var macro = "%%SI" + "TE%%";
-	if (publisherurl !== macro) document.write ("&amp;publisherurl="+publisherurl);
-	document.write ("'></scr"+"ipt>");
+<!-- BEGIN CRITEO CDB -->
+<script async="async" type="text/javascript" src="//static.criteo.net/js/ld/publishertag.js"></script>
+<div id="criteo_slot_1357661"></div>
+<script>
+    !function(){
+        /* CONFIG CRITEO ZONE ID, SLOT DIV ID, PASSBACK */
+        var criteoZoneId = 1357661;
+        var criteoSlotId = "criteo_slot_1357661";
+        var passback = function () {
+            var div = document.getElementById(criteoSlotId);
+            if (div) {
+            var s = document.createElement('script'); s.setAttribute('async', ''); s.setAttribute('src', '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'); 
+            div.appendChild(s);
+            /* traicy_pc_top_300_1 */
+            div.innerHTML+= '<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-3121993718200907" data-ad-slot="7745396730"></ins>';
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            }
+        }
+ 
+        var CriteoAdUnits = { "placements": [{ "slotid": criteoSlotId, "zoneid": criteoZoneId }]};
+        window.Criteo = window.Criteo || {}; window.Criteo.events = window.Criteo.events || [];
+        var processCdbBid = function() {
+            var bids = Criteo.GetBidsForAdUnit(criteoSlotId);
+            if (bids.length > 0) {
+                var bidFound = bids[0]; Criteo.RenderAd({ bidId: bidFound.id, containerId: bidFound.impressionId });
+            } else { passback(); }
+        };
+        Criteo.events.push(function() { Criteo.RequestBids(CriteoAdUnits, processCdbBid, 2000);});
+    }();
 </script>
-<?php endif; ?>
+<!-- END CRITEO CDB -->
 <!-- /広告 -->

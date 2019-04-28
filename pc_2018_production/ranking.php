@@ -49,7 +49,7 @@ if (!is_single($post)) {
 }
 ?>
 
-<?php get_template_part('ad-sidebar'); ?><!-- ランキング -->
+<!-- ランキング -->
 
 <?php
 if (is_single($post)) {

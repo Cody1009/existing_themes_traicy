@@ -76,6 +76,16 @@
                                 while (have_posts()) : the_post();
                                     get_template_part('content-archive');
                                     $count++;
+													 if ($count == 2) {
+                        				get_template_part('ad_traicy_newpc_top_recommend_4');
+                        
+                    					} elseif ($count == 6) {
+                        				get_template_part('ad_traicy_newpc_top_recommend_5');
+                        
+                   					 } elseif ($count == 15) {
+                        					get_template_part('ad_traicy_newpc_top_recommend_6');
+                        	
+                    }
                                 endwhile;
 
                                 $t = $count % 3;

@@ -41,7 +41,7 @@
                             var s = document.getElementsByTagName('script')[0];
                             s.parentNode.insertBefore(pa, s);
                         })();
-                    </script>
+                    </script>					
                     <!-- popinタグ（レコメンド） -->
                     <div class="ad-banner-center">
                         <?php get_template_part('ad-banner-730-90'); ?>

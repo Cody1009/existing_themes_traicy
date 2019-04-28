@@ -39,16 +39,18 @@ if ($country_name == "選択肢なし" || $country_name == "") {
 ?>
 
 
-<div>
-    <p class="skyscanner-comparison-text">航空券比較</p>
-    <h3 class="topTitle"><?= $country_name ?>行き</h3>
-</div>
 
-<a class="skyscanner-fee-image-row" href=<?= $country[1] ?> target="_blank">
-    <div class="ticketFee">
-        <?= number_format($country[0]); ?><span>円</span>
-    </div>
-    <img class="skyscanner-image" src="/images/skyscanner.png"/>
-</a>
+
+<div class="bottom-comparison-price">
+		<a href="<?= $lowest['detailUrl']; ?>">
+         <p class="bottom-country"><?= $country_name ?>行き<br>航空券</p>
+            	<div class="bottom-price">
+						<p class="bottom-lawest-price"><span><?= number_format($country[0]); ?></span> 円</p>
+            <div class="bottom-image imageSkyscanner">
+                <img src="/images/skyscanner.png"  class="object-fit-img"/>
+            </div>
+					</div>
+		 </a>
+      </div>
 
 

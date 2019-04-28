@@ -95,9 +95,7 @@ fjs.parentNode.insertBefore(js, fjs);
 	<div class="header_text">
 		<a href="/"><div>traicy</div></a>
 		<a href="http://www.hotelers.jp/"><div>Hotelers</div></a>
-		<a href="http://www.guesthousetoday.jp/"><div>GuesthouseToday</div></a>
 		<a href="http://www.extrain.info/"><div>EX-TRAIN</div></a>
-		<a href="http://www.traicy.com.tw/"><div>Traicy Taiwan</div></a>
 	</div>
 	<div class="social-icon">
 		<a class="side-twitter" href="https://twitter.com/traicycom" target="_blank"><span class="icon-twitter"></span></a>
