@@ -1,0 +1,29 @@
+/*notice*/
+/* line 121, ../sass/front-page.scss */
+h2.main_category {
+  background: #fff;
+  color: #245ba7;
+  height: 80px;
+  line-height: 80px;
+  font-size: 19px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.notice-date{
+	padding-left: 15px;
+	font-size: 12px;
+	line-height: 20px;
+	top: 20px;
+}
+li.notice {
+    background: white;
+    box-sizing: border-box;
+    border-bottom: 2px solid #EEEEEE;
+    padding: 8px 15px;
+    color: $black;
+    font-size: 16px;
+    line-height: 30px;
+	 font-weight: bold;
+}

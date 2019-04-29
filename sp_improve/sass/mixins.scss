@@ -1,0 +1,179 @@
+body {
+    margin: 0px;
+    color: $black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.content-title {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    color: $black;
+}
+
+.content-box {
+    display: flex;
+    border-bottom: 2px solid $lightGray;
+}
+
+.content-box img {
+    width: 100px;
+    height: 100px;
+}
+
+.content-box-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;  
+}
+
+.blue-btn-wrapper {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.blue-btn {
+    background-color: $skyBlue;
+    border-radius: 5px;
+    width: 80vw;
+    display: inline-block;
+    text-align:left;
+    padding: 15px 10px;
+    color: white!important;
+	
+	.fa-angle-right{
+		color: $white;
+	}
+}
+
+/*
+Theme Name: Traicy_SP_Improve
+	Description:Twenty Twelve を利用した子テーマです。
+Template:twentytwelve
+Version:1.0
+Author:camax (fixed by kamakan & sada)
+Author URI:http://camax.org/
+ */
+body {
+    margin: 0px;
+	 overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.content-title {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.content-box {
+    display: flex;
+    border-bottom: 2px solid #EEEEEE;
+}
+
+.content-box img {
+    width: 100px;
+    height: 100px;
+}
+
+.content-box-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.blue-btn-wrapper {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.blue-btn {
+    background-color: #00A1EF;
+    border-radius: 5px;
+    width: 80vw;
+    display: inline-block;
+    text-align: center;
+    padding: 15px 10px;
+    color: white;
+}
+.recruit-top-img{
+  width: 100vw;
+  margin-bottom: 60px;
+}
+.flow-for-application{
+  text-align: center;
+}
+.uls{
+  margin-left: 0px;
+  padding-inline-start: 3vw;
+}
+.uls li{
+  padding-bottom: 10px;
+}
+.center-contents{
+  width:90vw;
+  padding-right:5vw;
+  padding-left:5vw;
+}
+
+.static-page-title-text{
+  padding: 40px 0;
+  color: $black;
+  font-size: 22px;
+  font-family: "Hiragino Kaku Gothic Pro";
+  text-align: center;
+  font-weight: bold;
+}
+.static-page-body-text{
+  color:$black;
+　line-height: 20px;
+  text-align: left;
+  font-size: 16px;
+  font-family: "Hiragino Kaku Gothic Pro";
+  line-height: 30px !important;
+  padding-bottom: 15px;
+}
+.static-page-body-bold{
+  color: $black;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Hiragino Kaku Gothic Pro";
+  text-align: left;
+  padding-bottom: 50;
+}
+
+.black-horizontal-devider {
+   height: 5px;
+   width: 10vw;
+   background-color: #000000;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 40px;
+  }
+.fa{
+	padding: 20 0;
+}

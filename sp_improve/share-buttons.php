@@ -26,22 +26,29 @@ fjs.parentNode.insertBefore(js, fjs);
   </div>
 
   <div class="sns_icon facebook">
-    <a href='<?php echo $facebook_url; ?>' target="_blank" title="Facebookでシェア"><img src="https://www.traicy.com/images/facebook.png" alt="facebook"></a>
+    <a href='<?php echo $facebook_url; ?>' target="_blank" title="Facebookでシェア">
+		<div class="sns-icon-container"><img src="https://www.traicy.com/images/facebook.png" alt="facebook"></div></a>
   </div>
-
+	
+	<div class="sns_icon twitter">    
+	  <a href='<?php echo $twitter_url; ?>' target="_blank" title="twitterでシェア">
+		  <div class="sns-icon-container"><img src="https://www.traicy.com/images/twitter.png" alt="twitter"></div></a>
+  </div>	
+	
+  <div class="sns_icon hatena">
+		<a href='<?php echo $hatena_url; ?>' target="_blank" title="はてなブックマークに登録">
+			<img src="https://www.traicy.com/images/hatena.svg" alt="はてなブックマーク">
+	</a>
+  </div>
+	
   <div class="sns_icon google">
-    <a href='<?php echo $google_url; ?>' target="_blank" title="Google+で共有"><img src="https://www.traicy.com/images/google.png" alt="googleplus"></a>
+    <a href='<?php echo $google_url; ?>' target="_blank" title="Google+で共有">
+		<img src="https://www.traicy.com/images/google.png" alt="googleplus"></a>
   </div>
 
   <div class="sns_icon line">
-    <a href='<?php echo $line_url; ?>' target="_blank" title="LINEに送る"><img src="https://www.traicy.com/images/line.png" alt="LINE"></a>
+    <a href='<?php echo $line_url; ?>' target="_blank" title="LINEに送る">
+		<div class="sns-icon-container"><img src="https://www.traicy.com/images/line.png" alt="LINE"></div></a>
   </div>
 
-  <div class="sns_icon hatena">
-    <a href='<?php echo $hatena_url; ?>' target="_blank" title="はてなブックマークに登録"><img src="https://www.traicy.com/images/hatena.svg" alt="はてなブックマーク"></a>
-  </div>
-
-  <div class="sns_icon twitter">
-    <a href='<?php echo $twitter_url; ?>' title="twitterでシェア"><img src="https://www.traicy.com/images/twitter.png" alt="twitter"></a>
-  </div>
 </div>

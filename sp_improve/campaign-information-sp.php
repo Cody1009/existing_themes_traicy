@@ -21,7 +21,7 @@ jQuery(function($){
 $today = date( 'Ymd' );
 ?>
 
-<h1 id="campaignHead">イベント・キャンペーン情報</h1>
+<h1 id="campaignHead">ー イベント・キャンペーン情報 ー</h1>
 
 <!-- タブメニュー -->
 <ul id="campaign-tab-menu">
@@ -157,3 +157,8 @@ $posts = get_posts($args);
 </div> <!-- campaign -->
 
 <?php } ?>
+<div class="blue-btn-wrapper">
+  <a class="blue-btn" href="https://www.traicy.com/airline-tags">
+  	もっと見る <i class="fas fa-angle-right"></i>
+  </a>
+</div>

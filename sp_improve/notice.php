@@ -1,5 +1,5 @@
 <div id="topic">
-	<h2 class="main_category">お知らせ</h2>
+	<h2 class="main_category">ー お知らせ ー</h2>
 	<ul class="contents information">
 <?php
 	$termId = get_category_by_slug('information')->term_id;
@@ -14,7 +14,8 @@
 			setup_postdata( $post );
 ?>
 		<a href="<?php the_permalink(); ?>">
-			<li class="notice"><?php the_title(); ?> ( <?php echo get_the_date(); ?> )</li>
+			<span class="notice-date"><?php echo get_the_date(); ?></span>
+			<li class="notice"><?php the_title(); ?> </li>
 		</a>
 <?php
 		endforeach;

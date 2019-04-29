@@ -9,12 +9,17 @@
  * @since Twenty Twelve 1.0
  */
 ?>
+<head>
+	<style>
+	</style>
+</head>
+
 
 <div class="catCards ">
 <a href="<?php the_permalink(); ?>">
-		<h1><?php echo $post -> post_title; ?></h1>
 		<?php the_post_thumbnail('medium'); ?>
-		<p><?php echo mb_substr(strip_tags($post-> post_content),0,150).'...'; ?></p>
+	   <h1><?php echo $post -> post_title; ?></h1>
+		<p><?php echo mb_substr(strip_tags($post-> post_content),0,100).'...'; ?></p>
 </a>
 </div>
 

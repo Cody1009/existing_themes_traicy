@@ -28,19 +28,21 @@ get_header(); ?>
 			<div class="allCategory">
 
 <?php $count = 0; ?>
-	<?php
-		while ( have_posts() ) : the_post();
-			get_template_part( 'content-archive' );
-			$count++;
-			if($count % 4 == 2): ?>
-					<span class="sponsor">スポンサーリンク</span>
-					<!--広告-->
-					<div class="sponsorCard">
-						<?php get_template_part('ad-336-280-bottom') ?>
-					</div>
-			 <?php endif;
-		endwhile;
-	?>
+<?php
+while (have_posts()) : the_post();
+    get_template_part('content-archive');
+    $count++;
+    if ($count % 4 == 2): ?>
+        <span class="sponsor">スポンサーリンク</span>
+        <!--広告-->
+        <div class="sponsorCard">
+            <?php get_template_part('ad-336-280-bottom') ?>
+        </div>
+    <?php endif;
+endwhile;
+?>
+
+
 
 <?php	if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
 

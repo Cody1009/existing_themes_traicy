@@ -62,7 +62,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <?php wp_head(); ?>
 
 <!-- font-awesome -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 <!-- font-awesome -->
 
 <!-- DFPタグ start -->
@@ -99,196 +99,342 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
-<style>
-/* headerのスタイルは少量しかないので直接記述。*/
-#site-navigation {
-	width: 100%;
-	text-align: center;
-	box-sizing: border-box;
-	height: 60px;
-	padding: 5px 5px;
-}
-#site-navigation .header_logo{
-	height: 100%;
-	margin: 0 auto;
-}
-#traicyLogo {
-	width: 100px;
-	height: 50px;
-	float: left;
-}
-#menuIcons {
-  float: left;
-  width: calc(100% - 110px);
-  display: flex;
-  height: 50px;
-  margin: 2px 5px 0px;
-  justify-content: space-around;
-}
-#menuIcons > li {
-  list-style-type: none;
-  display: inline-block;
-  position: relative;
-  height: 50px;
-  width: 100%;
-  margin : 0;
-  text-align: center;
-}
-.menuIcon {
-  display: inline-block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 35px;
-  width: 100%;
-}
-.menuIcon > i {
-  font-size: 28px;
-  color: #54A0E6;
-  line-height: 35px;
-}
-.menuText {
-  display: inline-block;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  height: 20px;
-  width: 100%;
-}
-.menuText > span{
-  font-size: calc(6px + 1vw);
-  line-height: 20px
-  text-decoration: none;
-}
-
-.fa-large:before{
-	font-size : calc(10vw);
-	color : var(--bar-color);
-}
-#search-form {
-	padding: 12px 8px;
-	margin: 0 auto;
-	display: none;
-}
-#search-form form {
-	width: 100%;
-	display: table;
-	table-layout: fixed;
-	font-size: 14px;
-}
-#search-form input[type=text] {
-	display: table-cell;
-	width: 100%;
-	height: 38px;
-	padding: 10px;
-	box-sizing: border-box;
-	border-radius: 0;
-	-webkit-appearance: none;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
-	font-size: 16px;
-}
-
-#search-form .search-button {
-	display: table-cell;
-	vertical-align: top;
-	width: 20%;
-}
-#search-form .search-button input[type="submit"] {
-	width: 100%;
-	height: 38px;
-	font-weight: bold;
-	color: white;
-	border: none;
-	background: #54A0E6;
-	padding: 0;
-	border-radius: 0;
-	-webkit-appearance: none;
-	border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-#search-form .search-keyword {
-	list-style: none;
-	padding: 0;
-	margin: 12px auto 0;
-}
-#search-form .search-keyword li {
-	display: inline-block;
-	margin: 8px;
-	font-size: 12px;
-}
-</style>
-
 <script type="text/javascript">
 	jQuery(function() {
+        $("#nav-open-button").on("click",function(){
+            $("#header-nav").fadeIn();
+        });
+        $("#nav-close-button").on("click",function(){
+            $("#header-nav").fadeOut();
+        });
+        
 		$("#search_btn").on("click",function(){
-			$(this).toggleClass("active");
-			$("#search-form").fadeToggle("fast");
+			$("#search-container").fadeIn();
 		});
+		$("#search-close-button").on("click",function(){
+			$("#search-container").fadeOut();
+		});
+		
 });
 </script>
 
 <div itemscope itemtype="http://schema.org/Article" id="page" class="hfeed site">
-  <header id="masthead" class="site-header" role="banner">
-    <nav id="site-navigation" class="main-navigation fixed" role="navigation">
-      <div id="traicyLogo">
-        <a href="<?php echo esc_url( home_url( '/' ) );?>"><img class="header_logo" src="<?php get_stylesheet_directory_uri() ;?>/images/logo.gif"></a>
-      </div>
-      <div id="menuIcons">
-        <li>
-          <a href="https://www.traicy.com/wifi">
-            <div class="menuIcon">
-              <i class="fa fa-wifi"></i>
-            </div>
-            <div class="menuText">
-              <span>海外Wi-Fi</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="https://talk.traicy.com/">
-            <div class="menuIcon">
-              <i class="fa fa-plane"></i>
-            </div>
-            <div class="menuText">
-              <span>投稿サイト</span>
-            </div>
-          </a>
-        </li>
-        <li id="search_btn">
-            <div class="menuIcon">
-              <i class="fa  fa-search"></i>
-            </div>
-            <div class="menuText">
-              <span>検索</span>
-            </div>
-        </li>
-        <li>
-          <a href="https://www.traicy.com/category">
-            <div class="menuIcon">
-              <i class="fa fa-bars"></i>
-            </div>
-            <div class="menuText">
-              <span>カテゴリ</span>
-            </div>
-          </a>
-        </li>
-      </div>
-      <div class="both"></div>
-    </nav><!-- #site-navigation -->
 
-		<div id="search-form">
-			<form name="myForm" id="siteSearch" method="get" action="<?php echo home_url('/'); ?>">
-		    <input type="text" name="s" id="sitem" placeholder="Traicyの記事を検索する">
-		    <div class="search-button"><input type="submit" value="検索"></div>
-		  </form>
-		</div>
+  <header class="flex">
+        <div class="navigation-logo-wrapper flex">
+            <a href="https://www.traicy.com/"><img style="width: 100px;" src="https://www.traicy.com/images/logo.gif" alt=""></a>
+        </div>
+        <div class="navigation-items">
+            <ul class="flex">
+                <li id="search_btn">
+                    <span class="navigation-icon">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    <span class="navigation-title">
+                        探す
+                    </span>
+                </li>
+                <li>
+					<a href="https://talk.traicy.com/" title="">
+						<span class="navigation-icon">
+							<i class="fas fa-comment-dots"></i>
+						</span>
+						<span class="navigation-title">
+							コミュニティ
+						</span>
+					</a>
+                </li>
+                <li id="headerSignInBtn" class="navigation-register-btn-wrapper">
+                    <span class="navigation-register-btn">
+                        会員登録<br>
+                        ログイン
+                    </span>
+                </li>
+                <li id="nav-open-button">
+                    <span class="navigation-icon">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                    <span class="navigation-title">
+                        メニュー
+                    </span>
+                </li>
+            </ul>
+        </div>
+	  
 
-<!-- 広告 -->
-<?php get_template_part('ad-header'); ?>
-<!-- 広告 -->
+        <div id="header-nav">
 
-	</header><!-- #masthead -->
+            <div id="nav-close-button">
+                <span class="navigation-icon">
+                    <i class="far fa-times-circle"></i>
+                </span>
+                <span class="navigation-title">
+                    とじる
+                </span>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-plane-departure"></i> 航空
+                    </h3>
+                </a>
+                <div class="nav-small-titles">
+                    <span class="nav-small-title"><a href="" title="">マイレージ</a></span>
+                    <span class="nav-small-title"><a href="" title="">空港</a></span>
+                    <span class="nav-small-title"><a href="" title="">新路線・増減便・運休</a></span>
+                    <span class="nav-small-title"><a href="" title="">セール・特別運賃</a></span>
+                    <span class="nav-small-title"><a href="" title="">機内食</a></span>
+                    <span class="nav-small-title"><a href="" title="">機材</a></span>
+                    <span class="nav-small-title"><a href="" title="">航空会社一覧</a></span>
+                </div>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-subway"></i> 鉄道
+                    </h3>
+                </a>
+                <div class="nav-small-titles">
+                    <span class="nav-small-title"><a href="" title="">割引きっぷ</a></span>
+                </div>
+            </div>
+            
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-bus-alt"></i> バス
+                    </h3>
+                </a>
+                <div class="nav-small-titles">
+                    <span class="nav-small-title"><a href="" title="">空港バス</a></span>
+                </div>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-bed"></i> ホテル
+                    </h3>
+                </a>
+                <div class="nav-small-titles">
+                    <span class="nav-small-title"><a href="" title="">ホステル・バックパッカーズ</a></span>
+                    <span class="nav-small-title"><a href="" title="">民泊</a></span>
+                </div>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-building"></i> 旅行会社
+                    </h3>
+                </a>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-credit-card"></i> クレカ
+                    </h3>
+                </a>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-car"></i> 自動車
+                    </h3>
+                </a>
+                <div class="nav-small-titles">
+                    <span class="nav-small-title"><a href="" title="">道路</a></span>
+                    <span class="nav-small-title"><a href="" title="">レンタカー・カーシェア</a></span>
+                </div>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-columns"></i> コラム
+                    </h3>
+                </a>
+                <div class="nav-small-titles">
+                    <span class="nav-small-title"><a href="" title="">おもしろ</a></span>
+                </div>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-book"></i> 本
+                    </h3>
+                </a>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-comments"></i> 一問一答
+                    </h3>
+                </a>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-newspaper"></i> リリース
+                    </h3>
+                </a>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-globe-asia"></i> 旅行情報
+                    </h3>
+                </a>
+                <div class="nav-small-titles">
+                    <span class="nav-small-title"><a href="" title="">安全情報</a></span>
+                    <span class="nav-small-title"><a href="" title="">旅グッズ</a></span>
+                    <span class="nav-small-title"><a href="" title="">出入国・ビザ</a></span>
+                    <span class="nav-small-title"><a href="" title="">通信</a></span>
+                    <span class="nav-small-title"><a href="" title="">調査結果</a></span>
+                </div>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-chart-area"></i> IR
+                    </h3>
+                </a>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-comment"></i> トーク(掲示板)
+                    </h3>
+                </a>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-plane-departure"></i> 航空券比較
+                    </h3>
+                </a>
+            </div>
+
+            <div class="nav-category">
+                <a href="" title="">
+                    <h3 class="nav-large-title">
+                        <i class="fas fa-wifi"></i> 海外WI-FI比較
+                    </h3>
+                </a>
+            </div>
+        </div>
+
+        <style>
+
+        #header-nav {
+            display: none;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100vw;
+            padding: 24px 16px;
+            z-index: 5000;
+            background-color: white;
+            font-weight: 600;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch
+        }
+
+        #nav-close-button, #search-close-button {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .nav-category:nth-last-of-type(1) {
+            margin-bottom: 80px;
+        }
+
+        .nav-category {
+            padding-top: 24px;
+        }
+
+        .nav-large-title {
+            border-radius: 4px;
+            background-color: #245ba7;
+            color: white;
+            display: inline-block;
+            font-size: 20px;
+            padding: 8px 12px;
+        }
+
+        .nav-small-titles {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;  
+            flex-wrap: wrap;
+            padding: 20px 8px;
+        }
+
+        .nav-small-titles > span:nth-last-of-type(1) {
+          border-right: 0px white solid!important;
+        }
+
+        .nav-small-title {
+            margin: 16px 0px;
+            padding: 0px 10px;
+            color: #245ba7;
+            font-weight: 600;
+            border-right: 2px gray solid;
+        }
+
+        </style>
+
+        <div id="search-container">
+            <div id="search-close-button">
+                <span class="navigation-icon">
+                    <i class="far fa-times-circle"></i>
+                </span>
+                <span class="navigation-title">
+                    とじる
+                </span>
+            </div>
+            <div id="search-form">
+                <form name="myForm" id="siteSearch" method="get" action="<?php echo home_url('/'); ?>">
+                    <input type="text" name="s" id="sitem" placeholder="Traicyの記事を検索する">
+                    <div class="search-button"><input type="submit" value="検索"></div>
+                </form>
+            </div>
+        </div>
+
+        <style type="text/css" media="screen">
+            #search-container {
+                display: none;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                height: 100%;
+                width: 100vw;
+                padding: 24px 16px;
+                z-index: 5000;
+                background-color: white;
+                font-weight: 600;
+            }
+        </style>
+
+    </header>
 
 	<div id="main" class="wrapper">
 

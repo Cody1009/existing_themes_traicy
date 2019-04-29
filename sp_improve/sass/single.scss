@@ -1,8 +1,9 @@
 /* single.php の全体制御 */
 article.post{
 	width : 100%;
+	max-width: 100%;
 	box-sizing : border-box;
-	padding : 0px 15px;
+	padding : 0px 0px;
 }
 #content a {
 	color: #000;
@@ -11,211 +12,13 @@ article.post{
 .site-content article{
 	border-bottom : none;
 }
-/*ここから.entry-header*/
-header.entry-header{
-	margin : 0;
-	padding : 0;
-	border-bottom : 2px solid var(--border-color);
-	padding-bottom : 5px;
-	margin-bottom: 5px;
-}
-
-/* メタデータ */
-/*パンくずリスト */
-div.breadAndCat{
-	box-sizing : border-box;
-	width : 100%;
-	overflow : hidden;
-}
-div#breadcrumb{
-	float : left;
-	width : 50%;
-	font-size : 16px;
-	line-height : 20px;
-	display : block;
-	overflow : hidden;
-	margin-top : 3px;
-}
-span.category{
-	background: var(--main-title-background-color);
-	display: inline-block;
-	float : right;
-	padding: 3px 5px 3px 5px;
-	border-radius : 3px;
-	margin-top : 3px;
-	overflow : hidden;
-
-	a{
-		color : #fff !important;
-		font-size: 16px;
-		line-height : 20px;
-	}
-
-	& + span.category{
-		margin-right : 5px;
-	}
-}
 
 
-@media screen and (max-width : 600px){
-	div#breadcrumb{
-		width : 100%;
-	}
-	.onlyCategory{
-		width : 100%;
-		float : right;
-		height : auto;
-	}
-	span.category{
-		display : none;
-	}
-	header.entry-header > .hide_o600{
-		float : right;
-		width : 100%;
-		height : 30px;
-		margin-bottom : 10px;
-	}
-	span.onlyCategory{
-		display : inline-block;
-		width : auto;
-		background: var(--main-title-background-color);
-		padding: 3px 5px 3px 5px;
-		border-radius : 3px;
-		margin-top : 3px;
-	}
-	span.onlyCategory a{
-		color : #fff !important;
-		font-size: 16px;
-		line-height : 20px;
-	}
-	span.onlyCategory + span.onlyCategory{
-		margin-right : 5px;
-	}
-}
 
 
-	#primary .entry-title {
-		font-size: 18px;
-		padding-bottom: 10px;
-		text-indent : 1em;
-		padding : 0px 5px 10px 5px;
-		box-sizing : border-box;
-	}
-	header.entry-header h1.entry-title{
-		text-align : left !important;
-	}
-/*記事のタイトル下にある 著者情報*/
-header.entry-header div.date p a.author{
-	margin-left: 10px;
-}
-#content .date {
-	font-size: 14px;
-	text-align: right;
-}
 /* メタデータ */
 
 /* SNSシェアボタン */
-.share_buttons {
-  box-sizing: border-box;
-  width: calc(100% - 20px);
-  height: 35px;
-  min-height: 30px;
-  margin: 10px 10px 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.sns_icon {
-	margin: 0px;
-
-	&:first-child{
-	  width: 95px;
-	}
-	&:not(:first-child) {
-	  width: 90px;
-	  height: 35px;
-	  border-radius: 4px;
-	  cursor: pointer;
-		box-sizing: border-box;
-		width: calc(100% / 7 - 4px);
-		text-align: center;
-	}
-
-	img {
-	  box-sizing: border-box;
-	  height: 33px !important;
-	  width: 33px !important;
-	  display: inline-block;
-	  border-bottom-color: rgba(1,1,1,0);
-	  border-bottom: none !important;
-	  box-shadow: none !important;
-	  border-radius: 3px;
-	  margin: 1px 1px;
-	  padding: 0;
-		position: relative;
-		top: 45%;
-		-webkit-transform: translateY(-50%); /* Safari用 */
-		transform: translateY(-50%);
-		width:  25px !important;
-		height: 25px !important;
-	}
-}
-
-.sns_icon.google {
-  background-color: #E02F2F;
-}
-.sns_icon.line {
-  background-color: #00B900;
-}
-.sns_icon.hatena {
-  background-color: #00A4DE;
-}
-.sns_icon.twitter {
-  background-color: #1DA1F2;
-}
-.sns_icon.facebook {
-  background-color: #3B5998;
-}
-.sns_icon.facebook_like {
-  height: 20px !important;
-  line-height: 30px;
-}
-
-@media screen and (max-width : 320px){
-	.sns_icon.google {
-		display: none;
-	}
-	.sns_icon:not(:first-child) {
-		width : 40px;
-	}
-}
-
-/* SNSシェアボタン 終わり*/
-
-/* Googleカレンダー追加ボタン */
-.addGcalender.singlePage{
-	margin-bottom: 8px;
-
-	& > a{
-		display: block;
-		height: 26px;
-	}
-
-	button {
-	  float: right;
-	  width: 170px;
-	  height: 26px;
-	  font-size: 12px;
-	  background: rgb(235, 235, 235);
-	  margin: 0 10px !important;
-	  padding: 0;
-	}
-
-	i {
-	  font-size: 16px;
-	}
-}
-/* Googleカレンダー追加ボタン 終わり*/
 
 /* 記事の中身 */
 #primary {
@@ -224,6 +27,7 @@ header.entry-header div.date p a.author{
 			font-size:16px;
 			line-height : 20px;
 			letter-spacing : 0.8px;
+			padding: 0px 15px;
 			color: var(--main-color);
 
 			& > p {
@@ -358,7 +162,7 @@ header.entry-header div.date p a.author{
 
 /* 画像のobject-fit-img */
 
-p.wp-caption-text {
+	p.wp-caption-text {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0 5px;

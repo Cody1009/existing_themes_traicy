@@ -1,0 +1,66 @@
+.wanted-top-img{
+  width: 100vw;
+}
+.center-contents {
+  width:90vw;
+  padding-right:5vw;
+  padding-left:5vw;
+}
+.enterprise-info{
+	width: 100vw;
+    background-color: #EEEEEE;
+	position: relative;
+	transform: translateX(-5vw);
+}
+.info-container{
+  width:90vw;
+	padding: 0 5vw;
+}
+
+.static-page-title-text{
+  padding: 40px 0;
+  color: #313131;
+  font-size: 20px;
+  font-family: "Hiragino Kaku Gothic Pro";
+  text-align: center;
+  font-weight: bold;
+}
+.static-page-body-text{
+  color:#313131;
+　line-height: 18px;
+  text-align: left;
+  font-size: 16px;
+  font-family: "Hiragino Kaku Gothic Pro";
+  line-height: 30px !important;
+  padding-bottom: 15px;
+}
+.static-page-body-bold{
+  color: #313131;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Hiragino Kaku Gothic Pro";
+  text-align: left;
+  line-height: 50px;
+}
+
+.black-horizontal-devider {
+   height: 5px;
+   width: 10vw;
+   background-color: #000000;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 40px;
+  }
+table, th, td {
+    border: none;
+}
+tbody{
+  width: 90vw;
+}
+th{
+  width: auto;
+}
+td{
+  width: 81%;
+  padding: 0px 3px;
+  }

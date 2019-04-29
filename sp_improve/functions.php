@@ -273,22 +273,21 @@ function breadcrumb($do_echo = true){
 	$str ='';
 	if(!is_home()&&!is_admin()){
 		$str.= '<div id="breadcrumb" class="cf"><div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;">';
-		$str.= '<a href="'. home_url() .'" itemprop="url"><span itemprop="title"><i class="fa fa-home" aria-hidden="true"></i>
-Traicy</span></a>&nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>&nbsp;</div>';
+		$str.= '<a href="'. home_url() .'" itemprop="url"><span itemprop="title"><i class="fa fa-home" aria-hidden="true"></i></span></a></div>';
 		if(is_category()) {
 			$cat = get_queried_object();
 			if($cat -> parent != 0){
 				$ancestors = array_reverse(get_ancestors( $cat -> cat_ID, 'category' ));
 				foreach($ancestors as $ancestor){
-					$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_category_link($ancestor) .'" itemprop="url"><span itemprop="title">'. get_cat_name($ancestor) .'</span></a>&nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>&nbsp;</div>';
+					$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_category_link($ancestor) .'" itemprop="url"><span itemprop="title">'. get_cat_name($ancestor) .'</span></a></div>';
 				}
 			}
-			$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_category_link($cat -> term_id). '" itemprop="url"><span itemprop="title">'. $cat-> cat_name . '</span></a>&nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>&nbsp;</div>';
+			$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_category_link($cat -> term_id). '" itemprop="url"><span itemprop="title">'. $cat-> cat_name . '</span></a></div>';
 		} elseif(is_page()){
 			if($post -> post_parent != 0 ){
 				$ancestors = array_reverse(get_post_ancestors( $post->ID ));
 				foreach($ancestors as $ancestor){
-					$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_permalink($ancestor).'" itemprop="url"><span itemprop="title">'. get_the_title($ancestor) .'</span></a>&nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>&nbsp;</div>';
+					$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_permalink($ancestor).'" itemprop="url"><span itemprop="title">'. get_the_title($ancestor) .'</span></a></div>';
 				}
 			}
 		} elseif(is_single()){
@@ -297,7 +296,7 @@ Traicy</span></a>&nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true">
 			if($cat -> parent != 0){
 				$ancestors = array_reverse(get_ancestors( $cat -> cat_ID, 'category' ));
 				foreach($ancestors as $ancestor){
-					$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_category_link($ancestor).'" itemprop="url"><span itemprop="title">'. get_cat_name($ancestor). '</span></a>&nbsp;<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>&nbsp;</div>';
+					$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_category_link($ancestor).'" itemprop="url"><span itemprop="title">'. get_cat_name($ancestor). '</span></a></div>';
 				}
 			}
 			$str.='<div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" style="display:table-cell;"><a href="'. get_category_link($cat -> term_id). '" itemprop="url"><span itemprop="title">'. $cat-> cat_name . '</span></a></div>';

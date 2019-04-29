@@ -1,5 +1,4 @@
-
-	<link rel="stylesheet" id="sp-lp-banner.css" href="https://www.traicy.com/wp-content/themes/sp_improve/css/sp-lp-banner.css?ver=4.9.4" type="text/css" media="all">
+<!-- 	<link rel="stylesheet" id="sp-lp-banner.css" href="https://www.traicy.com/wp-content/themes/sp_improve/css/sp-lp-banner.css?ver=4.9.4" type="text/css" media="all">
 
 
 <div class="sp-lp-banner">
@@ -10,4 +9,4 @@
         事前登録でアプリを体験しよう。
     </p>
     <a href="https://www.traicy.com/app-lp" class="banner-anchor"></a>
-</div>
+</div>  -->

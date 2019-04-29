@@ -17,7 +17,7 @@ jQuery(function($){
   var tabsLiWid = $jsTabsLi.eq(0).width() + 2;
 
   //タブエリアの横幅指定
-  $jsTabs.css('width',tabsLiWid * tabsLiLen);
+  // $jsTabs.css('width',tabsLiWid * tabsLiLen);
 
   //スワイプイベント登録
   $jsSwipe.hammer().on('swipeleft',next);  //--------C
@@ -122,16 +122,16 @@ for($j=0;$j<6;$j++) :
 ?>
 
 <?php if( $j == 0 ) : ?>
-<div class="tab-pane active" id="tab1">
+<div class="top-tab tab-pane active" id="tab1">
 <?php else : ?>
-<div class="tab-pane" id="tab<?= $j+1 ?>">
+<div class="top-tab tab-pane" id="tab<?= $j+1 ?>">
 <?php endif; ?>
 
 
 
 <?php for($i=0;$i<$getNum;$i++) : ?>
   <?php if( $i == (int)($getNum/2) && $j == 0 ) : ?>
-    <div id="compeOld" class="yahoo_ad">
+    <div class="content-box yahoo_ad">
         <!--  Yahooの広告 -->
         <script type="text/javascript" language="JavaScript">
         yads_ad_ds = '52929_194770';
@@ -139,9 +139,8 @@ for($j=0;$j<6;$j++) :
         <script type="text/javascript" language="JavaScript" src="//yads.c.yimg.jp/js/yads.js"></script>
     </div>
   <?php endif; ?>
-	<a href="<?php echo $article[$i] -> guid; ?>" id="aCompe">
-		<div id="compeOld">
-			<div id="compeImgLeft">
+	<a href="<?php echo $article[$i] -> guid; ?>" class="content-link">
+		<div class="content-box">
 <?php
 if(has_post_thumbnail($article[$i] -> ID)){
 	if($i==0)
@@ -152,8 +151,13 @@ if(has_post_thumbnail($article[$i] -> ID)){
   echo '<img src="'.get_stylesheet_directory_uri().'/images/dummy_600_400.jpg">';
 }
 ?>
-			</div> <!-- compeImgLeft -->
-			<div id="compeArticleRight"><?php echo $article[$i] -> post_title; ?></div>
+
+		<div class="content-box-title">
+            <span class="content-title">
+                <?php echo $article[$i] -> post_title; ?>
+            </span>
+        </div>
+
     </div> <!-- old -->
 	</a>
 <?php endfor; ?>
@@ -164,8 +168,10 @@ jQuery($(document).ready(function(){
 }));
 </script>
 
-<div class="continue">
-  <a href='<?= $category[$j]['href'] ?>'><div class="arrow"></div><div>続きを見る</div></a>
+<div class="blue-btn-wrapper">
+  <a class="blue-btn" href='http://release.traicy.com/newarticle'>
+  	もっと見る <i class="fas fa-angle-right"></i>
+  </a>
 </div>
 </div> <!-- tab-pane -->
 
@@ -184,27 +190,31 @@ $json = json_decode($json,true);
 ?>
 
 
-<div class="tab-pane" id="tab7">
+<div class="tab-pane top-tab" id="tab7">
 
 <?php for($i=0;$i<$getNum;$i++) : ?>
-	<a href="<?php echo $json[$i]['permalink']; ?>" id="aCompe">
-		<div id="compeOld">
-			<div id="compeImgLeft">
+	<a href="<?php echo $json[$i]['permalink']; ?>" class="content-link">
+		<div class="content-box">
 <?php
 if($i==0)
 	echo '<img src="'.$json[$i]['img_large'].'">';
 else
 	echo '<img src="'.$json[$i]['img_thumbnail'].'">';
 ?>
-			</div>
-			<div id="compeArticleRight"><?php echo mb_substr(strip_tags($json[$i]['title']),0,60).'...'; ?></div>
+			<div class="content-box-title">
+                <span class="content-title">
+                    <?php echo mb_substr(strip_tags($json[$i]['title']),0,60).'...'; ?>
+                </span>
+            </div>
 		</div>
 	</a>
 <?php endfor; ?>
 <?php //記事の表示 ?>
 
-<div class="continue">
-  <a href='http://release.traicy.com/newarticle'><div class="arrow"></div><div>続きを見る</div></a>
+<div class="blue-btn-wrapper">
+  <a class="blue-btn" href='http://release.traicy.com/newarticle'>
+  	もっと見る <i class="fas fa-angle-right"></i>
+  </a>
 </div>
 </div> <!-- tab-pane -->
 
@@ -220,7 +230,7 @@ $args=array(
 	// 表示数
 	'limit' => 7,
 	// HTMLのwrapper　開始タグ
-	'wpp_start' => '<div class="tab-pane" id="tab8">',
+	'wpp_start' => '<div class="tab-pane top-tab" id="tab8">',
 	// HTMLのwrapper　終了タグ
 	'wpp_end' => '</div>',
 	// サムネイル画像の幅
@@ -229,12 +239,14 @@ $args=array(
 	'thumbnail_height' => '0',
 	// HTML部分
 	'post_html' => '
-	<a href="{url}" id="aCompe">
-		<div id="compeOld">
-			<div id="compeImgLeft">
+	<a href="{url}" class="content-link">
+		<div class="content-box">
 				{thumb_img}
-			</div>
-			<div id="compeArticleRight">{text_title}</div>
+			<div class="content-box-title">
+                <span class="content-title">
+                    {text_title}
+                </span>
+            </div>
 		</div>
 	</a>'
 );

@@ -1,43 +1,4 @@
-.archive-header {
-  background : var(--main-background-color);
-  font-size : 16px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  border-bottom: 0px;
 
-  div.tag-description {
-    background-color: #fff;
-    font-size:0.9em;
-
-    h3 {
-      font-size: 1.1em;
-      padding: 7px 0;
-		}
-    h2 {
-      font-size: 1.2em;
-      background: var(--bar-color);
-      padding: 0.4em 0px 0.4em 1em;
-      color: white;
-      font-weight: 900;
-    }
-
-    h1.archive-title{
-      font-size : 16px;
-      margin-left : 3px;
-    }
-
-    .flex-container{
-			.left{
-				text-align: center;
-				margin: 0 auto;
-			}
-			table{
-				border-collapse: separate;
-				border-spacing: 10px;
-			}
-		}
-  }
-}
 
 // airline-tag-page.php
 ul.airline_tag li{

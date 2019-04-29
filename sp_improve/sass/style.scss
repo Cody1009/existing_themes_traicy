@@ -41,8 +41,7 @@ div#content{
 	width : 100% !important;
 	margin : 0 !important;
 	padding : 0;
-	padding-bottom : 10px;
-	background-color : var(--main-background-color);
+	background-color : #fff;
 }
 
 @media screen and (max-width: 600px) { /* スマフォ */
@@ -194,17 +193,15 @@ div#content .wp-pagenavi{padding: 5px 0;}
 }
 .catCards{
 	width : 100%;
-	margin : 3px 7px;
+	margin : 0px 7px;
 	background : #fff;
 	padding : 10px 10px;
 }
 .catCards a >  h1{
-	font-size : 20px;
-	color : var(--main-title-color);
-	margin-bottom : 5px;
-	padding-bottom : 5px;
-	border-bottom : 2px solid var(--border-color);
-	text-align : center;
+	font-size : 16px;
+	color : #313131;
+	letter-spacing: .5px;
+	line-height: 25px;
 }
 .catCards img{
 	width : auto;
@@ -217,12 +214,14 @@ div#content .wp-pagenavi{padding: 5px 0;}
 	box-shadow : none;
 }
 .catCards p{
-	padding : 10px 5px;
+	padding : 20px 0px;
 	font-size : 16px;
+	letter-spacing: .5px;
 	color : var(--main-color);
-	border-top : 2px solid var(--border-color);
+	border-bottom : 2px solid var(--border-color);
 	word-wrap : break-word;
   overflow-wrap : break-word;
+	line-height: 20px;
 }
 .catCards:hover{
 	background-color : rgba(255,255,204,0.7);
